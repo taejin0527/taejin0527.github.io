@@ -11,10 +11,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion" lang="ko">
+<html class="theme-next mist" lang="ko">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,14 +77,14 @@
     root: '/',
     scheme: 'Mist',
     version: '7.2.0',
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":true},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     copycode: {"enable":true,"show_result":true,"style":"flat"},
     fancybox: false,
     fastclick: false,
     lazyload: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -356,6 +354,400 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Euler-009/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Euler-009/" class="post-title-link" itemprop="url">(Problem) 009 Special Pythagorean triplet</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2020-03-25 13:05:29" itemprop="dateCreated datePublished" datetime="2020-03-25T13:05:29+09:00">2020-03-25</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Project-Euler/" itemprop="url" rel="index"><span itemprop="name">Project Euler</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Euler-009/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Euler-009/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Project-Euler"><a href="#Project-Euler" class="headerlink" title="Project Euler"></a>Project Euler</h1><ul>
+<li>공식 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0Lw==" title="https://projecteuler.net/">projecteuler.net<i class="fa fa-external-link"></i></span></li>
+<li>한글 번역 - <span class="exturl" data-url="aHR0cDovL2V1bGVyLnN5bmFwLmNvLmtyL3Byb2JfZGV0YWlsLnBocD9pZD0x" title="http://euler.synap.co.kr/prob_detail.php?id=1">projecteuler @kr<i class="fa fa-external-link"></i></span></li>
+<li>(HackerRank) ProjectEuler+ - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXM=" title="https://www.hackerrank.com/contests/projecteuler/challenges">hackerrank.com<i class="fa fa-external-link"></i></span></li>
+</ul>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><div class="spoiler collapsed">
+    <div class="spoiler-title">
+        Problem list
+    </div>
+    <div class="spoiler-content">
+        <ul>
+<li>No 9 : <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0L3Byb2JsZW09OQ==" title="https://projecteuler.net/problem=9">Special Pythagorean triplet<i class="fa fa-external-link"></i></span><ul>
+<li>HackerRank : <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXMvZXVsZXIwMDkvcHJvYmxlbQ==" title="https://www.hackerrank.com/contests/projecteuler/challenges/euler009/problem">Project Euler 9: Special Pythagorean triplet<i class="fa fa-external-link"></i></span></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/[object Object]/Euler-009/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Euler-008/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Euler-008/" class="post-title-link" itemprop="url">(Problem) 008 Largest product in a series</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2020-03-23 13:51:54" itemprop="dateCreated datePublished" datetime="2020-03-23T13:51:54+09:00">2020-03-23</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Project-Euler/" itemprop="url" rel="index"><span itemprop="name">Project Euler</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Euler-008/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Euler-008/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Project-Euler"><a href="#Project-Euler" class="headerlink" title="Project Euler"></a>Project Euler</h1><ul>
+<li>공식 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0Lw==" title="https://projecteuler.net/">projecteuler.net<i class="fa fa-external-link"></i></span></li>
+<li>한글 번역 - <span class="exturl" data-url="aHR0cDovL2V1bGVyLnN5bmFwLmNvLmtyL3Byb2JfZGV0YWlsLnBocD9pZD0x" title="http://euler.synap.co.kr/prob_detail.php?id=1">projecteuler @kr<i class="fa fa-external-link"></i></span></li>
+<li>(HackerRank) ProjectEuler+ - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXM=" title="https://www.hackerrank.com/contests/projecteuler/challenges">hackerrank.com<i class="fa fa-external-link"></i></span></li>
+</ul>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><div class="spoiler collapsed">
+    <div class="spoiler-title">
+        Problem list
+    </div>
+    <div class="spoiler-content">
+        <ul>
+<li>No 8 : <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0L3Byb2JsZW09OA==" title="https://projecteuler.net/problem=8">Largest product in a series<i class="fa fa-external-link"></i></span><ul>
+<li>HackerRank : <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXMvZXVsZXIwMDgvcHJvYmxlbQ==" title="https://www.hackerrank.com/contests/projecteuler/challenges/euler008/problem">Project Euler #8: Largest product in a series<i class="fa fa-external-link"></i></span></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/[object Object]/Euler-008/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Euler-007/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -536,396 +928,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Euler-006/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/Euler-006/" class="post-title-link" itemprop="url">(Problem) 006 Sum square difference</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2020-03-21 19:26:28" itemprop="dateCreated datePublished" datetime="2020-03-21T19:26:28+09:00">2020-03-21</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Project-Euler/" itemprop="url" rel="index"><span itemprop="name">Project Euler</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/Euler-006/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Euler-006/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Project-Euler"><a href="#Project-Euler" class="headerlink" title="Project Euler"></a>Project Euler</h1><ul>
-<li>공식 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0Lw==" title="https://projecteuler.net/">projecteuler.net<i class="fa fa-external-link"></i></span></li>
-<li>한글 번역 - <span class="exturl" data-url="aHR0cDovL2V1bGVyLnN5bmFwLmNvLmtyL3Byb2JfZGV0YWlsLnBocD9pZD0x" title="http://euler.synap.co.kr/prob_detail.php?id=1">projecteuler @kr<i class="fa fa-external-link"></i></span></li>
-<li>(HackerRank) ProjectEuler+ - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXM=" title="https://www.hackerrank.com/contests/projecteuler/challenges">hackerrank.com<i class="fa fa-external-link"></i></span></li>
-</ul>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><div class="spoiler collapsed">
-    <div class="spoiler-title">
-        Problem list
-    </div>
-    <div class="spoiler-content">
-        <ul>
-<li>No 6 : <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0L3Byb2JsZW09Ng==" title="https://projecteuler.net/problem=6">Sum square difference<i class="fa fa-external-link"></i></span><ul>
-<li>HackerRank : <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXMvZXVsZXIwMDYvcHJvYmxlbQ==" title="https://www.hackerrank.com/contests/projecteuler/challenges/euler006/problem">Project Euler #4: Sum square difference<i class="fa fa-external-link"></i></span></li>
-</ul>
-</li>
-</ul>
-
-    </div>
-</div>
-
-<div class="note no-icon">
-            <div class="note primary no-icon">            <h3 id="Sum-square-difference"><a href="#Sum-square-difference" class="headerlink" title="Sum square difference"></a>Sum square difference</h3><br><h4 id="problem-lt-번역-gt"><a href="#problem-lt-번역-gt" class="headerlink" title="problem  &lt;번역&gt;"></a>problem  &lt;번역&gt;</h4><img data-src="/img/Euler/Problem 6.png"><h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p><span class="label warning"> Simple Code</span></p><div class="note success no-icon">            <p>컴퓨터는 연산이 빠르기 때문에 Brute Force한 방법으로 그냥 단순히 반복문을 통해 다 더하여 답을 구할 수도 있다.</p>          </div><figure class="highlight python"><figcaption><span>006_sum_square_difference.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_num</span><span class="params">(n)</span>:</span></span><br><span class="line">  total = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">      total += i</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> total**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_square_num</span><span class="params">(n)</span>:</span></span><br><span class="line">  total = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">      total += i**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(sum_of_num(<span class="number">100</span>) - sum_of_square_num(<span class="number">100</span>))  </span><br></pre></td></tr></table></figure><hr><span class="label warning"> HackerRank</span><div class="note success no-icon">            <p>하지만 조금이라도 효율적인 성능을 이끌어 내기 위해서는 수식을 이용한 풀이가 더 적당할 것 같다.<br>n까지의 단순 합은 n(n+1)/2와 같고<br>n까지의 제곱 합은 (2n+1)(n+1)n/6과 같다.<br><img data-src="/img/Euler/euler006.png"></p>          </div><figure class="highlight python"><figcaption><span>006_for_HacerRank.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_num</span><span class="params">(n)</span>:</span></span><br><span class="line">  total = n*(n + <span class="number">1</span>)//<span class="number">2</span></span><br><span class="line">  <span class="keyword">return</span> total**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_square_num</span><span class="params">(n)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> (<span class="number">2</span>*n + <span class="number">1</span>)*(n + <span class="number">1</span>)*n//<span class="number">6</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  <span class="keyword">for</span> _ <span class="keyword">in</span> range(int(input())):</span><br><span class="line">      num = int(input())</span><br><span class="line">      print(sum_of_num(num) - sum_of_square_num(num)) </span><br></pre></td></tr></table></figure>          </div><div class="note info">            <p>제곱의 합 공식</p>          </div>
-          </div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Euler-005/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/Euler-005/" class="post-title-link" itemprop="url">(Problem) 005 Smallest multiple</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2020-03-21 18:49:03" itemprop="dateCreated datePublished" datetime="2020-03-21T18:49:03+09:00">2020-03-21</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Project-Euler/" itemprop="url" rel="index"><span itemprop="name">Project Euler</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/Euler-005/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Euler-005/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Project-Euler"><a href="#Project-Euler" class="headerlink" title="Project Euler"></a>Project Euler</h1><ul>
-<li>공식 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0Lw==" title="https://projecteuler.net/">projecteuler.net<i class="fa fa-external-link"></i></span></li>
-<li>한글 번역 - <span class="exturl" data-url="aHR0cDovL2V1bGVyLnN5bmFwLmNvLmtyL3Byb2JfZGV0YWlsLnBocD9pZD0x" title="http://euler.synap.co.kr/prob_detail.php?id=1">projecteuler @kr<i class="fa fa-external-link"></i></span></li>
-<li>(HackerRank) ProjectEuler+ - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXM=" title="https://www.hackerrank.com/contests/projecteuler/challenges">hackerrank.com<i class="fa fa-external-link"></i></span></li>
-</ul>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><div class="spoiler collapsed">
-    <div class="spoiler-title">
-        Problem list
-    </div>
-    <div class="spoiler-content">
-        <ul>
-<li>No 5 : <span class="exturl" data-url="aHR0cHM6Ly9wcm9qZWN0ZXVsZXIubmV0L3Byb2JsZW09NQ==" title="https://projecteuler.net/problem=5">Smallest multiple<i class="fa fa-external-link"></i></span><ul>
-<li>HackerRank : <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vY29udGVzdHMvcHJvamVjdGV1bGVyL2NoYWxsZW5nZXMvZXVsZXIwMDUvcHJvYmxlbQ==" title="https://www.hackerrank.com/contests/projecteuler/challenges/euler005/problem">Project Euler #4: Smallest multiple<i class="fa fa-external-link"></i></span></li>
-</ul>
-</li>
-</ul>
-
-    </div>
-</div>
-
-<div class="note no-icon">
-            <div class="note primary no-icon">            <h3 id="Smallest-multiple"><a href="#Smallest-multiple" class="headerlink" title="Smallest multiple"></a>Smallest multiple</h3><br><h4 id="problem-lt-번역-gt"><a href="#problem-lt-번역-gt" class="headerlink" title="problem  &lt;번역&gt;"></a>problem  &lt;번역&gt;</h4><img data-src="/img/Euler/Problem 5.png"><h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p><span class="label warning"> Simple Code</span></p><div class="note success no-icon">            <p>최소 공배수를 찾는 문제이다.<br>최대 공약수, 최소 공배수를 찾을 때 유클리드 호제법을 응용한 유클리드 알고리즘을 사용하면 쉽다.</p>          </div><figure class="highlight python"><figcaption><span>005_smallest_multiple.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(a, b)</span>:</span></span><br><span class="line">  <span class="keyword">while</span> b &gt; <span class="number">0</span>:</span><br><span class="line">      a, b = b, a % b</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcd</span><span class="params">(a, b)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> a * b // gcd(a, b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smallest_multiple</span><span class="params">(n)</span>:</span></span><br><span class="line">  cur = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">      cur = lcd(cur, num)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> cur</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(smallest_multiple(<span class="number">20</span>))  </span><br></pre></td></tr></table></figure><hr><span class="label warning"> HackerRank</span><div class="note success no-icon">            <p>테스트 케이스 입력 받는 부분만 추가해 주면 된다.</p>          </div><figure class="highlight python"><figcaption><span>005_for_HacerRank.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(a, b)</span>:</span></span><br><span class="line">  <span class="keyword">while</span> b &gt; <span class="number">0</span>:</span><br><span class="line">      a, b = b, a % b</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcd</span><span class="params">(a, b)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> a * b // gcd(a, b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smallest_multiple</span><span class="params">(n)</span>:</span></span><br><span class="line">  cur = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">      cur = lcd(cur, num)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> cur</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  <span class="keyword">for</span> _ <span class="keyword">in</span> range(int(input())):</span><br><span class="line">      print(smallest_multiple(int(input()))) </span><br></pre></td></tr></table></figure><div class="note info">            <p>유클리드 호제법을 잘 이해하고 있다면 쉽게 풀 수 있는 문제이다.</p>          </div>          </div>
-          </div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -974,7 +976,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">97</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1027,7 +1029,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">카테고리</span>
                   </a>
                 </div>
@@ -1152,7 +1160,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">50</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">55</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1276,9 +1294,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -1297,18 +1312,10 @@
   
   <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
 
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
 
 
 
   <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
 
 
 
