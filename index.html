@@ -77,8 +77,8 @@
     root: '/',
     scheme: 'Mist',
     version: '7.2.0',
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":true},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
     copycode: {"enable":true,"show_result":true,"style":"flat"},
     fancybox: false,
     fastclick: false,
@@ -388,7 +388,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
       <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/jjang.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -589,7 +589,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
       <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/jjang.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -773,7 +773,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
       <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/jjang.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -898,12 +898,14 @@
           <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
 <li>Fast I/O in Java in Competitive Programming - <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvZmFzdC1pby1pbi1qYXZhLWluLWNvbXBldGl0aXZlLXByb2dyYW1taW5nLw==" title="https://www.geeksforgeeks.org/fast-io-in-java-in-competitive-programming/">geeksforgeeks.com<i class="fa fa-external-link"></i></span></li>
 <li>Java IO : Input-output in Java with Examples - <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvamF2YS1pby1pbnB1dC1vdXRwdXQtaW4tamF2YS13aXRoLWV4YW1wbGVzLw==" title="https://www.geeksforgeeks.org/java-io-input-output-in-java-with-examples/">geeksforgeeks.com<i class="fa fa-external-link"></i></span></li>
+<li>입력 속도 비교 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuYWNtaWNwYy5uZXQvYmxvZy9zZWFyY2gvJUVDJTlFJTg1JUVCJUEwJUE1KyVFQyU4NiU4RCVFQiU4RiU4NCslRUIlQjklODQlRUElQjUlOTA=" title="https://www.acmicpc.net/blog/search/%EC%9E%85%EB%A0%A5+%EC%86%8D%EB%8F%84+%EB%B9%84%EA%B5%90">acmicpc.net<i class="fa fa-external-link"></i></span></li>
+<li>출력 속도 비교 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuYWNtaWNwYy5uZXQvYmxvZy92aWV3LzU3" title="https://www.acmicpc.net/blog/view/57">acmicpc.net<i class="fa fa-external-link"></i></span></li>
 </ul>
 <hr>
 <br>
 
 <div class="note info">
-            <p>Problem Solving(PS)에서 입출력은 매우 중요하다고 생각한다.<br>물론 어떤 자료구조와 알고리즘으로 문제를 해결할지도 매우 중요하고 핵심적인 부분이지만, 입력이 없으면 쓸모가 없고 출력이 없으면 의미가 없다.</p><p>또한 가끔 Online Judge 사이트를 통해 알고리즘 문제를 풀다 보면 입출력 속도 차이로 통과하거나 하지 못하는 경우도 있다.</p><p>그래서 JAVA의 입출력과 관련해서 한 번 정리해보려고 한다. <span class="github-emoji" alias="thumbsup" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">&#x1f44d;</span></p>
+            <p>Problem Solving(PS)에서 입출력은 매우 중요하다고 생각한다.<br>물론 어떤 자료구조와 알고리즘으로 문제를 해결할지도 매우 중요하고 핵심적인 부분이지만, 입력이 없으면 쓸모가 없고 출력이 없으면 의미가 없다. 또한 가끔 Online Judge 사이트를 통해 알고리즘 문제를 풀다 보면 입출력 속도 차이로 통과하거나 하지 못하는 경우도 있다.</p><p>그래서 JAVA의 입출력과 관련해서 한 번 정리해보려고 한다. <span class="github-emoji" alias="thumbsup" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">&#x1f44d;</span></p>
           </div>
           <!--noindex-->
           
@@ -990,7 +992,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="NUNU">
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
             
               <p class="site-author-name" itemprop="name">NUNU</p>
               <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
@@ -1221,6 +1223,16 @@
           
 
           
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
 
           
           
@@ -1231,6 +1243,11 @@
 
       
 
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
       
 
       <!-- Adsense Sidebar -->
@@ -1292,11 +1309,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
