@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="컴퓨터 시스템 구조2.1 컴퓨터 시스템의 동작   컴퓨터는 공유된 주기억장치에 접근을 제공하는 공통 버스에 의해 연결된 CPU와 여러 개의 장치 제어기(Device controller)로 구성되어 있습니다. 장치 제어기(Device Controller)각 장치(디스크, 오디오 장치, 비디오 디스플레이)를 관리 장치 제어기와 CPU는 병행으로 수행되므로 이들">
+<meta name="keywords" content="OS,운영체">
+<meta property="og:type" content="article">
+<meta property="og:title" content="운영체제 - Overview_2">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/CS-OS-20190212-os-overview-2/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="컴퓨터 시스템 구조2.1 컴퓨터 시스템의 동작   컴퓨터는 공유된 주기억장치에 접근을 제공하는 공통 버스에 의해 연결된 CPU와 여러 개의 장치 제어기(Device controller)로 구성되어 있습니다. 장치 제어기(Device Controller)각 장치(디스크, 오디오 장치, 비디오 디스플레이)를 관리 장치 제어기와 CPU는 병행으로 수행되므로 이들">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:15:47.769Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="운영체제 - Overview_2">
+<meta name="twitter:description" content="컴퓨터 시스템 구조2.1 컴퓨터 시스템의 동작   컴퓨터는 공유된 주기억장치에 접근을 제공하는 공통 버스에 의해 연결된 CPU와 여러 개의 장치 제어기(Device controller)로 구성되어 있습니다. 장치 제어기(Device Controller)각 장치(디스크, 오디오 장치, 비디오 디스플레이)를 관리 장치 제어기와 CPU는 병행으로 수행되므로 이들">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/CS-OS-20190212-os-overview-2/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>운영체제 - Overview_2 | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/CS-OS-20190212-os-overview-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">운영체제 - Overview_2
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-12 18:51:53" itemprop="dateCreated datePublished" datetime="2019-02-12T18:51:53+09:00">2019-02-12</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CS-🖥/" itemprop="url" rel="index"><span itemprop="name">CS 🖥</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CS-🖥/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/CS-OS-20190212-os-overview-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/CS-OS-20190212-os-overview-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="컴퓨터-시스템-구조"><a href="#컴퓨터-시스템-구조" class="headerlink" title="컴퓨터 시스템 구조"></a>컴퓨터 시스템 구조</h1><h2 id="2-1-컴퓨터-시스템의-동작"><a href="#2-1-컴퓨터-시스템의-동작" class="headerlink" title="2.1 컴퓨터 시스템의 동작"></a>2.1 컴퓨터 시스템의 동작</h2><img style="height:450px; align:center;" data-src="https://i.imgur.com/8JAIHTg.png">
+
+<ul>
+<li>컴퓨터는 <u>공유된 주기억장치에 접근을 제공하는 공통 버스에 의해 연결된 CPU와 여러 개의 장치 제어기(Device controller)로 구성</u>되어 있습니다.<ul>
+<li>장치 제어기(Device Controller)<br>각 장치(디스크, 오디오 장치, 비디오 디스플레이)를 관리</li>
+<li>장치 제어기와 CPU는 병행으로 수행되므로 이들은 주기억장치 접근에 대해 경쟁합니다. 주기억장치 제어기(Memory Controller)는 이들의 접근을 동기화해줍니다.</li>
+</ul>
+</li>
+<li>컴퓨터가 처음 구동되면 초기에 실행될 프로그램이 필요합니다. 이 프로그램을 <strong>부트스트랩 프로그램(Bootstrap program)</strong> 이라고 합니다. 이 프로그램은 보통 컴퓨터 하드웨어 내에 ROM(Read-Only-Memory)에 저장되어 있습니다.<ul>
+<li>부트스트랩 프로그램(Bootstrap program)<br>모든 하드웨어를 초기화하고 운영체제 커널을 주기억장치에 적재한 후에 커널을 실행</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>컴퓨터에서 사건(Event)의 발생은 <strong>인트럽트(interrupt)</strong> 신호, <strong>트랩(trap)</strong> 혹은 <strong>예외(Exception)</strong> 를 통해 운영체제에 통보됩니다. 사건이 발생되면 CPU는 현재 수행중인 작업을 멈추고, 운영체제 내에 있는 특정 코드를 실행합니다. 이 실행이 끝나면 다시 멈춘 작업을 재개합니다.</li>
+</ul>
+<img height="250px" data-src="http://pediaa.com/wp-content/uploads/2018/08/Difference-Between-Trap-and-Interrupt_Figure-1.png">
+
+<p><span style="color:red">Interrupt</span></p>
+<ul>
+<li><strong>Hardware Interrupt</strong> : 하드웨어는 CPU에 특정 신호를 보내어 인트럽트의 발생을 알림<br>– 예) 키보드 입력, I/O interrupt, timer ticks</li>
+<li>하드웨어가 시스템의 수행 흐름을 바꾸기 위해 발생하는 것</li>
+<li>비동기식(Asynchronus Interrupt)</li>
+</ul>
+<p><span style="color:red">Trap</span></p>
+<ul>
+<li><strong>Software Interrupt</strong> : 시스템호출(System call)이라는 특정 연산을 실행하여 일부로 발생시키거나 오류 때문에 자발적으로 발생<br>– 오류의 예) 0 나누기, 부적합한 주기억장치 접근(page fault)</li>
+<li>동기식(Synchronus Interrupt)</li>
+</ul>
+<p><span style="color:red">Exception</span></p>
+<ul>
+<li>프로세서에 의해 자동으로 처리</li>
+<li><strong>Faults</strong> 와 <strong>Aborts</strong> 로 세분화 가능<br>– Faults : 복구 가능한 오류 (recoverable error)<br>– Aborts : 처리하기 어려운 오류 (an error that is difficult to handle)</li>
+</ul>
+<br>
+
+<h2 id="2-2-I-O-구조"><a href="#2-2-I-O-구조" class="headerlink" title="2.2 I/O 구조"></a>2.2 I/O 구조</h2><ul>
+<li>장치 제어기(Device controller)에 따라 하나 이상의 장치가 제이거에 연결될 수 있습니다</li>
+<li>장치 제어기는 지역 버퍼와 몇 개의 특수 목적 레지스터를 유지합니다</li>
+<li>장치 제어기는 연결된 주변장치와 지역 버퍼 간에 데이터 이동을 책임집니다. 이 버퍼의 크기는 주변장치에 따라 다릅니다.</li>
+</ul>
+<h3 id="2-2-1-I-O-Interrupt"><a href="#2-2-1-I-O-Interrupt" class="headerlink" title="2.2.1 I/O Interrupt"></a>2.2.1 I/O Interrupt</h3><ul>
+<li>입출력의 두 가지 형태<br>– 동기식 입출력(Synchronous I/O) : 입출력이 시작되면 요청한 프로세서는 입출력이 완료될 때까지 기다림<br>– 비동기식 입출력(Asynchronous I/O) : 요청한 프로세서는 입출력이 완료될 때까지 기다리지 않고 계속 다른 작업을 수행</li>
+<li>입출력의 완료를 기다리는 방법<br>– 특수한 명령어 사용<br>– 대기 루프 사용</li>
+<li><u>만약 CPU가 입출력 완료를 항상 기다리면</u> 한번에 한 입출력만 가능<br>하지만 시스템의 효율을 높이기 위해 입출력과 계산을 병행할 수 있어야함으로 이 방법은 비효율적</li>
+<li>운영체제는 여러 개의 입출력 요청을 관리하기 위해 <strong>장치 상태 테이블(device-status table)</strong> 을 유지합니다. 각 장치마다 대기큐를 유지합니다.</li>
+</ul>
+<img height="350px" data-src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter13/13_09_DeviceStatusTable.jpg">
+
+<h3 id="2-2-2-DMA-구조"><a href="#2-2-2-DMA-구조" class="headerlink" title="2.2.2 DMA 구조"></a>2.2.2 DMA 구조</h3><ul>
+<li>속도가 느린 입출력 장치는 하나의 입력을 받은 후에 다음 입력까지 CPU는 다른 유용한 작업을 할 수 있습니다.<br>반대로 속도가 빠른 입출력 장치는 인트럽트가 너무 빈번하게 발생하여 CPU가 다른 유용한 작업을 할 시간이 없습니다.</li>
+<li>이것을 해결하기 위해 사용하는 기법이 <strong>DMA(Direct Memory Access)</strong> 입니다.</li>
+<li>DMA 방식에서 장치 제어기는 데이터 블록을 CPU의 관여없이 직접 주기억장치로 이동하며, 인터럽트는 바이트 단위가 아닌 블록 단위로 발생합니다.</li>
+</ul>
+<img style="align:center;" data-src="http://pds17.egloos.com/pds/200910/26/90/c0098890_4ae5a423a7cef.jpg">
+
+<br>
+
+<h2 id="2-3-저장-구조"><a href="#2-3-저장-구조" class="headerlink" title="2.3 저장 구조"></a>2.3 저장 구조</h2><img data-src="https://i.imgur.com/ofvb8E7.png">
+
+<ul>
+<li><p>컴퓨터 프로그래밍이 실행되기 위해서는 <strong>주기억장치(main memory / primary storage / internal memory)</strong> 에 적재되어야 합니다</p>
+</li>
+<li><p>주기억장치는 보통 <u>동적 임의접근 메모리(dynamic Random-Access Memory, RAM)</u>라고 하는 반도체 메모리를 사용</p>
+</li>
+<li><p><u>CPU가 직접 접근할 수 있는 기억장치</u>는 주기억장치뿐입니다</p>
+</li>
+<li><p>주기억장치의 한 구성 단위를 <strong>워드(word)</strong> 라 하며, 각 워드는 독특한 주소를 가집니다</p>
+</li>
+<li><p><span style="color:red">주기억장치의 크기 / 주기억장치의 휘발성</span> 때문에 모든 프로그램과 데이터를 주기억장치에 영구적으로 저장할 수 없습니다</p>
+</li>
+<li><p>이 문제를 해결하기 위해 많은 양의 데이터를 영구 보관할 수 있는 <strong>보조 기억장치(auxiliary memory / secondary storage / external memory)</strong> 를 사용합니다</p>
+</li>
+</ul>
+<h3 id="2-3-1-주기억장치"><a href="#2-3-1-주기억장치" class="headerlink" title="2.3.1 주기억장치"></a>2.3.1 주기억장치</h3><ul>
+<li><strong>Memory-mapped I/O</strong><br>주기억장치의 일부 주소가 입출력을 위해 예약되어 있으며, 이 주소에서 읽거나 쓰면 장치 레지스터로부터 데이터를 읽거나 쓰는 결과가 되는 것</li>
+<li>CPU가 I/O 포트를 통해 연결된 장치와 데이터를 교환하는 2가지 방식<br>– <strong>Programmed I/O</strong> : CPU가 계속 장치의 상태를 검사(polling)하는 방식<br>– <strong>Interrupt</strong> : 다음 데이터를 처리할 준비가 되면 장치 제어기는 인터럽트를 통해 그 사실을 CPU에 알리는 방식</li>
+<li>주기억장치와 CPU의 속도 차이를 극복하기 위해 주기억장치와 CPU 사이에 <strong>캐시(cache)</strong> 라고 하는 고속 메모리 버퍼를 사용</li>
+</ul>
+<img data-src="https://teachcomputerscience.com/wp-content/uploads/2016/12/cache_animation.gif">
+
+<h3 id="2-3-2-보조기억장치-자기-디스크"><a href="#2-3-2-보조기억장치-자기-디스크" class="headerlink" title="2.3.2 보조기억장치(자기 디스크)"></a>2.3.2 보조기억장치(자기 디스크)</h3><img style="height:120px; float:right;" data-src="https://www.applexsoft.com/glossary/harddisk.jpg">
+
+<ul>
+<li><p>자기 디스크는 <strong>플래터(platter)</strong> 라고 하는 여러 개의 원형 판으로 구성이 플래터는 다시 원형 모양의 <strong>트랙(track)</strong> 으로 구성<br>트랙은 다시 여러 개의 <strong>섹터(sector)</strong> 로 나뉘어짐</p>
+<br>
+<img style="height:150px; float:right;" data-src="http://mblogthumb1.phinf.naver.net/20141226_132/capemay_1419579186649T86jM_PNG/010edsector.png?type=w2">
+</li>
+<li><p>단순하게 섹터를 여러 개를 하나로 묶은 것을 <strong>클러스터(cluster)</strong> 라 하고, 같은 위치에 있는 트랙의 모음을 <strong>실린더(cylinder)</strong> 라고 합니다<br>– 클러스터는 <u>운영체제에서 사용하는 데이터 저장의 최소 단위</u></p>
+<br>
+<br></li>
+<li><p><strong>디스크의 속도</strong> = 컴퓨터로 데이터를 전송하는 비율인 전송률(transfer rate) + 임의접근 시간(random-access time)이라고 하는 위치결정 시간(positioning time)에 의해 결정됩니다</p>
+</li>
+<li><p>데이터의 교환은 특수한 제어기를 통해 이루어집니다<br>컴퓨터 연결 끝에는 호스트 제어기<br>디스크 자체 내에는 디스크 제어기 가 있습니다</p>
+</li>
+<li><p>디스크 제어기는 자체적으로 캐시를 가지고 있습니다</p>
+</li>
+<li><p>실제 데이터는 디스크 제어기에 의해 디스크에서 캐시로 옮겨지고, 호스트 제어기는 캐시에 있는 데이터를 주기억장치로 옮깁니다</p>
+</li>
+</ul>
+<h2 id="2-4-저장장치의-계층구조"><a href="#2-4-저장장치의-계층구조" class="headerlink" title="2.4 저장장치의 계층구조"></a>2.4 저장장치의 계층구조</h2><img data-src="https://eunhyejung.github.io/assets/contents/content03.PNG">
+
+<ul>
+<li>계층구조에서 위에 위치할 수록 속도는 빠르지만 고가이며 휘발성의 성질을 가집니다</li>
+<li>두 저장장치의 속도 차이는 중간에 빠른 캐시를 설치하여 극복할 수 있습니다</li>
+<li>시스템을 구성할 때 저장장치의 계층구조를 균형있게 잘 구성하면 저렴한 가격에 높은 성능을 얻을 수 있습니다</li>
+</ul>
+<h3 id="2-4-1-캐싱"><a href="#2-4-1-캐싱" class="headerlink" title="2.4.1 캐싱"></a>2.4.1 캐싱</h3><ul>
+<li>CPU가 데이터를 필요하면 먼저 캐시에 그 데이터가 있는지 검사합니다<br>만약 있으면 캐시에서 바로 사용하고 없으면 주기억장치에 있는 데이터를 사용하지만 이 데이터의 복사본을 캐시에 보관합니다. 이는 데이터를 곧 다시 사용할 확률이 높기 때문입니다</li>
+<li><strong>캐시의 크기는 제한</strong> 되어 있으므로 이것을 잘 관리하여야 시스템의 성능을 높일 수 있습니다. 캐시의 크기와 교체 정책(replacement policy)을 잘 선택하면 원하는 데이터가 캐시에 있을 확률을 80%에서 99%까지 높일 수 있습니다</li>
+<li>주기억장치는 CPU와 보조기억장치 사이에 있는 캐시로 사용될 수 있습니다</li>
+</ul>
+<h3 id="2-4-2-일관성"><a href="#2-4-2-일관성" class="headerlink" title="2.4.2 일관성"></a>2.4.2 일관성</h3><ul>
+<li>저장장치의 계층구조를 사용하면 같은 데이터가 여러 레벨에 존재할 수 있습니다</li>
+<li>한번에 하나의 프로세스만 동작하면 아무 문제가 되지 않지만!<br>여러 프로세스가 같은 데이터를 접근하고자 하면 모든 프로세스가 최신의 데이터를 얻을 수 있도록 해야 합니다<br><u>이 문제는 다중프로세서 시스템에서 더욱 심각합니다</u></li>
+<li>분산 환경에서는 여러 파일의 복사본이 여러 컴퓨터에 분산되어 있을 수 있습니다. 따라서 하나의 복사본에 대한 갱신이 이루어지면 다른 복사본도 갱신되도록 하여야 합니다</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><span class="exturl" data-url="aHR0cDovL3BlZGlhYS5jb20vZGlmZmVyZW5jZS1iZXR3ZWVuLXRyYXAtYW5kLWludGVycnVwdC8=" title="http://pediaa.com/difference-between-trap-and-interrupt/">Difference between Trap and Interrupt<i class="fa fa-external-link"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3JlY2lwZXMuZWdsb29zLmNvbS81MTUyODY3" title="http://recipes.egloos.com/5152867">DMA-CPU몰래 영차영차<i class="fa fa-external-link"></i></span></p>
+<p><br><br><br></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/OS/" rel="tag"># OS</a>
+          
+            <a href="/tags/운영체/" rel="tag"># 운영체</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/Web-Spring-20190211-spring-IoC/" rel="next" title="스프링 - IoC Containers">
+                <i class="fa fa-chevron-left"></i> 스프링 - IoC Containers
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/Language-Python-20190712-01-hello-python/" rel="prev" title="(파이썬) 01 HELLO, PYTHON!">
+                (파이썬) 01 HELLO, PYTHON! <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#컴퓨터-시스템-구조"><span class="nav-text">컴퓨터 시스템 구조</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-컴퓨터-시스템의-동작"><span class="nav-text">2.1 컴퓨터 시스템의 동작</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-I-O-구조"><span class="nav-text">2.2 I/O 구조</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-I-O-Interrupt"><span class="nav-text">2.2.1 I/O Interrupt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-DMA-구조"><span class="nav-text">2.2.2 DMA 구조</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-저장-구조"><span class="nav-text">2.3 저장 구조</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-주기억장치"><span class="nav-text">2.3.1 주기억장치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-보조기억장치-자기-디스크"><span class="nav-text">2.3.2 보조기억장치(자기 디스크)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-저장장치의-계층구조"><span class="nav-text">2.4 저장장치의 계층구조</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-캐싱"><span class="nav-text">2.4.1 캐싱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-일관성"><span class="nav-text">2.4.2 일관성</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/CS-OS-20190212-os-overview-2/";
+    this.page.identifier = "[object Object]/CS-OS-20190212-os-overview-2/";
+    this.page.title = '운영체제 - Overview_2';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>

@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-list2/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190806-sw-list1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -403,224 +403,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-list2/" class="post-title-link" itemprop="url">(파이썬 S/W 문제해결 기본) List2 - 4836번 4837번 4839번 4843번</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-08-07 22:55:10" itemprop="dateCreated datePublished" datetime="2019-08-07T22:55:10+09:00">2019-08-07</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-list2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-list2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="4836번-색칠하기"><a href="#4836번-색칠하기" class="headerlink" title="4836번 - 색칠하기"></a>4836번 - 색칠하기</h1><div class="note ">
-            <ul><li>시간 : 10개 테스트케이스를 합쳐서 Python의 경우 2초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T + <span class="number">1</span>):</span><br><span class="line">    red_color = []</span><br><span class="line">    blue_color = []</span><br><span class="line"></span><br><span class="line">    N = int(input())</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        purple_color = <span class="number">0</span></span><br><span class="line">        r1, c1, r2, c2, color = map(int, input().split())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> range(c1, c2+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> range(r1, r2+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> color==<span class="number">1</span>:</span><br><span class="line">                    red_color.append([x,y])</span><br><span class="line">                <span class="keyword">elif</span> color==<span class="number">2</span>:</span><br><span class="line">                    blue_color.append([x,y])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> red <span class="keyword">in</span> red_color:</span><br><span class="line">            <span class="keyword">for</span> blue <span class="keyword">in</span> blue_color:</span><br><span class="line">                <span class="keyword">if</span> red == blue:</span><br><span class="line">                    purple_color += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, purple_color))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="4837번-부분집합의-합"><a href="#4837번-부분집합의-합" class="headerlink" title="4837번 - 부분집합의 합"></a>4837번 - 부분집합의 합</h1><div class="note ">
-            <ul><li>시간 : 10개 테스트케이스를 합쳐서 Python의 경우 2초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>부분집합을 구할 때, 비트연산을 사용</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">set_A = [num <span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">13</span>)]</span><br><span class="line">subset_A = [[set_A[j] <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">12</span>) <span class="keyword">if</span> i&amp;(<span class="number">1</span>&lt;&lt;j)] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>&lt;&lt;<span class="number">12</span>)]</span><br><span class="line"></span><br><span class="line">T = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T + <span class="number">1</span>):</span><br><span class="line">    N, K = map(int, input().split())    <span class="comment"># N : 부분집합 원소의 수, K : 부분집합의 합</span></span><br><span class="line">    cnt=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> subset <span class="keyword">in</span> subset_A:</span><br><span class="line">        <span class="keyword">if</span> len(subset)==N <span class="keyword">and</span> sum(subset)==K:</span><br><span class="line">            cnt+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, cnt))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="4839번-이진탐색"><a href="#4839번-이진탐색" class="headerlink" title="4839번 - 이진탐색"></a>4839번 - 이진탐색</h1><div class="note ">
-            <ul><li>시간 : 10개 테스트케이스를 합쳐서 Python의 경우 2초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>이진탐색 재귀함수</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(left, right, key, cnt)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> left&gt;right:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        middle = (left+right)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> key==middle:</span><br><span class="line">            <span class="keyword">return</span> cnt</span><br><span class="line">        <span class="keyword">elif</span> key&lt;middle:</span><br><span class="line">            <span class="keyword">return</span> binary_search(left, middle, key, cnt+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> binary_search(middle, right, key, cnt+<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">T = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T + <span class="number">1</span>):</span><br><span class="line">    P, A, B = map(int, input().split())</span><br><span class="line"></span><br><span class="line">    winner = <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> binary_search(<span class="number">1</span>, P, A, <span class="number">0</span>)&lt;binary_search(<span class="number">1</span>, P, B, <span class="number">0</span>):</span><br><span class="line">        winner =<span class="string">'A'</span></span><br><span class="line">    <span class="keyword">elif</span> binary_search(<span class="number">1</span>, P, A, <span class="number">0</span>)&gt;binary_search(<span class="number">1</span>, P, B, <span class="number">0</span>):</span><br><span class="line">        winner = <span class="string">'B'</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, winner))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="4843번-특별한-정렬"><a href="#4843번-특별한-정렬" class="headerlink" title="4843번 - 특별한 정렬"></a>4843번 - 특별한 정렬</h1><div class="note ">
-            <ul><li>시간 : 10개 테스트케이스를 합쳐서 Python의 경우 2초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>정렬시키고 양끝에서 안쪽으로 iter 반복</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">special_sort</span><span class="params">(arr)</span>:</span></span><br><span class="line">    s_arr = sorted(arr)</span><br><span class="line">    length = len(s_arr)</span><br><span class="line"></span><br><span class="line">    special_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</span><br><span class="line">        <span class="keyword">if</span> i%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">            special_arr.append(s_arr[length<span class="number">-1</span>-i//<span class="number">2</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            special_arr.append((s_arr[i//<span class="number">2</span>]))</span><br><span class="line">    <span class="keyword">return</span> special_arr</span><br><span class="line"></span><br><span class="line">T = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T + <span class="number">1</span>):</span><br><span class="line">    N = int(input())</span><br><span class="line">    arr_N = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> input().split()]</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'#&#123;&#125; '</span>.format(test_case), end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> special_sort(arr_N)[:<span class="number">10</span>]:</span><br><span class="line">        print(a, end=<span class="string">' '</span>)</span><br><span class="line">    print()</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-list1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/sw-list1/" class="post-title-link" itemprop="url">(파이썬 S/W 문제해결 기본) List1 - 4828번 4831번 4834번 4835번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190806-sw-list1/" class="post-title-link" itemprop="url">(파이썬 S/W 문제해결 기본) List1 - 4828번 4831번 4834번 4835번</a>
               
             
           </h2>
@@ -660,7 +443,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -678,8 +468,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-list1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-list1/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190806-sw-list1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190806-sw-list1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -722,7 +512,7 @@
 <p>한 줄을 한번에 입력 받는 input() 말고 띄어쓰기 마다 입력받는 방법이 없을까?<br>sys.stdin.readline() 을 사용하면 시간 단축은 많이 된다는 것 같다</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">T = int(input())            <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">    N = int(input())        <span class="comment"># 5 &lt;= N &lt;= 1000</span></span><br><span class="line">    max = <span class="number">1</span>; min = <span class="number">1000000</span>  <span class="comment"># 1&lt;= a &lt;= 1000000</span></span><br><span class="line">    a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> sys.stdin.readline().split()]</span><br><span class="line">    <span class="comment"># = [int(num) for num in input().split()]</span></span><br><span class="line">    <span class="comment"># = list(map(int, input().split()))</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> a:</span><br><span class="line">        <span class="keyword">if</span> num&gt;max:</span><br><span class="line">            max = num</span><br><span class="line">        <span class="keyword">if</span> num&lt;min:</span><br><span class="line">            min = num</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, max-min))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">T = int(input()) <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">N = int(input()) <span class="comment"># 5 &lt;= N &lt;= 1000</span></span><br><span class="line">max = <span class="number">1</span>; min = <span class="number">1000000</span> <span class="comment"># 1&lt;= a &lt;= 1000000</span></span><br><span class="line">a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> sys.stdin.readline().split()] <span class="comment"># = [int(num) for num in input().split()] # = list(map(int, input().split()))</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> a:</span><br><span class="line">        <span class="keyword">if</span> num&gt;max:</span><br><span class="line">            max = num</span><br><span class="line">        <span class="keyword">if</span> num&lt;min:</span><br><span class="line">            min = num</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, max-min))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -734,7 +524,7 @@
 <p>자동차경주대회 문제랑 비슷</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input())            <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">    K, N, M = map(int, input().split())    <span class="comment"># k:최대 이동 거리, n:총 정거장 수 , m:충전기 정류장 수</span></span><br><span class="line">    bus_stop = [int(stop) <span class="keyword">for</span> stop <span class="keyword">in</span> input().split()]</span><br><span class="line">    charge_stop = [<span class="number">0</span>]*(N+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(M):</span><br><span class="line">        charge_stop[bus_stop[i]] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    bus_position = <span class="number">0</span></span><br><span class="line">    max_stop = K</span><br><span class="line">    cnt=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        check = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(bus_position+<span class="number">1</span>, max_stop+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> charge_stop[i] == <span class="number">1</span>:</span><br><span class="line">                bus_position = i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                check += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> check == K:</span><br><span class="line">            cnt = <span class="number">0</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line">        max_stop = bus_position + K</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> max_stop &gt;= N:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">'#%s %d'</span>%(test_case, cnt))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input()) <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">K, N, M = map(int, input().split()) <span class="comment"># k:최대 이동 거리, n:총 정거장 수 , m:충전기 정류장 수</span></span><br><span class="line">bus_stop = [int(stop) <span class="keyword">for</span> stop <span class="keyword">in</span> input().split()]</span><br><span class="line">charge_stop = [<span class="number">0</span>]\*(N+<span class="number">1</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(M):</span><br><span class="line">charge_stop[bus_stop[i]] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    bus_position = <span class="number">0</span></span><br><span class="line">    max_stop = K</span><br><span class="line">    cnt=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        check = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(bus_position+<span class="number">1</span>, max_stop+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> charge_stop[i] == <span class="number">1</span>:</span><br><span class="line">                bus_position = i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                check += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> check == K:</span><br><span class="line">            cnt = <span class="number">0</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line">        max_stop = bus_position + K</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> max_stop &gt;= N:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">'#%s %d'</span>%(test_case, cnt))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -746,7 +536,7 @@
 <p>카드 장수가 같을 때 큰 숫자를 선택해야하는 조건을 주의</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input())                        <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">    N = int(input())                    <span class="comment"># 5 &lt;= N &lt;= 100</span></span><br><span class="line">    a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> input()]   <span class="comment"># 0 &lt;= a &lt;= 9</span></span><br><span class="line"></span><br><span class="line">    cards = [<span class="number">0</span>] * <span class="number">10</span></span><br><span class="line">    max_cnt = <span class="number">0</span></span><br><span class="line">    max_idx = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        cards[a[i]] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> cards[a[i]] &gt; max_cnt:</span><br><span class="line">            max_cnt = cards[a[i]]</span><br><span class="line">            max_idx = a[i]</span><br><span class="line">        <span class="keyword">elif</span> cards[a[i]] == max_cnt:</span><br><span class="line">            <span class="keyword">if</span> a[i] &gt; max_idx:</span><br><span class="line">                max_idx = a[i]</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125; &#123;&#125;"</span>.format(test_case, max_idx, max_cnt))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input()) <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">N = int(input()) <span class="comment"># 5 &lt;= N &lt;= 100</span></span><br><span class="line">a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> input()] <span class="comment"># 0 &lt;= a &lt;= 9</span></span><br><span class="line"></span><br><span class="line">    cards = [<span class="number">0</span>] * <span class="number">10</span></span><br><span class="line">    max_cnt = <span class="number">0</span></span><br><span class="line">    max_idx = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        cards[a[i]] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> cards[a[i]] &gt; max_cnt:</span><br><span class="line">            max_cnt = cards[a[i]]</span><br><span class="line">            max_idx = a[i]</span><br><span class="line">        <span class="keyword">elif</span> cards[a[i]] == max_cnt:</span><br><span class="line">            <span class="keyword">if</span> a[i] &gt; max_idx:</span><br><span class="line">                max_idx = a[i]</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125; &#123;&#125;"</span>.format(test_case, max_idx, max_cnt))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -755,10 +545,9 @@
           </div>
 
 <blockquote>
-<p>시간복잡도 : 정렬 sort() - O(nlogn)<br>        : 최대,최소 max(),min() - O(n)</p>
-</blockquote>
+<dl><dt>시간복잡도 : 정렬 sort() - O(nlogn)</dt><dd>최대,최소 max(),min() - O(n)</dd></dl></blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input())                        <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">    N, M = map(int, input().split())    <span class="comment"># 10 &lt;= N &lt;= 100 , 2 &lt;= M &lt;= N</span></span><br><span class="line">    a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> input().split()]   <span class="comment"># 1 &lt;= a &lt;= 10000</span></span><br><span class="line"></span><br><span class="line">    sum_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N - M + <span class="number">1</span>):</span><br><span class="line">        sum_list.append(sum(a[i:i + M]))</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, max(sum_list) - min(sum_list)))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">T = int(input()) <span class="comment"># 1 &lt;= T &lt;= 50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> test_case <span class="keyword">in</span> range(<span class="number">1</span>, T+<span class="number">1</span>):</span><br><span class="line">N, M = map(int, input().split()) <span class="comment"># 10 &lt;= N &lt;= 100 , 2 &lt;= M &lt;= N</span></span><br><span class="line">a = [int(num) <span class="keyword">for</span> num <span class="keyword">in</span> input().split()] <span class="comment"># 1 &lt;= a &lt;= 10000</span></span><br><span class="line"></span><br><span class="line">    sum_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N - M + <span class="number">1</span>):</span><br><span class="line">        sum_list.append(sum(a[i:i + M]))</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"#&#123;&#125; &#123;&#125;"</span>.format(test_case, max(sum_list) - min(sum_list)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -820,7 +609,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6203/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190805-sw-6203/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -840,7 +629,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-6203/" class="post-title-link" itemprop="url">(SW Expert Academy) 객체지향 - 6203번 6208번 6217번 6223번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6203/" class="post-title-link" itemprop="url">(SW Expert Academy) 객체지향 - 6203번 6208번 6217번 6223번</a>
               
             
           </h2>
@@ -880,7 +669,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -898,8 +694,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6203/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6203/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6203/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190805-sw-6203/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -942,7 +738,7 @@
 <p>성적 총합 출력</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">subject</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, kor, eng, math)</span>:</span></span><br><span class="line">        self.__kor = kor</span><br><span class="line">        self.__eng = eng</span><br><span class="line">        self.__math = math</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">total</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__kor+self.__eng+self.__math</span><br><span class="line"></span><br><span class="line">score = input().split(<span class="string">', '</span>)</span><br><span class="line"></span><br><span class="line">stduent = subject(int(score[<span class="number">0</span>]),int(score[<span class="number">1</span>]),int(score[<span class="number">2</span>]))</span><br><span class="line">print(<span class="string">"국어, 영어, 수학의 총점: &#123;&#125;"</span>.format(stduent.total()))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">subject</span>:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> **<span class="title">init</span>**<span class="params">(self, kor, eng, math)</span>:</span></span><br><span class="line">self.**kor = kor</span><br><span class="line">self.**eng = eng</span><br><span class="line">self.\_\_math = math</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">total</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__kor+self.__eng+self.__math</span><br><span class="line"></span><br><span class="line">score = input().split(<span class="string">', '</span>)</span><br><span class="line"></span><br><span class="line">stduent = subject(int(score[<span class="number">0</span>]),int(score[<span class="number">1</span>]),int(score[<span class="number">2</span>]))</span><br><span class="line">print(<span class="string">"국어, 영어, 수학의 총점: &#123;&#125;"</span>.format(stduent.total()))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -954,7 +750,7 @@
 <p>국적 두 번 출력</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Korean</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printNationality</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"대한민국"</span>)</span><br><span class="line"></span><br><span class="line">korean = Korean()</span><br><span class="line">korean.printNationality()</span><br><span class="line">korean.printNationality()</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Korean</span>:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printNationality</span><span class="params">(self)</span>:</span></span><br><span class="line">print(<span class="string">"대한민국"</span>)</span><br><span class="line"></span><br><span class="line">korean = Korean()</span><br><span class="line">korean.printNationality()</span><br><span class="line">korean.printNationality()</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -966,7 +762,7 @@
 <p>이렇게 하는게 맞는건지 잘 모르겠다…</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="string">"""Parnet/Super class"""</span></span><br><span class="line">    _name1 = <span class="string">"홍길동"</span></span><br><span class="line">    _name2 = <span class="string">"이순신"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @name.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self._name = name</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"이름: "</span>+self._name1)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GraduateStudent</span><span class="params">(Student)</span>:</span></span><br><span class="line">    <span class="string">"""Child/Sub class"""</span></span><br><span class="line">    __major = <span class="string">"컴퓨터"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.__name = super()._name2</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"이름: &#123;&#125;, 전공: &#123;&#125;"</span>.format(self.__name, self.__major))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Student().show()</span><br><span class="line">GraduateStudent().show()</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line"><span class="string">"""Parnet/Super class"""</span></span><br><span class="line">\_name1 = <span class="string">"홍길동"</span></span><br><span class="line">\_name2 = <span class="string">"이순신"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @name.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self._name = name</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"이름: "</span>+self._name1)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GraduateStudent</span><span class="params">(Student)</span>:</span></span><br><span class="line"><span class="string">"""Child/Sub class"""</span></span><br><span class="line">\_\_major = <span class="string">"컴퓨터"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.__name = super()._name2</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"이름: &#123;&#125;, 전공: &#123;&#125;"</span>.format(self.__name, self.__major))</span><br><span class="line"></span><br><span class="line">Student().show()</span><br><span class="line">GraduateStudent().show()</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -978,10 +774,255 @@
 <p>원의 면적을 구할 때, 파이(pi)를 파이썬의 math를 사용하여 계산하려 했지만 출력 결과는 소수점 둘째 자리까지인데 버림이 되어있다.<br>round() 를 사용하여 반올림하면 결과값이 다르게 나와서 파이를 3.14로 계산 하였다.<br>round() 함수에서 반올림은 사사오입 원칙을 따른다는 것을 기억!!</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span>:</span></span><br><span class="line">    __radius = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">area</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">3.14</span>*(self.__radius**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"원의 면적: &#123;&#125;"</span>.format(Circle().area()))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span>:</span></span><br><span class="line">\_\_radius = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">area</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">3.14</span>*(self.__radius**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"원의 면적: &#123;&#125;"</span>.format(Circle().area()))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190805-sw-6232/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6232/" class="post-title-link" itemprop="url">(SW Expert Academy) 문자열 - 6232번 6239번 6241번 6678번 6243번 6248번</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-05 12:35:38" itemprop="dateCreated datePublished" datetime="2019-08-05T12:35:38+09:00">2019-08-05</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6232/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190805-sw-6232/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1번-6232번"><a href="#1번-6232번" class="headerlink" title="1번 - 6232번"></a>1번 - 6232번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>나눗셈 몫으로 정수를 원하면 ‘//‘ 사용!</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_palindrome</span><span class="params">(word)</span>:</span></span><br><span class="line">word_list = list(word)</span><br><span class="line">length = len(word)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,length//<span class="number">2</span>):</span><br><span class="line"><span class="keyword">if</span> word_list[i] != word_list[length<span class="number">-1</span>-i]:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">word = input()</span><br><span class="line">print(word)</span><br><span class="line"><span class="keyword">if</span>(is_palindrome(word)):</span><br><span class="line">print(<span class="string">"입력하신 단어는 회문(Palindrome)입니다."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">print(<span class="string">"입력하신 단어는 회문(Palindrome)이 아닙니다."</span>)</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="2번-6239번"><a href="#2번-6239번" class="headerlink" title="2번 - 6239번"></a>2번 - 6239번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>단어 역순 출력</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">' '</span>.join(input().split(<span class="string">' '</span>)[::<span class="number">-1</span>]))</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="3번-6241번"><a href="#3번-6241번" class="headerlink" title="3번 - 6241번"></a>3번 - 6241번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">URL = <span class="string">'http://www.example.com/test?p=1&amp;q=2'</span></span><br><span class="line">protocol = URL[:URL.find(<span class="string">'://'</span>)]</span><br><span class="line">host = URL[URL.find(<span class="string">'://'</span>)+<span class="number">3</span>:URL.rfind(<span class="string">'/'</span>)]</span><br><span class="line">others = URL[URL.rfind(<span class="string">'/'</span>)+<span class="number">1</span>:]</span><br><span class="line"></span><br><span class="line">print(<span class="string">"protocol: &#123;&#125;\nhost: &#123;&#125;\nothers: &#123;&#125;"</span>.format(protocol,host,others))</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="4번-6678번"><a href="#4번-6678번" class="headerlink" title="4번 - 6678번"></a>4번 - 6678번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>아래와 같은 방법으로 제출하면 메모리 에러가 뜬다. 즉, 아무 입력 없이 엔터를 눌러도 종료되지 않고 계속 돌아간다는거 같은데<br>다른 IDE를 사용하여 프로그램을 돌려보면 정상적으로 작동된다</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">words = input()</span><br><span class="line"><span class="keyword">if</span> words==<span class="string">''</span>:</span><br><span class="line"><span class="keyword">break</span></span><br><span class="line">print(<span class="string">"&gt;&gt; &#123;&#125;"</span>.format(words.upper()))</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="5번-6243번"><a href="#5번-6243번" class="headerlink" title="5번 - 6243번"></a>5번 - 6243번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>.split(‘ ‘)으로 공백 구분, set() 으로 중복값 없애고 sorted()로 순서를 정렬</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">','</span>.join(sorted(list(set(input().split(<span class="string">' '</span>))))))</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="7번-6248번"><a href="#7번-6248번" class="headerlink" title="7번 - 6248번"></a>7번 - 6248번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">raw_str = list(input())</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(raw_str), <span class="number">2</span>):</span><br><span class="line">print(<span class="string">''</span>.join(raw_str[i]), end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+          </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
         
@@ -1029,7 +1070,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1073,7 +1114,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1263,13 +1304,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1339,7 +1374,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

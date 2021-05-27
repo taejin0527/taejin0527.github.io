@@ -383,292 +383,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/02-functions-and-getting-help/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/02-functions-and-getting-help/" class="post-title-link" itemprop="url">(파이썬) 02 Functions and Getting Help</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-07-15 15:06:03" itemprop="dateCreated datePublished" datetime="2019-07-15T15:06:03+09:00">2019-07-15</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/02-functions-and-getting-help/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/02-functions-and-getting-help/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>Kaggle 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbQ==" title="https://www.kaggle.com">Kaggle<i class="fa fa-external-link"></i></span></li>
-<li>3강 ‘Functions and Getting Help’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9mdW5jdGlvbnMtYW5kLWdldHRpbmctaGVscA==" title="https://www.kaggle.com/colinmorris/functions-and-getting-help">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
-</ul>
-<hr>
-<h1 id="개요-Intro"><a href="#개요-Intro" class="headerlink" title="개요(Intro)"></a>개요(Intro)</h1><p>앞서 <code>print</code> 나 <code>abs</code> 와 같은 함수를 사용해 보았습니다. 파이썬에는 이 외에도 수 많은 내장 함수들을 가지고 있고 자신만의 함수를 정의하여 사용할 수도 있습니다.</p>
-<p>이번 강에서는 함수를 정의하고 사용하는 방법에 대해 배워보겠습니다.</p>
-<p><br><br><br></p>
-<h1 id="도움말-활용-Getting-Help"><a href="#도움말-활용-Getting-Help" class="headerlink" title="도움말 활용(Getting Help)"></a>도움말 활용(Getting Help)</h1><p>만약 <code>abs</code> 함수의 기능이 무엇인지 잊어버렸다면 어떻게 하시겠습니까?</p>
-<p><code>help()</code>함수는 아마 파이썬 함수 중에서도 가장 중요한 함수일 것입니다. <code>help()</code>함수의 정확한 사용법을 알게 된다면 대부분의 다른 함수들을 이해하는 열쇠를 쥐고 있는 것과 다름 없습니다.</p>
-<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><div class="note default">
-          <p><strong>예제</strong>,</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(round)</span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="first-unique-name-2"><div class="note success">
-          <p><strong>출력</strong>,</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on built-in function round in module builtins:</span><br><span class="line"></span><br><span class="line">round(...)</span><br><span class="line">    round(number[, ndigits]) -&gt; number</span><br><span class="line"></span><br><span class="line">    Round a number to a given precision in decimal digits (default 0 digits).</span><br><span class="line">    This returns an int when called with one argument, otherwise the</span><br><span class="line">    same type as the number. ndigits may be negative.</span><br><span class="line">    </span><br></pre></td></tr></table></figure><p><code>help()</code>함수는 2 가지를 보여줍니다:</p><ol><li><p>해당 함수의 헤더 <code>round(number[, ndigits])</code>. 이 경우 <code>round()</code> 함수가 <code>number</code>로 설정한 인자를 취한다는 것을 알 수 있습니다. 또한 사용자는 선택적으로 <code>ndigits</code>로 설정된 별도의 인자를 제공 할 수 있습니다.</p></li><li><p>해당 함수의 기능에 대한 (영어)설명</p></li></ol>
-        </div></div></div></div>
-
-<div class="note danger">
-            <p><strong><span style="color:red">Common pitfall(흔히하는 실수)</span></strong></p><p>함수(function)를 찾을 때 함수의 이름을 전달해야하며 함수를 호출 한 결과는 전달하지 말아야합니다.</p>
-          </div>
-
-<div class="tabs" id="pitfall"><ul class="nav-tabs"><li class="tab active"><a href="#pitfall-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#pitfall-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="pitfall-1"><p>What happens if we invoke help on a call to the function abs()?</p>
-<div class="note default">
-          <p><strong>결과를 확인해 보세요-&gt;</strong></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(round(<span class="number">-2.01</span>))</span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="pitfall-2"><div class="note danger">
-          <p><strong>원하던 결과가 아님</strong></p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on int object:</span><br><span class="line"></span><br><span class="line">class int(object)</span><br><span class="line"> |  int(x=0) -&gt; integer</span><br><span class="line"> |  int(x, base=10) -&gt; integer</span><br><span class="line"> |  </span><br><span class="line"> |  Convert a number or string to an integer, or return 0 if no arguments</span><br><span class="line"> |  are given.  If x is a number, return x.__int__().  For floating point</span><br><span class="line"> |  numbers, this truncates towards zero.</span><br><span class="line"> |  </span><br><span class="line"> |  If x is not a number or if base is given, then x must be a string,</span><br><span class="line"> |  bytes, or bytearray instance representing an integer literal in the</span><br><span class="line"> |  given base.  The literal can be preceded by &apos;+&apos; or &apos;-&apos; and be surrounded</span><br><span class="line"> |  by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.</span><br><span class="line"> |  Base 0 means to interpret the base from the string as an integer literal.</span><br><span class="line"> |  &gt;&gt;&gt; int(&apos;0b100&apos;, base=0)</span><br><span class="line"> |  4</span><br><span class="line"> |  </span><br><span class="line"> |  Methods defined here:</span><br><span class="line"> |  </span><br><span class="line"> |  __abs__(self, /)</span><br><span class="line"> |      abs(self)</span><br><span class="line"> |  </span><br><span class="line"> |  __add__(self, value, /)</span><br><span class="line"> |      Return self+value.</span><br><span class="line"> |  </span><br><span class="line"> |  __and__(self, value, /)</span><br><span class="line"> |      Return self&amp;value.</span><br><span class="line"> |  </span><br><span class="line"> |  __bool__(self, /)</span><br><span class="line"> |      self != 0</span><br><span class="line"> |  </span><br><span class="line"> |  __ceil__(...)</span><br><span class="line"> |      Ceiling of an Integral returns itself.</span><br><span class="line"> |  </span><br><span class="line"> |  __divmod__(self, value, /)</span><br><span class="line"> |      Return divmod(self, value).</span><br><span class="line"> |  </span><br><span class="line"> |  __eq__(self, value, /)</span><br><span class="line"> |      Return self==value.</span><br><span class="line"> |  </span><br><span class="line"> |  __float__(self, /)</span><br><span class="line"> |      float(self)</span><br><span class="line"> |  </span><br><span class="line"> |  __floor__(...)</span><br><span class="line"> |      Flooring an Integral returns itself.</span><br><span class="line"> |  </span><br><span class="line"> |  __floordiv__(self, value, /)</span><br><span class="line"> |      Return self//value.</span><br><span class="line"> |  </span><br><span class="line"> |  __format__(...)</span><br><span class="line"> |      default object formatter</span><br><span class="line"> |  </span><br><span class="line"> |  __ge__(self, value, /)</span><br><span class="line"> |      Return self&gt;=value.</span><br><span class="line"> |  </span><br><span class="line"> |  __getattribute__(self, name, /)</span><br><span class="line"> |      Return getattr(self, name).</span><br><span class="line"> |  </span><br><span class="line"> |  __getnewargs__(...)</span><br><span class="line"> |  </span><br><span class="line"> |  __gt__(self, value, /)</span><br><span class="line"> |      Return self&gt;value.</span><br><span class="line"> |  </span><br><span class="line"> |  __hash__(self, /)</span><br><span class="line"> |      Return hash(self).</span><br><span class="line"> |  </span><br><span class="line"> |  __index__(self, /)</span><br><span class="line"> |      Return self converted to an integer, if self is suitable for use as an index into a list.</span><br><span class="line"> |  </span><br><span class="line"> |  __int__(self, /)</span><br><span class="line"> |      int(self)</span><br><span class="line"> |  </span><br><span class="line"> |  __invert__(self, /)</span><br><span class="line"> |      ~self</span><br><span class="line"> |  </span><br><span class="line"> |  __le__(self, value, /)</span><br><span class="line"> |      Return self&lt;=value.</span><br><span class="line"> |  </span><br><span class="line"> |  __lshift__(self, value, /)</span><br><span class="line"> |      Return self&lt;&lt;value.</span><br><span class="line"> |  </span><br><span class="line"> |  __lt__(self, value, /)</span><br><span class="line"> |      Return self&lt;value.</span><br><span class="line"> |  </span><br><span class="line"> |  __mod__(self, value, /)</span><br><span class="line"> |      Return self%value.</span><br><span class="line"> |  </span><br><span class="line"> |  __mul__(self, value, /)</span><br><span class="line"> |      Return self*value.</span><br><span class="line"> |  </span><br><span class="line"> |  __ne__(self, value, /)</span><br><span class="line"> |      Return self!=value.</span><br><span class="line"> |  </span><br><span class="line"> |  __neg__(self, /)</span><br><span class="line"> |      -self</span><br><span class="line"> |  </span><br><span class="line"> |  __new__(*args, **kwargs) from builtins.type</span><br><span class="line"> |      Create and return a new object.  See help(type) for accurate signature.</span><br><span class="line"> |  </span><br><span class="line"> |  __or__(self, value, /)</span><br><span class="line"> |      Return self|value.</span><br><span class="line"> |  </span><br><span class="line"> |  __pos__(self, /)</span><br><span class="line"> |      +self</span><br><span class="line"> |  </span><br><span class="line"> |  __pow__(self, value, mod=None, /)</span><br><span class="line"> |      Return pow(self, value, mod).</span><br><span class="line"> |  </span><br><span class="line"> |  __radd__(self, value, /)</span><br><span class="line"> |      Return value+self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rand__(self, value, /)</span><br><span class="line"> |      Return value&amp;self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rdivmod__(self, value, /)</span><br><span class="line"> |      Return divmod(value, self).</span><br><span class="line"> |  </span><br><span class="line"> |  __repr__(self, /)</span><br><span class="line"> |      Return repr(self).</span><br><span class="line"> |  </span><br><span class="line"> |  __rfloordiv__(self, value, /)</span><br><span class="line"> |      Return value//self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rlshift__(self, value, /)</span><br><span class="line"> |      Return value&lt;&lt;self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rmod__(self, value, /)</span><br><span class="line"> |      Return value%self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rmul__(self, value, /)</span><br><span class="line"> |      Return value*self.</span><br><span class="line"> |  </span><br><span class="line"> |  __ror__(self, value, /)</span><br><span class="line"> |      Return value|self.</span><br><span class="line"> |  </span><br><span class="line"> |  __round__(...)</span><br><span class="line"> |      Rounding an Integral returns itself.</span><br><span class="line"> |      Rounding with an ndigits argument also returns an integer.</span><br><span class="line"> |  </span><br><span class="line"> |  __rpow__(self, value, mod=None, /)</span><br><span class="line"> |      Return pow(value, self, mod).</span><br><span class="line"> |  </span><br><span class="line"> |  __rrshift__(self, value, /)</span><br><span class="line"> |      Return value&gt;&gt;self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rshift__(self, value, /)</span><br><span class="line"> |      Return self&gt;&gt;value.</span><br><span class="line"> |  </span><br><span class="line"> |  __rsub__(self, value, /)</span><br><span class="line"> |      Return value-self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rtruediv__(self, value, /)</span><br><span class="line"> |      Return value/self.</span><br><span class="line"> |  </span><br><span class="line"> |  __rxor__(self, value, /)</span><br><span class="line"> |      Return value^self.</span><br><span class="line"> |  </span><br><span class="line"> |  __sizeof__(...)</span><br><span class="line"> |      Returns size in memory, in bytes</span><br><span class="line"> |  </span><br><span class="line"> |  __str__(self, /)</span><br><span class="line"> |      Return str(self).</span><br><span class="line"> |  </span><br><span class="line"> |  __sub__(self, value, /)</span><br><span class="line"> |      Return self-value.</span><br><span class="line"> |  </span><br><span class="line"> |  __truediv__(self, value, /)</span><br><span class="line"> |      Return self/value.</span><br><span class="line"> |  </span><br><span class="line"> |  __trunc__(...)</span><br><span class="line"> |      Truncating an Integral returns itself.</span><br><span class="line"> |  </span><br><span class="line"> |  __xor__(self, value, /)</span><br><span class="line"> |      Return self^value.</span><br><span class="line"> |  </span><br><span class="line"> |  bit_length(...)</span><br><span class="line"> |      int.bit_length() -&gt; int</span><br><span class="line"> |      </span><br><span class="line"> |      Number of bits necessary to represent self in binary.</span><br><span class="line"> |      &gt;&gt;&gt; bin(37)</span><br><span class="line"> |      &apos;0b100101&apos;</span><br><span class="line"> |      &gt;&gt;&gt; (37).bit_length()</span><br><span class="line"> |      6</span><br><span class="line"> |  </span><br><span class="line"> |  conjugate(...)</span><br><span class="line"> |      Returns self, the complex conjugate of any int.</span><br><span class="line"> |  </span><br><span class="line"> |  from_bytes(...) from builtins.type</span><br><span class="line"> |      int.from_bytes(bytes, byteorder, *, signed=False) -&gt; int</span><br><span class="line"> |      </span><br><span class="line"> |      Return the integer represented by the given array of bytes.</span><br><span class="line"> |      </span><br><span class="line"> |      The bytes argument must be a bytes-like object (e.g. bytes or bytearray).</span><br><span class="line"> |      </span><br><span class="line"> |      The byteorder argument determines the byte order used to represent the</span><br><span class="line"> |      integer.  If byteorder is &apos;big&apos;, the most significant byte is at the</span><br><span class="line"> |      beginning of the byte array.  If byteorder is &apos;little&apos;, the most</span><br><span class="line"> |      significant byte is at the end of the byte array.  To request the native</span><br><span class="line"> |      byte order of the host system, use `sys.byteorder&apos; as the byte order value.</span><br><span class="line"> |      </span><br><span class="line"> |      The signed keyword-only argument indicates whether two&apos;s complement is</span><br><span class="line"> |      used to represent the integer.</span><br><span class="line"> |  </span><br><span class="line"> |  to_bytes(...)</span><br><span class="line"> |      int.to_bytes(length, byteorder, *, signed=False) -&gt; bytes</span><br><span class="line"> |      </span><br><span class="line"> |      Return an array of bytes representing an integer.</span><br><span class="line"> |      </span><br><span class="line"> |      The integer is represented using length bytes.  An OverflowError is</span><br><span class="line"> |      raised if the integer is not representable with the given number of</span><br><span class="line"> |      bytes.</span><br><span class="line"> |      </span><br><span class="line"> |      The byteorder argument determines the byte order used to represent the</span><br><span class="line"> |      integer.  If byteorder is &apos;big&apos;, the most significant byte is at the</span><br><span class="line"> |      beginning of the byte array.  If byteorder is &apos;little&apos;, the most</span><br><span class="line"> |      significant byte is at the end of the byte array.  To request the native</span><br><span class="line"> |      byte order of the host system, use `sys.byteorder&apos; as the byte order value.</span><br><span class="line"> |      </span><br><span class="line"> |      The signed keyword-only argument determines whether two&apos;s complement is</span><br><span class="line"> |      used to represent the integer.  If signed is False and a negative integer</span><br><span class="line"> |      is given, an OverflowError is raised.</span><br><span class="line"> |  </span><br><span class="line"> |  ----------------------------------------------------------------------</span><br><span class="line"> |  Data descriptors defined here:</span><br><span class="line"> |  </span><br><span class="line"> |  denominator</span><br><span class="line"> |      the denominator of a rational number in lowest terms</span><br><span class="line"> |  </span><br><span class="line"> |  imag</span><br><span class="line"> |      the imaginary part of a complex number</span><br><span class="line"> |  </span><br><span class="line"> |  numerator</span><br><span class="line"> |      the numerator of a rational number in lowest terms</span><br><span class="line"> |  </span><br><span class="line"> |  real</span><br><span class="line"> |      the real part of a complex number</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-        </div>*</div></div></div>
-
-<p>파이썬 내부에서는 다음과 같이 표현식을 해석합니다. 먼저 <code>round(-2.01)</code> 값을 계산한 다음 해당 표현식의 결과에 대한 도움말(help)을 제공합니다.</p>
-<p>(도움말(OUTPUT)을 보면 <code>integer</code> 에 대해 참 많은 설명이 있습니다. 나중에 파이썬에서 객체, 메소드, 속성에 관해 배우고나면 위의 방대한 도움말 출력이 더 잘 이해가 될 것입니다.)</p>
-<p><code>round</code>는 짧은 docstring을 가진 매우 간단한 함수입니다. <code>help</code>는 <code>print</code> 함수와 같이 보다 복잡하고 다양한 기능을 가진 함수를 다룰 때 더 많은 도움을 줍니다. 다음 출력 결과가 지금은 이해가지 않아도 걱정하지 마세요… 지금은 이 도움말에서 새로운 점이 있는지 확인만 하셔도 됩니다.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(<span class="keyword">print</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Help on built-<span class="keyword">in</span> function <span class="keyword">print</span> <span class="keyword">in</span> module builtins:</span><br><span class="line"></span><br><span class="line">print(...)</span><br><span class="line">    print(value, ..., sep=<span class="string">' '</span>, end=<span class="string">'\n'</span>, file=sys.stdout, flush=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">    Prints the values to a stream, <span class="keyword">or</span> to sys.stdout by default.</span><br><span class="line">    Optional keyword arguments:</span><br><span class="line">    file:  a file-like object (stream); defaults to the current sys.stdout.</span><br><span class="line">    sep:   string inserted between values, default a space.</span><br><span class="line">    end:   string appended after the last value, default a newline.</span><br><span class="line">    flush: whether to forcibly flush the stream.</span><br></pre></td></tr></table></figure>
-
-<p>뭔가 발견하셨나요? 예를 들어 print가 <code>sep</code>라는 인자를 취할 수 있다는 것을 알 수 있습니다. 그리고 설명을 통해 인자들 사이에 넣는 문자열이라는 것을 알 수 있습니다.</p>
-<h2 id="함수정의-Defining-functions"><a href="#함수정의-Defining-functions" class="headerlink" title="함수정의(Defining functions)"></a>함수정의(Defining functions)</h2><p>내장 함수(builtin function)는 훌륭하지만, 상황에 따라 나만의 함수가 필요하기도 합니다. 아래의 간단한 예제를 살펴보겠습니다.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">least_difference</span><span class="params">(a, b, c)</span>:</span></span><br><span class="line">  diff1 = abs(a - b)</span><br><span class="line">  diff2 = abs(b - c)</span><br><span class="line">  diff3 = abs(a - c)</span><br><span class="line">  <span class="keyword">return</span> min(diff1, diff2, diff3)</span><br></pre></td></tr></table></figure>
-
-<p>이 코드는 <code>a</code>, <code>b</code>와 <code>c</code>라는 세 개의 매개변수를 취하는 <code>least_difference</code>라는 함수를 생성합니다.</p>
-<p>함수는 <code>def</code> 라는 키워드의 헤더로 시작합니다. <code>:</code> 다음에 들여쓰기 된 코드 블록(즉, 2번째 줄부터)은 함수가 호출 될 때 실행됩니다.</p>
-<p><code>return</code>은 함수와 관련된 또다른 고유한 키워드입니다. 파이썬에서 <code>return</code> 문을 만나면 함수를 즉시 종료하고 (return의)오른쪽에있는 값을 전달합니다.</p>
-<p><code>least_difference()</code>가 어떤 기능을 하는지 아시겠나요? 확실하지 않은 경우 몇 가지 예를 통해 언제든지 시도해 볼 수 있습니다.</p>
-<div class="tabs" id="df_examples"><ul class="nav-tabs"><li class="tab active"><a href="#df_examples-1"><i class="fa fa-eye"></i>EXAMPLE 1</a></li><li class="tab"><a href="#df_examples-2"><i class="fa fa-eye"></i>EXAMPLE 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="df_examples-1"><div class="note info">
-          <p><strong>함수에 인자를 넣어서 확인해 볼 수 있습니다</strong></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(</span><br><span class="line">  least_difference(<span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>),</span><br><span class="line">  least_difference(<span class="number">1</span>, <span class="number">10</span>, <span class="number">10</span>),</span><br><span class="line">  least_difference(<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>), <span class="comment"># Python allows trailing commas in argument lists. How nice is that?</span></span><br><span class="line">)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div>
-<div class="note success">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">9 0 1</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="df_examples-2"><div class="note info">
-          <p><strong>혹은 <code>help()</code> 함수를 사용해서 설명을 읽어볼 수 있습니다</strong></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(least_difference)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div>
-<div class="note warning">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on function least_difference in module __main__:</span><br><span class="line"></span><br><span class="line">least_difference(a, b, c)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>아쉽게도 파이썬은 제가 작성한 코드를 읽고 설명을 작성할 만큼 똑똑하지 못한 것을 볼 수 있습니다.하지만 우리는 함수를 작성하며 이 함수에 대한 설명을 추가할 수 있습니다. 이를 <b>docstring</b> 이라고 합니다
-        </div></div></div></div>
-
-<h3 id="Docstring"><a href="#Docstring" class="headerlink" title="Docstring"></a>Docstring</h3><div class="tabs" id="docstring"><ul class="nav-tabs"><li class="tab active"><a href="#docstring-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#docstring-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="docstring-1"><div class="note primary">
-          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">least_difference</span><span class="params">(a, b, c)</span>:</span></span><br><span class="line">  <span class="string">"""Return the smallest difference between any two numbers</span></span><br><span class="line"><span class="string">  among a, b and c.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &gt;&gt;&gt; least_difference(1, 5, -5)</span></span><br><span class="line"><span class="string">  4</span></span><br><span class="line"><span class="string">  """</span></span><br><span class="line">  diff1 = abs(a - b)</span><br><span class="line">  diff2 = abs(b - c)</span><br><span class="line">  diff3 = abs(a - c)</span><br><span class="line">  <span class="keyword">return</span> min(diff1, diff2, diff3)</span><br><span class="line"></span><br><span class="line">    </span><br></pre></td></tr></table></figure><p>docstring은 함수 바로 뒤에 삼중 따옴표 <code>&quot;&quot;&quot;</code>로 묶인 문자열(여러 줄로 작성 가능)입니다. 이 함수에 대한 <code>help()</code>를 호출하면 docstring이 표시됩니다.</p>
-        </div></div><div class="tab-pane" id="docstring-2"><div class="note default">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">help(least_difference)</span><br><span class="line">    </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on function least_difference in module __main__:</span><br><span class="line"></span><br><span class="line">least_difference(a, b, c)</span><br><span class="line">  Return the smallest difference between any two numbers</span><br><span class="line">  among a, b and c.</span><br><span class="line"></span><br><span class="line">  &gt;&gt;&gt; least_difference(1, 5, -5)</span><br><span class="line">  4</span><br></pre></td></tr></table></figure>
-        </div>
-
-<div class="note info">
-          <p><strong><span style="color=blue">참고</span></strong><br>docstring의 마지막 두 줄은 예제 함수의 호출과 결과입니다.<br>(<code>&gt;&gt;&gt;</code>는 파이썬 대화형 셸(interactive shells)에서 사용되는 명령 프롬프트에 대한 참조입니다.) 파이썬은 예제 호출을 실행하지 않습니다.<br>이는 독자의 이익을 위해서입니다. 함수의 docstring에 보편적으로 하나 이상의 예제 호출을 포함하지 않지만, 설명을 읽는 사람이 함수의 기능을 이해하도록 돕는 데 매우 효과적 일 수 있습니다.<br>실제 예를 보려면 numpy 함수 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL251bXB5L251bXB5L2Jsb2IvdjEuMTQuMi9udW1weS9saWIvdHdvZGltX2Jhc2UucHkjTDE0MC1MMTk0" title="https://github.com/numpy/numpy/blob/v1.14.2/numpy/lib/twodim_base.py#L140-L194">np.eye에 대한 설명서<i class="fa fa-external-link"></i></span>를 참조하십시오.</p>
-        </div></div></div></div>
-
-<p>훌륭한 프로그래머들은 docstring을 사용합니다. 만약 그 코드를 사용하고 버릴 계획이 아니라면 말이죠(이는 드문 경우입니다).<br>여러분도 docstring을 작성하는 습관을 들이시길 바랍니다.</p>
-<h2 id="반환값이-없는-함수들-Functions-that-don’t-return"><a href="#반환값이-없는-함수들-Functions-that-don’t-return" class="headerlink" title="반환값이 없는 함수들(Functions that don’t return)"></a>반환값이 없는 함수들(Functions that don’t return)</h2><p>만약 우리가 작성한 함수(function)에 <code>return</code> 키워드를 작성하지 않으면 어떻게 될까요?</p>
-<div class="tabs" id="return_example"><ul class="nav-tabs"><li class="tab active"><a href="#return_example-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#return_example-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="return_example-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">least_difference</span><span class="params">(a, b, c)</span>:</span></span><br><span class="line">  <span class="string">"""Return the smallest difference between any two numbers</span></span><br><span class="line"><span class="string">  among a, b and c.</span></span><br><span class="line"><span class="string">  """</span></span><br><span class="line">  diff1 = abs(a - b)</span><br><span class="line">  diff2 = abs(b - c)</span><br><span class="line">  diff3 = abs(a - c)</span><br><span class="line">  min(diff1, diff2, diff3)</span><br><span class="line"></span><br><span class="line">  print(</span><br><span class="line">    least_difference(<span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>),</span><br><span class="line">    least_difference(<span class="number">1</span>, <span class="number">10</span>, <span class="number">10</span>),</span><br><span class="line">    least_difference(<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>),</span><br><span class="line">  )</span><br><span class="line">  </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="return_example-2"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">None None None</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-
-<p>파이썬은 그러한 함수 정의를 허용합니다. 그 함수들의 호출 한 결과는 <code>None</code>이라는 특별한 값을 가집니다. (이는 다른 언어의 “null”개념과 유사합니다.)</p>
-<p><code>return</code> 문이 없으면 <code>least_difference</code> 는 완전히 무의미해 보이지만 이 함수를 통해 아무 것도 반환하지 않고 유용한 작업을 수행 할 수 있습니다.<br>우리는 이러한 함수를 2개나 봤습니다: <code>print()</code>와 <code>help()</code>함수는 아무 것도 반환하지 않았습니다.<br>우리는 함수들의 부작용(side effect - 화면에 텍스트를 넣는 것)을 위해서만 호출합니다. 유용한 부작용의 다른 예는 파일에 쓰거나 입력을 수정하는 것을 포함합니다.</p>
-<div class="tabs" id="mystery"><ul class="nav-tabs"><li class="tab active"><a href="#mystery-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#mystery-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="mystery-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mystery = print()</span><br><span class="line">print(mystery)</span><br><span class="line">      </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="mystery-2"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">None</span><br><span class="line">      </span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-
-<h2 id="기본-매개변수-Default-arguments"><a href="#기본-매개변수-Default-arguments" class="headerlink" title="기본 매개변수(Default arguments)"></a>기본 매개변수(Default arguments)</h2><p><code>help(print)</code> 를 호출하면 <code>print</code> 함수에는 몇 가지의 선택적 매개변수들(optinal arguments)이 있는 것을 볼 수 있습니다.<br>예를 들어, 출력하고자 하는 값들 사이에 우리가 원하는 특별한 <code>sep</code> 값을 지정할 수 있습니다.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, sep=<span class="string">' &lt; '</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 &lt; 2 &lt; 3</span><br></pre></td></tr></table></figure>
-
-<p>만약 특정한 값을 명시하지 않으면, <code>sep</code> 에는 기본값인 <code>&#39; &#39;</code>(공백) 이 들어갑니다.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
-
-<p>우리가 정의한 함수에 선택적 매개변수를 기본값으로 추가하는 것은 꽤 간단합니다.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet</span><span class="params">(who=<span class="string">"Colin"</span>)</span>:</span></span><br><span class="line">    print(<span class="string">"Hello,"</span>, who)</span><br><span class="line"></span><br><span class="line">greet()</span><br><span class="line">greet(who=<span class="string">"Kaggle"</span>)</span><br><span class="line"><span class="comment"># (In this case, we don't need to specify the name of the argument, because it's unambiguous.)</span></span><br><span class="line">greet(<span class="string">"world"</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hello, colin</span><br><span class="line">Hello, Kaggle</span><br><span class="line">Hello, world</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="함수들에-적용되는-함수들-Functions-Applied-to-Functions"><a href="#함수들에-적용되는-함수들-Functions-Applied-to-Functions" class="headerlink" title="함수들에 적용되는 함수들(Functions Applied to Functions)"></a>함수들에 적용되는 함수들(Functions Applied to Functions)</h2><p>처음에는 매우 추상적이라고 느낄 수 있지만 매우 매우 유용한 기술이 있습니다.<br>함수는 다른 함수의 매개변수로 사용될 수 있습니다. 몇 가지 예를 들어 보면 다음과 같습니다.</p>
-<div class="tabs" id="functions_example"><ul class="nav-tabs"><li class="tab active"><a href="#functions_example-1"><i class="fa fa-eye"></i>EXAMPLE 1</a></li><li class="tab"><a href="#functions_example-2"><i class="fa fa-eye"></i>EXAMPLE 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="functions_example-1"><div class="tabs" id="squared_call"><ul class="nav-tabs"><li class="tab active"><a href="#squared_call-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#squared_call-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="squared_call-1"><div class="note primary">
-          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mult_by_five</span><span class="params">(x)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">5</span> * x</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(fn, arg)</span>:</span></span><br><span class="line">  <span class="string">"""Call fn on arg"""</span></span><br><span class="line">  <span class="keyword">return</span> fn(arg)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">squared_call</span><span class="params">(fn, arg)</span>:</span></span><br><span class="line">  <span class="string">"""Call fn on the result of calling fn on arg"""</span></span><br><span class="line">  <span class="keyword">return</span> fn(fn(arg))</span><br><span class="line"></span><br><span class="line">print(</span><br><span class="line">  call(mult_by_five, <span class="number">1</span>),</span><br><span class="line">  squared_call(mult_by_five, <span class="number">1</span>),</span><br><span class="line">  sep=<span class="string">'\n'</span>, <span class="comment"># '\n' is the newline character - it starts a new line</span></span><br><span class="line">)</span><br><span class="line">      </span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="squared_call-2"><div class="note success">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">25</span><br></pre></td></tr></table></figure><p>다른 함수에서 작동하는 함수를 “Higher order function”이라고합니다.<br>아마 지금 당장은 잘 사용하지 않으시겠지만 파이썬에 내장된 매우 유용한 고차 함수들(higher order function)이 있습니다.</p>
-        </div></div></div></div></div><div class="tab-pane" id="functions_example-2"><div class="tabs" id="max"><ul class="nav-tabs"><li class="tab active"><a href="#max-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#max-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="max-1"><div class="note primary">
-          <p><code>max</code> 함수에 대한 흥미로운 예제입니다,</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mod_5</span><span class="params">(x)</span>:</span></span><br><span class="line">  <span class="string">"""Return the remainder of x after dividing by 5"""</span></span><br><span class="line">  <span class="keyword">return</span> x % <span class="number">5</span></span><br><span class="line"></span><br><span class="line">print(</span><br><span class="line">  <span class="string">'Which number is biggest?'</span>,</span><br><span class="line">  max(<span class="number">100</span>, <span class="number">51</span>, <span class="number">14</span>),</span><br><span class="line">  <span class="string">'Which number is the biggest modulo 5?'</span>,</span><br><span class="line">  max(<span class="number">100</span>, <span class="number">51</span>, <span class="number">14</span>, key=mod_5),</span><br><span class="line">  sep=<span class="string">'\n'</span>,</span><br><span class="line">)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="max-2"><div class="note success">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Which number is biggest?</span><br><span class="line">100</span><br><span class="line">Which number is the biggest modulo 5?</span><br><span class="line">14</span><br></pre></td></tr></table></figure><p>기본적으로 <code>max</code> 함수는 가장 큰 인수를 반환합니다.<br>그러나 선택적 <code>key</code> 인자를 사용하여 함수를 전달하면 <code>key(x)</code> (일명 ‘argmax’)를 최대화하는 인자 <code>x</code>를 반환합니다.</p>
-        </div></div></div></div></div></div></div>
-
-<p><br><br><br></p>
-<h1 id="연습문제-Your-Turn"><a href="#연습문제-Your-Turn" class="headerlink" title="연습문제(Your Turn)"></a>연습문제(Your Turn)</h1><p>함수(Function)는 파이썬 프로그래밍의 새로운 세상을 열어줍니다. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE1OA==" title="https://www.kaggle.com/kernels/fork/1275158">second Python programming exercise<i class="fa fa-external-link"></i></span></strong></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/blog-migration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -827,7 +541,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/01-hello-python/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20190712-01-hello-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -847,7 +561,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/01-hello-python/" class="post-title-link" itemprop="url">(파이썬) 01 HELLO, PYTHON!</a>
+                <a href="/[object Object]/Language-Python-20190712-01-hello-python/" class="post-title-link" itemprop="url">(파이썬) 01 HELLO, PYTHON!</a>
               
             
           </h2>
@@ -887,21 +601,21 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
 
                 
                 
@@ -919,8 +633,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/01-hello-python/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/01-hello-python/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Language-Python-20190712-01-hello-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20190712-01-hello-python/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -960,26 +674,26 @@
 <li>1강 ‘Hello, Python’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9oZWxsby1weXRob24=" title="https://www.kaggle.com/colinmorris/hello-python">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
 </ul>
 <hr>
-<h1 id="개요-Intro"><a href="#개요-Intro" class="headerlink" title="개요(Intro)"></a>개요(Intro)</h1><p>Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으시다면  “<span class="exturl" data-url="aHR0cHM6Ly93aWtpLnB5dGhvbi5vcmcvbW9pbi9CZWdpbm5lcnNHdWlkZS9Ob25Qcm9ncmFtbWVycw==" title="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python for Non-Programmers<i class="fa fa-external-link"></i></span>“ 해당 문서를 참고하는 것을 권장합니다)</p>
+<h1 id="개요-Intro"><a href="#개요-Intro" class="headerlink" title="개요(Intro)"></a>개요(Intro)</h1><p>Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으시다면 “<span class="exturl" data-url="aHR0cHM6Ly93aWtpLnB5dGhvbi5vcmcvbW9pbi9CZWdpbm5lcnNHdWlkZS9Ob25Qcm9ncmFtbWVycw==" title="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python for Non-Programmers<i class="fa fa-external-link"></i></span>“ 해당 문서를 참고하는 것을 권장합니다)</p>
 <p>우선, Python의 구문(syntax), 변수 할당(variable assignment), 산술 연산자(arithmetic operators)에 대해 가볍게 다루어 보겠습니다. 만약 Python에 경험이 있으시면 바로 연습문제(<span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE2Mw==" title="https://www.kaggle.com/kernels/fork/1275163">exercise with Kaggle Kernal<i class="fa fa-external-link"></i></span>)로 넘어가셔도 됩니다.</p>
 <p><br><br><br></p>
 <h1 id="Hello-Python"><a href="#Hello-Python" class="headerlink" title="Hello, Python!"></a>Hello, Python!</h1><p><strong>Python</strong> 은 영국의 코미디 그룹 <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTW9udHlfUHl0aG9u" title="https://en.wikipedia.org/wiki/Monty_Python">몬티 파이선(Monty Python)<i class="fa fa-external-link"></i></span>에서 그 이름을 가져왔습니다. 그들에게 존경을 표하는 마음으로 우리의 첫 python 프로그램을 스팸(spam)에 관한 그들의 코미디 스케치(skit)를 만들어 볼까요?<br><code>몬티 파이선의 코미디 스케치 25화 7분 50초부터 해당 에피소드가 등장한다고 합니다</code> - <span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj16TGloLVdRd0JTYw==" title="https://www.youtube.com/watch?v=zLih-WQwBSc">youtube 영상<i class="fa fa-external-link"></i></span></p>
 <div class="tabs" id="spam_skit"><ul class="nav-tabs"><li class="tab active"><a href="#spam_skit-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#spam_skit-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="spam_skit-1"><p>그저 재미로, 아래의 코드를 읽어보시고 어떻게 실행 될지 예상해 보세요.</p>
 <div class="note default">
-          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amout = <span class="number">0</span></span><br><span class="line">print(spam_amout)</span><br><span class="line"></span><br><span class="line"><span class="comment">#스팸, 계란, 스팸, 스팸, 베이컨과 스팸 주문</span></span><br><span class="line">spam_amout = spam_amout + <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> spam_amount &gt;<span class="number">0</span>:</span><br><span class="line">  print(<span class="string">"But I don't want ANY spam!"</span>)</span><br><span class="line"></span><br><span class="line">viking_song = <span class="string">"Spam "</span> * spam_amount</span><br><span class="line">print(viking_song)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div></div><div class="tab-pane" id="spam_skit-2"><p>결과는 아래와 같습니다</p>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amout = <span class="number">0</span></span><br><span class="line">print(spam_amout)</span><br><span class="line"></span><br><span class="line">      <span class="comment">#스팸, 계란, 스팸, 스팸, 베이컨과 스팸 주문</span></span><br><span class="line">      spam_amout = spam_amout + <span class="number">4</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> spam_amount &gt;<span class="number">0</span>:</span><br><span class="line">        print(<span class="string">"But I don't want ANY spam!"</span>)</span><br><span class="line"></span><br><span class="line">      viking_song = <span class="string">"Spam "</span> * spam_amount</span><br><span class="line">      print(viking_song)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="spam_skit-2"><p>결과는 아래와 같습니다</p>
 <div class="note success">
-          <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0</span><br><span class="line">But I don&apos;t want ANY spam!</span><br><span class="line">Spam Spam Spam Spam</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-        </div></div></div></div>
+            <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0</span><br><span class="line">But I don&apos;t want ANY spam!</span><br><span class="line">Spam Spam Spam Spam</span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
 <br>
-자, 이제 하나하나 분석해보겠습니다. 이 간단한 프로그램은  파이썬 코드가 어떻게 생겼는지, 어떻게 동작하는지를 여러 중요한 측면들을 통해 보여줍니다. 위에서 부터 순서대로 살펴보겠습니다.
+자, 이제 하나하나 분석해보겠습니다. 이 간단한 프로그램은 파이썬 코드가 어떻게 생겼는지, 어떻게 동작하는지를 여러 중요한 측면들을 통해 보여줍니다. 위에서 부터 순서대로 살펴보겠습니다.
 <br>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amount = <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>변수 선언</strong> : <code>spam_amount</code>라는 변수를 만들고 할당 연산자라고하는 = 을 사용하여 0 값을 할당합니다.</p>
 <blockquote>
-<p><strong>잠깐!</strong> :  만약 기존에 다른 언어(Java 또는 C ++ 등)로 프로그래밍을 하셨던 분의 경우 파이썬 코드에서는 몇 가지 빠져있는 것을 느꼈을 것 입니다.</p>
+<p><strong>잠깐!</strong> : 만약 기존에 다른 언어(Java 또는 C ++ 등)로 프로그래밍을 하셨던 분의 경우 파이썬 코드에서는 몇 가지 빠져있는 것을 느꼈을 것 입니다.</p>
 <blockquote>
 <p><code>spam_amount</code>를 할당하기 전에 “선언(declar)”할 필요가 없습니다.<br>우리는 파이썬에게 어떤 유형의 값인 <code>spam_amount</code>가 참조 할지를 말할 필요가 없습니다. 사실, 우리는 문자열(string)이나 부울(boolean)과 같은 다른 종류의 것을 참조하기 위해 <code>spam_amount</code>를 재할당 할 수 있습니다.</p>
 </blockquote>
@@ -1001,7 +715,7 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> spam_amount &gt; <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">"But I don't want ANY spam!"</span>) <span class="comment"># But I don't want ANY spam!</span></span><br><span class="line"></span><br><span class="line">viking_song = <span class="string">"Spam Spam Spam"</span></span><br><span class="line">print(viking_song)	<span class="comment">#Spam Spam Spam</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>조건문(conditional)</strong>에 대한 설명은 나중에 자세히 다루겠지만, 코드를 전혀 짜본적 없더라도 이 문장이 어떤 것을 의미하는지는 짐작할 수 있을 것 입니다. 파이썬은 가독성과 단순성 때문에 높이 평가됩니다.</p>
-<p>어떤 코드가 <code>if문</code>에 속해 있는지 구별하는 방법을 잘 보십시오. <code>&quot;But I don&#39;t want ANY spam!&quot;</code>  문자열은 <code>spam_amount</code>가 양수일 때만 출력되어야 합니다. 하지만 뒤에 <code>print (viking_song)</code>과 같은 코드는 무슨일이 있어도 실행 되어야합니다. 우리(그리고 파이썬)는 그것을 어떻게 알 수 있습니까?</p>
+<p>어떤 코드가 <code>if문</code>에 속해 있는지 구별하는 방법을 잘 보십시오. <code>&quot;But I don&#39;t want ANY spam!&quot;</code> 문자열은 <code>spam_amount</code>가 양수일 때만 출력되어야 합니다. 하지만 뒤에 <code>print (viking_song)</code>과 같은 코드는 무슨일이 있어도 실행 되어야합니다. 우리(그리고 파이썬)는 그것을 어떻게 알 수 있습니까?</p>
 <p><code>if문</code> 줄(line)의 끝에있는 콜론 (<code>:</code>)은 새로운 “코드 블록”이 시작되고 있음을 나타냅니다. 들여 쓰기되는 후속 행이 <strong>해당 코드 블록의 일부</strong> 입니다. 다른 언어에서는 <code>{</code> 중괄호 <code>}</code>를 사용하여 코드 블록의 시작과 끝을 표시합니다. Python의 이런 공백을 사용한 코드 블럭은 다른 언어에 익숙한 프로그래머에게는 놀라운 일일 수 있지만, 코드 블록의 들여 쓰기를 시행하지 않는 언어보다 일관되고 읽기 쉬운 코드가 될 수 있습니다.</p>
 <p>이후의 행에서 <code>viking_song</code>을 다루는 줄은 여분의 4 칸으로 들여 쓰이지 않기 때문에 <code>if</code>의 코드 블록에 포함되지 않습니다. 나중에 함수를 정의하고 루프(loops)를 사용할 때 들여 쓰기 된 코드 블록의 예제를 보게 될 것입니다.</p>
 <p>이 스니펫은(snippet)은 파이썬에서의 <strong>문자열(string) 형태</strong> 입니다.</p>
@@ -1090,7 +804,7 @@
 
 <p>위 연산이 유용하게 쓰일만한 상황이 떠오르시나요? 곧 예제를 통해 살펴보도록 하겠습니다.</p>
 <p><br><br></p>
-<h3 id="연산-순서-Order-of-operations"><a href="#연산-순서-Order-of-operations" class="headerlink" title="연산 순서(Order of operations)"></a>연산 순서(Order of operations)</h3><p>초등학교에서 다들 산술 연산의 연산 순서 대해 배우셨을겁니다. <code>외국에서는 PEMDAS - Parentheses, Exponents, Multiplication/Division, Addition/Subtraction 로 외우나 봅니다</code>  괄호 -&gt;지수 -&gt; 곱셈 /나눗셈 -&gt; 덧셈 /뺄셈 순서로 계산하면 된다고 기억하실겁니다.</p>
+<h3 id="연산-순서-Order-of-operations"><a href="#연산-순서-Order-of-operations" class="headerlink" title="연산 순서(Order of operations)"></a>연산 순서(Order of operations)</h3><p>초등학교에서 다들 산술 연산의 연산 순서 대해 배우셨을겁니다. <code>외국에서는 PEMDAS - Parentheses, Exponents, Multiplication/Division, Addition/Subtraction 로 외우나 봅니다</code> 괄호 -&gt;지수 -&gt; 곱셈 /나눗셈 -&gt; 덧셈 /뺄셈 순서로 계산하면 된다고 기억하실겁니다.</p>
 <p>파이썬에서도 비슷한 규칙으로 계산을 합니다. 그리고 매우 직관적입니다.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">8</span> - <span class="number">3</span> + <span class="number">2</span> 	<span class="comment"># 7</span></span><br><span class="line"><span class="number">-3</span> + <span class="number">4</span> * <span class="number">2</span>	<span class="comment"># 5</span></span><br></pre></td></tr></table></figure>
 
@@ -1155,11 +869,312 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/CS-OS-20190212-os-overview-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/CS-OS-20190212-os-overview-2/" class="post-title-link" itemprop="url">운영체제 - Overview_2</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-12 18:51:53" itemprop="dateCreated datePublished" datetime="2019-02-12T18:51:53+09:00">2019-02-12</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CS-🖥/" itemprop="url" rel="index"><span itemprop="name">CS 🖥</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CS-🖥/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/CS-OS-20190212-os-overview-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/CS-OS-20190212-os-overview-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="컴퓨터-시스템-구조"><a href="#컴퓨터-시스템-구조" class="headerlink" title="컴퓨터 시스템 구조"></a>컴퓨터 시스템 구조</h1><h2 id="2-1-컴퓨터-시스템의-동작"><a href="#2-1-컴퓨터-시스템의-동작" class="headerlink" title="2.1 컴퓨터 시스템의 동작"></a>2.1 컴퓨터 시스템의 동작</h2><img style="height:450px; align:center;" data-src="https://i.imgur.com/8JAIHTg.png">
+
+<ul>
+<li>컴퓨터는 <u>공유된 주기억장치에 접근을 제공하는 공통 버스에 의해 연결된 CPU와 여러 개의 장치 제어기(Device controller)로 구성</u>되어 있습니다.<ul>
+<li>장치 제어기(Device Controller)<br>각 장치(디스크, 오디오 장치, 비디오 디스플레이)를 관리</li>
+<li>장치 제어기와 CPU는 병행으로 수행되므로 이들은 주기억장치 접근에 대해 경쟁합니다. 주기억장치 제어기(Memory Controller)는 이들의 접근을 동기화해줍니다.</li>
+</ul>
+</li>
+<li>컴퓨터가 처음 구동되면 초기에 실행될 프로그램이 필요합니다. 이 프로그램을 <strong>부트스트랩 프로그램(Bootstrap program)</strong> 이라고 합니다. 이 프로그램은 보통 컴퓨터 하드웨어 내에 ROM(Read-Only-Memory)에 저장되어 있습니다.<ul>
+<li>부트스트랩 프로그램(Bootstrap program)<br>모든 하드웨어를 초기화하고 운영체제 커널을 주기억장치에 적재한 후에 커널을 실행</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>컴퓨터에서 사건(Event)의 발생은 <strong>인트럽트(interrupt)</strong> 신호, <strong>트랩(trap)</strong> 혹은 <strong>예외(Exception)</strong> 를 통해 운영체제에 통보됩니다. 사건이 발생되면 CPU는 현재 수행중인 작업을 멈추고, 운영체제 내에 있는 특정 코드를 실행합니다. 이 실행이 끝나면 다시 멈춘 작업을 재개합니다.</li>
+</ul>
+<img height="250px" data-src="http://pediaa.com/wp-content/uploads/2018/08/Difference-Between-Trap-and-Interrupt_Figure-1.png">
+
+<p><span style="color:red">Interrupt</span></p>
+<ul>
+<li><strong>Hardware Interrupt</strong> : 하드웨어는 CPU에 특정 신호를 보내어 인트럽트의 발생을 알림<br>– 예) 키보드 입력, I/O interrupt, timer ticks</li>
+<li>하드웨어가 시스템의 수행 흐름을 바꾸기 위해 발생하는 것</li>
+<li>비동기식(Asynchronus Interrupt)</li>
+</ul>
+<p><span style="color:red">Trap</span></p>
+<ul>
+<li><strong>Software Interrupt</strong> : 시스템호출(System call)이라는 특정 연산을 실행하여 일부로 발생시키거나 오류 때문에 자발적으로 발생<br>– 오류의 예) 0 나누기, 부적합한 주기억장치 접근(page fault)</li>
+<li>동기식(Synchronus Interrupt)</li>
+</ul>
+<p><span style="color:red">Exception</span></p>
+<ul>
+<li>프로세서에 의해 자동으로 처리</li>
+<li><strong>Faults</strong> 와 <strong>Aborts</strong> 로 세분화 가능<br>– Faults : 복구 가능한 오류 (recoverable error)<br>– Aborts : 처리하기 어려운 오류 (an error that is difficult to handle)</li>
+</ul>
+<br>
+
+<h2 id="2-2-I-O-구조"><a href="#2-2-I-O-구조" class="headerlink" title="2.2 I/O 구조"></a>2.2 I/O 구조</h2><ul>
+<li>장치 제어기(Device controller)에 따라 하나 이상의 장치가 제이거에 연결될 수 있습니다</li>
+<li>장치 제어기는 지역 버퍼와 몇 개의 특수 목적 레지스터를 유지합니다</li>
+<li>장치 제어기는 연결된 주변장치와 지역 버퍼 간에 데이터 이동을 책임집니다. 이 버퍼의 크기는 주변장치에 따라 다릅니다.</li>
+</ul>
+<h3 id="2-2-1-I-O-Interrupt"><a href="#2-2-1-I-O-Interrupt" class="headerlink" title="2.2.1 I/O Interrupt"></a>2.2.1 I/O Interrupt</h3><ul>
+<li>입출력의 두 가지 형태<br>– 동기식 입출력(Synchronous I/O) : 입출력이 시작되면 요청한 프로세서는 입출력이 완료될 때까지 기다림<br>– 비동기식 입출력(Asynchronous I/O) : 요청한 프로세서는 입출력이 완료될 때까지 기다리지 않고 계속 다른 작업을 수행</li>
+<li>입출력의 완료를 기다리는 방법<br>– 특수한 명령어 사용<br>– 대기 루프 사용</li>
+<li><u>만약 CPU가 입출력 완료를 항상 기다리면</u> 한번에 한 입출력만 가능<br>하지만 시스템의 효율을 높이기 위해 입출력과 계산을 병행할 수 있어야함으로 이 방법은 비효율적</li>
+<li>운영체제는 여러 개의 입출력 요청을 관리하기 위해 <strong>장치 상태 테이블(device-status table)</strong> 을 유지합니다. 각 장치마다 대기큐를 유지합니다.</li>
+</ul>
+<img height="350px" data-src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter13/13_09_DeviceStatusTable.jpg">
+
+<h3 id="2-2-2-DMA-구조"><a href="#2-2-2-DMA-구조" class="headerlink" title="2.2.2 DMA 구조"></a>2.2.2 DMA 구조</h3><ul>
+<li>속도가 느린 입출력 장치는 하나의 입력을 받은 후에 다음 입력까지 CPU는 다른 유용한 작업을 할 수 있습니다.<br>반대로 속도가 빠른 입출력 장치는 인트럽트가 너무 빈번하게 발생하여 CPU가 다른 유용한 작업을 할 시간이 없습니다.</li>
+<li>이것을 해결하기 위해 사용하는 기법이 <strong>DMA(Direct Memory Access)</strong> 입니다.</li>
+<li>DMA 방식에서 장치 제어기는 데이터 블록을 CPU의 관여없이 직접 주기억장치로 이동하며, 인터럽트는 바이트 단위가 아닌 블록 단위로 발생합니다.</li>
+</ul>
+<img style="align:center;" data-src="http://pds17.egloos.com/pds/200910/26/90/c0098890_4ae5a423a7cef.jpg">
+
+<br>
+
+<h2 id="2-3-저장-구조"><a href="#2-3-저장-구조" class="headerlink" title="2.3 저장 구조"></a>2.3 저장 구조</h2><img data-src="https://i.imgur.com/ofvb8E7.png">
+
+<ul>
+<li><p>컴퓨터 프로그래밍이 실행되기 위해서는 <strong>주기억장치(main memory / primary storage / internal memory)</strong> 에 적재되어야 합니다</p>
+</li>
+<li><p>주기억장치는 보통 <u>동적 임의접근 메모리(dynamic Random-Access Memory, RAM)</u>라고 하는 반도체 메모리를 사용</p>
+</li>
+<li><p><u>CPU가 직접 접근할 수 있는 기억장치</u>는 주기억장치뿐입니다</p>
+</li>
+<li><p>주기억장치의 한 구성 단위를 <strong>워드(word)</strong> 라 하며, 각 워드는 독특한 주소를 가집니다</p>
+</li>
+<li><p><span style="color:red">주기억장치의 크기 / 주기억장치의 휘발성</span> 때문에 모든 프로그램과 데이터를 주기억장치에 영구적으로 저장할 수 없습니다</p>
+</li>
+<li><p>이 문제를 해결하기 위해 많은 양의 데이터를 영구 보관할 수 있는 <strong>보조 기억장치(auxiliary memory / secondary storage / external memory)</strong> 를 사용합니다</p>
+</li>
+</ul>
+<h3 id="2-3-1-주기억장치"><a href="#2-3-1-주기억장치" class="headerlink" title="2.3.1 주기억장치"></a>2.3.1 주기억장치</h3><ul>
+<li><strong>Memory-mapped I/O</strong><br>주기억장치의 일부 주소가 입출력을 위해 예약되어 있으며, 이 주소에서 읽거나 쓰면 장치 레지스터로부터 데이터를 읽거나 쓰는 결과가 되는 것</li>
+<li>CPU가 I/O 포트를 통해 연결된 장치와 데이터를 교환하는 2가지 방식<br>– <strong>Programmed I/O</strong> : CPU가 계속 장치의 상태를 검사(polling)하는 방식<br>– <strong>Interrupt</strong> : 다음 데이터를 처리할 준비가 되면 장치 제어기는 인터럽트를 통해 그 사실을 CPU에 알리는 방식</li>
+<li>주기억장치와 CPU의 속도 차이를 극복하기 위해 주기억장치와 CPU 사이에 <strong>캐시(cache)</strong> 라고 하는 고속 메모리 버퍼를 사용</li>
+</ul>
+<img data-src="https://teachcomputerscience.com/wp-content/uploads/2016/12/cache_animation.gif">
+
+<h3 id="2-3-2-보조기억장치-자기-디스크"><a href="#2-3-2-보조기억장치-자기-디스크" class="headerlink" title="2.3.2 보조기억장치(자기 디스크)"></a>2.3.2 보조기억장치(자기 디스크)</h3><img style="height:120px; float:right;" data-src="https://www.applexsoft.com/glossary/harddisk.jpg">
+
+<ul>
+<li><p>자기 디스크는 <strong>플래터(platter)</strong> 라고 하는 여러 개의 원형 판으로 구성이 플래터는 다시 원형 모양의 <strong>트랙(track)</strong> 으로 구성<br>트랙은 다시 여러 개의 <strong>섹터(sector)</strong> 로 나뉘어짐</p>
+<br>
+<img style="height:150px; float:right;" data-src="http://mblogthumb1.phinf.naver.net/20141226_132/capemay_1419579186649T86jM_PNG/010edsector.png?type=w2">
+</li>
+<li><p>단순하게 섹터를 여러 개를 하나로 묶은 것을 <strong>클러스터(cluster)</strong> 라 하고, 같은 위치에 있는 트랙의 모음을 <strong>실린더(cylinder)</strong> 라고 합니다<br>– 클러스터는 <u>운영체제에서 사용하는 데이터 저장의 최소 단위</u></p>
+<br>
+<br></li>
+<li><p><strong>디스크의 속도</strong> = 컴퓨터로 데이터를 전송하는 비율인 전송률(transfer rate) + 임의접근 시간(random-access time)이라고 하는 위치결정 시간(positioning time)에 의해 결정됩니다</p>
+</li>
+<li><p>데이터의 교환은 특수한 제어기를 통해 이루어집니다<br>컴퓨터 연결 끝에는 호스트 제어기<br>디스크 자체 내에는 디스크 제어기 가 있습니다</p>
+</li>
+<li><p>디스크 제어기는 자체적으로 캐시를 가지고 있습니다</p>
+</li>
+<li><p>실제 데이터는 디스크 제어기에 의해 디스크에서 캐시로 옮겨지고, 호스트 제어기는 캐시에 있는 데이터를 주기억장치로 옮깁니다</p>
+</li>
+</ul>
+<h2 id="2-4-저장장치의-계층구조"><a href="#2-4-저장장치의-계층구조" class="headerlink" title="2.4 저장장치의 계층구조"></a>2.4 저장장치의 계층구조</h2><img data-src="https://eunhyejung.github.io/assets/contents/content03.PNG">
+
+<ul>
+<li>계층구조에서 위에 위치할 수록 속도는 빠르지만 고가이며 휘발성의 성질을 가집니다</li>
+<li>두 저장장치의 속도 차이는 중간에 빠른 캐시를 설치하여 극복할 수 있습니다</li>
+<li>시스템을 구성할 때 저장장치의 계층구조를 균형있게 잘 구성하면 저렴한 가격에 높은 성능을 얻을 수 있습니다</li>
+</ul>
+<h3 id="2-4-1-캐싱"><a href="#2-4-1-캐싱" class="headerlink" title="2.4.1 캐싱"></a>2.4.1 캐싱</h3><ul>
+<li>CPU가 데이터를 필요하면 먼저 캐시에 그 데이터가 있는지 검사합니다<br>만약 있으면 캐시에서 바로 사용하고 없으면 주기억장치에 있는 데이터를 사용하지만 이 데이터의 복사본을 캐시에 보관합니다. 이는 데이터를 곧 다시 사용할 확률이 높기 때문입니다</li>
+<li><strong>캐시의 크기는 제한</strong> 되어 있으므로 이것을 잘 관리하여야 시스템의 성능을 높일 수 있습니다. 캐시의 크기와 교체 정책(replacement policy)을 잘 선택하면 원하는 데이터가 캐시에 있을 확률을 80%에서 99%까지 높일 수 있습니다</li>
+<li>주기억장치는 CPU와 보조기억장치 사이에 있는 캐시로 사용될 수 있습니다</li>
+</ul>
+<h3 id="2-4-2-일관성"><a href="#2-4-2-일관성" class="headerlink" title="2.4.2 일관성"></a>2.4.2 일관성</h3><ul>
+<li>저장장치의 계층구조를 사용하면 같은 데이터가 여러 레벨에 존재할 수 있습니다</li>
+<li>한번에 하나의 프로세스만 동작하면 아무 문제가 되지 않지만!<br>여러 프로세스가 같은 데이터를 접근하고자 하면 모든 프로세스가 최신의 데이터를 얻을 수 있도록 해야 합니다<br><u>이 문제는 다중프로세서 시스템에서 더욱 심각합니다</u></li>
+<li>분산 환경에서는 여러 파일의 복사본이 여러 컴퓨터에 분산되어 있을 수 있습니다. 따라서 하나의 복사본에 대한 갱신이 이루어지면 다른 복사본도 갱신되도록 하여야 합니다</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><span class="exturl" data-url="aHR0cDovL3BlZGlhYS5jb20vZGlmZmVyZW5jZS1iZXR3ZWVuLXRyYXAtYW5kLWludGVycnVwdC8=" title="http://pediaa.com/difference-between-trap-and-interrupt/">Difference between Trap and Interrupt<i class="fa fa-external-link"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3JlY2lwZXMuZWdsb29zLmNvbS81MTUyODY3" title="http://recipes.egloos.com/5152867">DMA-CPU몰래 영차영차<i class="fa fa-external-link"></i></span></p>
+<p><br><br><br></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/29/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/31/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/29/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/31/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1203,7 +1218,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1393,13 +1408,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1469,7 +1478,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

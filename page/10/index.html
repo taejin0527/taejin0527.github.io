@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-day14/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200303-PY-day13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -403,234 +403,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/PY-day14/" class="post-title-link" itemprop="url">(PYTHON) Day - 14 Itertools(1)</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2020-03-04 17:52:00" itemprop="dateCreated datePublished" datetime="2020-03-04T17:52:00+09:00">2020-03-04</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-day14/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-day14/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>문제 출처 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZGFzaGJvYXJk" title="https://www.hackerrank.com/dashboard">HackerRank<i class="fa fa-external-link"></i></span></li>
-<li>파이썬 연습 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZG9tYWlucy9weXRob24/ZmlsdGVycyU1QnN0YXR1cyU1RCU1QiU1RD11bnNvbHZlZCZiYWRnZV90eXBlPXB5dGhvbg==" title="https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=python">Practice - Python<i class="fa fa-external-link"></i></span></li>
-</ul>
-<p>개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다<br>문제를 풀고 <span class="label success"> Discussion Tab</span>을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다</p>
-<hr>
-<h1 id="HackerRank"><a href="#HackerRank" class="headerlink" title="HackerRank"></a>HackerRank</h1><div class="spoiler collapsed">
-    <div class="spoiler-title">
-        HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
-    </div>
-    <div class="spoiler-content">
-        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul>
-<li><del>Introduction</del></li>
-<li><del>Basic Data Types</del></li>
-<li><del>Strings</del></li>
-<li><del>Sets</del></li>
-<li><del>Math</del></li>
-<li><strong style="color:blue">Itertools</strong></li>
-<li>Collections</li>
-<li>Date and Time</li>
-<li>Errors and Exceptions</li>
-<li>Classes</li>
-<li>Built-Ins</li>
-<li>Python Functionals</li>
-<li>Regex and Parsing</li>
-<li>XML</li>
-<li>Closures and Decorators</li>
-<li>Numpy</li>
-<li>Debugging</li>
-</ul>
-
-    </div>
-</div>
-
-<hr>
-<h1 id="Itertools"><a href="#Itertools" class="headerlink" title="Itertools"></a>Itertools</h1><div class="note primary no-icon">
-            <h2 id="기본-개념"><a href="#기본-개념" class="headerlink" title="기본 개념"></a>기본 개념</h2><p><span class="label warning"> <strong>Itertools</strong></span><br>itertools 모듈을 사용하면 빠르고 효율적으로 메모리를 사용하는 반복자를 사용할 수 있다.<br>모듈의 함수들은 다음과 같이 크게 3가지 용도로 구분할 수 있다.</p><p><span class="label warning"> <strong>Infinite Iterators</strong></span><br><span class="label success"> 무한으로 반복</span>할수 있는 함수로 3가지가 있다.</p><table><thead><tr><th>Iterator</th><th>Arguments</th><th>Results</th><th>Example</th></tr></thead><tbody><tr><td>count()</td><td>start, [step]</td><td>start, start+step, start+2*step, …</td><td>count(10) –&gt; 10 11 12 13 14 …</td></tr><tr><td>cycle()</td><td>p</td><td>p0, p1, … plast, p0, p1, …</td><td>cycle(‘ABCD’) –&gt; A B C D A B C D …</td></tr><tr><td>repeat()</td><td>elem [,n]</td><td>elem, elem, elem, … endlessly or up to n times</td><td>repeat(10, 3) –&gt; 10 10 10</td></tr></tbody></table><p><span class="label warning"> <strong>Iterators that Terminate</strong></span><br>itertools 모듈 대부분의 비중을 차지하는 이 12개의 함수들은 <span class="label success"> 유한번 반복</span>하는 함수들이다.</p><table><thead><tr><th>Iterator</th><th>Arguments</th><th>Results</th><th>Example</th></tr></thead><tbody><tr><td>accumulate()</td><td>p [,func]</td><td>p0, p0+p1, p0+p1+p2, …</td><td>accumulate([1,2,3,4,5]) –&gt; 1 3 6 10 15</td></tr><tr><td>chain()</td><td>p, q, …</td><td>p0, p1, … plast, q0, q1, …</td><td>chain(‘ABC’, ‘DEF’) –&gt; A B C D E F</td></tr><tr><td>chain.from_iterable()</td><td>iterable</td><td>p0, p1, … plast, q0, q1, …</td><td>chain.from_iterable([‘ABC’, ‘DEF’]) –&gt; A B C D E F</td></tr><tr><td>compress()</td><td>data, selectors</td><td>(d[0] if s[0]), (d[1] if s[1]), …</td><td>compress(‘ABCDEF’, [1,0,1,0,1,1]) –&gt; A C E F</td></tr><tr><td>dropwhile()</td><td>pred, seq</td><td>seq[n], seq[n+1], starting when pred fails</td><td>dropwhile(lambda x: x&lt;5, [1,4,6,4,1]) –&gt; 6 4 1</td></tr><tr><td>filterfalse()</td><td>pred, seq</td><td>elements of seq where pred(elem) is false</td><td>filterfalse(lambda x: x%2, range(10)) –&gt; 0 2 4 6 8</td></tr><tr><td>groupby()</td><td>iterable[, key]</td><td>sub-iterators grouped by value of key(v)</td><td></td></tr><tr><td>islice()</td><td>seq, [start,] stop [, step]</td><td>elements from seq[start:stop:step]</td><td>islice(‘ABCDEFG’, 2, None) –&gt; C D E F G</td></tr><tr><td>starmap()</td><td>func, seq</td><td>func(<em>seq[0]), func(</em>seq[1]), …</td><td>starmap(pow, [(2,5), (3,2), (10,3)]) –&gt; 32 9 1000</td></tr><tr><td>takewhile()</td><td>pred, seq</td><td>seq[0], seq[1], until pred fails</td><td>takewhile(lambda x: x&lt;5, [1,4,6,4,1]) –&gt; 1 4</td></tr><tr><td>tee()</td><td>it, n</td><td>it1, it2, … itn  splits one iterator into n</td><td></td></tr><tr><td>zip_longest()</td><td>p, q, …</td><td>(p[0], q[0]), (p[1], q[1]), …</td><td>zip_longest(‘ABCD’, ‘xy’, fillvalue=’-‘) –&gt; Ax By C- D-</td></tr></tbody></table><p><span class="label warning"> <strong>Combinatoric Generators</strong></span><br>데이터들의 <span class="label success"> 순열과 조합</span>(combination &amp; permutation)을 만드는 함수로 4가지가 있다.</p><table><thead><tr><th>Iterator</th><th>Arguments</th><th>Results</th><th>Example</th></tr></thead><tbody><tr><td>product()</td><td>p, q, … [repeat=1]</td><td>cartesian product, equivalent to a nested for-loop</td><td>AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD</td></tr><tr><td>permutations()</td><td>p[, r]</td><td>r-length tuples, all possible orderings, no repeated elements</td><td>AB AC AD BA BC BD CA CB CD DA DB DC</td></tr><tr><td>combinations()</td><td>p, r</td><td>r-length tuples, in sorted order, no repeated elements</td><td>AB AC AD BC BD CD</td></tr><tr><td>combinations_with_replacement()</td><td>p, r</td><td>r-length tuples, in sorted order, with repeated elements</td><td>AA AB AC AD BB BC BD CC CD DD</td></tr></tbody></table><hr><h2 id="자세한-학습-참고"><a href="#자세한-학습-참고" class="headerlink" title="자세한 학습 (참고)"></a>자세한 학습 (참고)</h2><p><span class="exturl" data-url="aHR0cHM6Ly9ueXUtY2RzLmdpdGh1Yi5pby9weXRob24taXRlcnRvb2xzLw==" title="https://nyu-cds.github.io/python-itertools/">The itertools Module<i class="fa fa-external-link"></i></span></p>
-          </div>
-
-<hr>
-<hr>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-day13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/PY-day13/" class="post-title-link" itemprop="url">(PYTHON) Day - 13 Math(2)</a>
+                <a href="/[object Object]/Language-Python-20200303-PY-day13/" class="post-title-link" itemprop="url">(PYTHON) Day - 13 Math(2)</a>
               
             
           </h2>
@@ -670,21 +443,21 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
 
                 
                 
@@ -702,8 +475,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-day13/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-day13/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Language-Python-20200303-PY-day13/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200303-PY-day13/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -749,32 +522,29 @@
         HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
     </div>
     <div class="spoiler-content">
-        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul>
-<li><del>Introduction</del></li>
-<li><del>Basic Data Types</del></li>
-<li><del>Strings</del></li>
-<li><del>Sets</del></li>
-<li><strong style="color:blue">Math</strong></li>
-<li>Itertools</li>
-<li>Collections</li>
-<li>Date and Time</li>
-<li>Errors and Exceptions</li>
-<li>Classes</li>
-<li>Built-Ins</li>
-<li>Python Functionals</li>
-<li>Regex and Parsing</li>
-<li>XML</li>
-<li>Closures and Decorators</li>
-<li>Numpy</li>
-<li>Debugging</li>
-</ul>
-
+        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><pre><code>- ~~Introduction~~
+- ~~Basic Data Types~~
+- ~~Strings~~
+- ~~Sets~~
+- &lt;strong style=&quot;color:blue&quot;&gt;Math&lt;/strong&gt;
+- Itertools
+- Collections
+- Date and Time
+- Errors and Exceptions
+- Classes
+- Built-Ins
+- Python Functionals
+- Regex and Parsing
+- XML
+- Closures and Decorators
+- Numpy
+- Debugging</code></pre>
     </div>
 </div>
 
 <hr>
 <h1 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h1><div class="note no-icon">
-            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Find-Angle-MBC">Find Angle MBC</a></li><li><a href="#Triangle-Quest-2">Triangle Quest 2</a></li><li><a href="#Mod-Divmod">Mod Divmod</a></li><li><a href="#Power-Mod-Power">Power - Mod Power</a></li><li><a href="#Integers-Come-In-All-Sizes">Integers Come In All Sizes</a></li><li><a href="#Triangle-Quest">Triangle Quest</a></li></ul>          </div><hr><h2 id="Find-Angle-MBC"><a href="#Find-Angle-MBC" class="headerlink" title="Find Angle MBC"></a>Find Angle MBC</h2><br><div class="note info">            <p>문제 : AB, BC의 길이가 주어졌을 때 ∠MBC 의 각도를 구하는 문제(점 M은 빗변 AC의 정중앙이다)<br>입력 : 변 AB의 길이; 변 BC의 길이;<br>출력 : ∠MBC 의 각도 (정수로 반올림)<br><img data-src="https://s3.amazonaws.com/hr-challenge-images/9668/1440151155-10b2b748ee-rsz_1438840048-2cf71ed69d-findangle.png"></p>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>10<br>10</p></div><div class="tab-pane" id="example1-2"><p>45°</p></div></div></div><div class="note success no-icon">            <p>점 M이 직삼각형 ABC에서 빗변 AC의 중앙이기 때문에 작은 이등변 삼각형이 생기고 각 ∠MBC는 각 ∠MCB와 같다<br>즉 ∠MCB=∠ACB로 구한다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">AB = float(input())</span><br><span class="line">BC = float(input())</span><br><span class="line"></span><br><span class="line">print(str(int(round(math.degrees(math.atan2(AB, BC)))))+<span class="string">'°'</span>)   </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Triangle-Quest-2"><a href="#Triangle-Quest-2" class="headerlink" title="Triangle Quest 2"></a>Triangle Quest 2</h2><br><div class="note info">            <p>문제 : 양수 N이 주어졌을 때, N까지 증가하는 palindromic(회문) triangle을 출력하는 문제(단, 2줄 이내로 코드를 작성해야함)<br>입력 : 양수 N;<br>출력 : palindromic triangle 형태로 출력<br>참고 : <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvZGVtbG8tbnVtYmVyLXNxdWFyZS0xMS0xLw==" title="https://www.geeksforgeeks.org/demlo-number-square-11-1/">Demlo Number<i class="fa fa-external-link"></i></span></p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>5</p></div><div class="tab-pane" id="example2-2"><p>1<br>121<br>12321<br>1234321<br>123454321</p></div></div></div><div class="note danger no-icon">            <p>for문 하나만 사용하라고 하며(only 1 for is allowed) 에러를 발생한다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())+<span class="number">1</span>):</span><br><span class="line">  print(*[k <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, i+<span class="number">1</span>)], *[k <span class="keyword">for</span> k <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>)], sep=<span class="string">''</span>)  </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>1 = 1<br>11 * 11 = 121<br>111 * 111 = 12321<br>1111 * 1111 = 1234321</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())+<span class="number">1</span>):</span><br><span class="line">  print(((<span class="number">10</span>**i <span class="number">-1</span> )//<span class="number">9</span>)**<span class="number">2</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Mod-Divmod"><a href="#Mod-Divmod" class="headerlink" title="Mod Divmod"></a>Mod Divmod</h2><br><div class="note info">            <p>문제 : 두개의 정수 a, b가 주어졌을 때 몫과 나머지를 출력하는 문제<br>입력 : 정수 a; 정수 b<br>출력 : 몫(a//b); 나머지(a%b); 몫과 나머지(a//b, a%b)</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>177<br>10</p></div><div class="tab-pane" id="example3-2"><p>17<br>7<br>(17, 7)</p></div></div></div><div class="note default no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line">b = int(input())</span><br><span class="line"></span><br><span class="line">print(a//b)</span><br><span class="line">print(a%b)</span><br><span class="line">print(divmod(a, b))  </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>조금더 짧게</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = divmod(int(input()), int(input()))</span><br><span class="line">print(*a, a, sep=<span class="string">'\n'</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Power-Mod-Power"><a href="#Power-Mod-Power" class="headerlink" title="Power - Mod Power"></a>Power - Mod Power</h2><br><div class="note info">            <p>문제 : 숫자 a, b, c가 주어졌을 때 a의 b제곱 값과 이를 c로 나눈 나머지를 구하는 문제<br>입력 : a; b; c<br>출력 : a의 b제곱; a ** b % c;</p>          </div><div class="tabs" id="example4"><ul class="nav-tabs"><li class="tab"><a href="#example4-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example4-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example4-1"><p>3<br>4<br>5</p></div><div class="tab-pane" id="example4-2"><p>81<br>1</p></div></div></div><div class="note success no-icon">            <p><code>pow()</code> 함수를 사용하는 매우 간단한 문제</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a, b, m = int(input()),int(input()), int(input())</span><br><span class="line">print(pow(a,b),pow(a,b,m),sep=<span class="string">'\n'</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Integers-Come-In-All-Sizes"><a href="#Integers-Come-In-All-Sizes" class="headerlink" title="Integers Come In All Sizes"></a>Integers Come In All Sizes</h2><br><div class="note info">            <p>문제 : 실수 a, b, c, d가 주어졌을 때 a^b + c^d의 값을 구하는 문제<br>입력 : 실수 a; b; c; d<br>출력 : a<strong>b + c</strong>d의 값</p>          </div><div class="tabs" id="example5"><ul class="nav-tabs"><li class="tab"><a href="#example5-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example5-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example5-1"><p>9<br>29<br>7<br>27</p></div><div class="tab-pane" id="example5-2"><p>4710194409608608369201743232  </p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a, b, c, d = [int(input()) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="string">'1234'</span>]</span><br><span class="line">print(a**b + c**d) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Triangle-Quest"><a href="#Triangle-Quest" class="headerlink" title="Triangle Quest"></a>Triangle Quest</h2><br><div class="note info">            <p>문제 : 양수 N이 주어졌을 때 1에서 N까지 증가하는 numerical triangle을 출력하는 문제<br>입력 : N;<br>출력 : numerical triangle</p>          </div><div class="tabs" id="example6"><ul class="nav-tabs"><li class="tab"><a href="#example6-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example6-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example6-1"><p>5</p></div><div class="tab-pane" id="example6-2"><p>1<br>22<br>333<br>4444</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())): <span class="comment">#More than 2 lines will result in 0 score. Do not leave a blank line also</span></span><br><span class="line"> print((<span class="number">10</span>**(i)//<span class="number">9</span>)*i)</span><br></pre></td></tr></table></figure>          </div>
+            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Find-Angle-MBC">Find Angle MBC</a></li><li><a href="#Triangle-Quest-2">Triangle Quest 2</a></li><li><a href="#Mod-Divmod">Mod Divmod</a></li><li><a href="#Power-Mod-Power">Power - Mod Power</a></li><li><a href="#Integers-Come-In-All-Sizes">Integers Come In All Sizes</a></li><li><a href="#Triangle-Quest">Triangle Quest</a></li></ul>          </div><hr><h2 id="Find-Angle-MBC"><a href="#Find-Angle-MBC" class="headerlink" title="Find Angle MBC"></a>Find Angle MBC</h2><br><div class="note info">            <p>문제 : AB, BC의 길이가 주어졌을 때 ∠MBC 의 각도를 구하는 문제(점 M은 빗변 AC의 정중앙이다)<br>입력 : 변 AB의 길이; 변 BC의 길이;<br>출력 : ∠MBC 의 각도 (정수로 반올림)<br><img data-src="https://s3.amazonaws.com/hr-challenge-images/9668/1440151155-10b2b748ee-rsz_1438840048-2cf71ed69d-findangle.png"></p>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>10<br>10</p></div><div class="tab-pane" id="example1-2"><p>45°</p></div></div></div><div class="note success no-icon">            <p>점 M이 직삼각형 ABC에서 빗변 AC의 중앙이기 때문에 작은 이등변 삼각형이 생기고 각 ∠MBC는 각 ∠MCB와 같다<br>즉 ∠MCB=∠ACB로 구한다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">AB = float(input())</span><br><span class="line">BC = float(input())</span><br><span class="line"></span><br><span class="line">print(str(int(round(math.degrees(math.atan2(AB, BC)))))+<span class="string">'°'</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Triangle-Quest-2"><a href="#Triangle-Quest-2" class="headerlink" title="Triangle Quest 2"></a>Triangle Quest 2</h2><br><div class="note info">            <p>문제 : 양수 N이 주어졌을 때, N까지 증가하는 palindromic(회문) triangle을 출력하는 문제(단, 2줄 이내로 코드를 작성해야함)<br>입력 : 양수 N;<br>출력 : palindromic triangle 형태로 출력<br>참고 : <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvZGVtbG8tbnVtYmVyLXNxdWFyZS0xMS0xLw==" title="https://www.geeksforgeeks.org/demlo-number-square-11-1/">Demlo Number<i class="fa fa-external-link"></i></span></p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>5</p></div><div class="tab-pane" id="example2-2"><p>1<br>121<br>12321<br>1234321<br>123454321</p></div></div></div><div class="note danger no-icon">            <p>for문 하나만 사용하라고 하며(only 1 for is allowed) 에러를 발생한다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())+<span class="number">1</span>):</span><br><span class="line">print(_[k <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, i+<span class="number">1</span>)], _[k <span class="keyword">for</span> k <span class="keyword">in</span> range(i<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>)], sep=<span class="string">''</span>) </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>1 = 1<br>11 _ 11 = 121<br>111 _ 111 = 12321<br>1111 * 1111 = 1234321</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())+<span class="number">1</span>):</span><br><span class="line">print(((<span class="number">10</span>**i <span class="number">-1</span> )//<span class="number">9</span>)**<span class="number">2</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Mod-Divmod"><a href="#Mod-Divmod" class="headerlink" title="Mod Divmod"></a>Mod Divmod</h2><br><div class="note info">            <p>문제 : 두개의 정수 a, b가 주어졌을 때 몫과 나머지를 출력하는 문제<br>입력 : 정수 a; 정수 b<br>출력 : 몫(a//b); 나머지(a%b); 몫과 나머지(a//b, a%b)</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>177<br>10</p></div><div class="tab-pane" id="example3-2"><p>17<br>7<br>(17, 7)</p></div></div></div><div class="note default no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line">b = int(input())</span><br><span class="line"></span><br><span class="line">print(a//b)</span><br><span class="line">print(a%b)</span><br><span class="line">print(divmod(a, b)) </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>조금더 짧게</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = divmod(int(input()), int(input()))</span><br><span class="line">print(\*a, a, sep=<span class="string">'\n'</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Power-Mod-Power"><a href="#Power-Mod-Power" class="headerlink" title="Power - Mod Power"></a>Power - Mod Power</h2><br><div class="note info">            <p>문제 : 숫자 a, b, c가 주어졌을 때 a의 b제곱 값과 이를 c로 나눈 나머지를 구하는 문제<br>입력 : a; b; c<br>출력 : a의 b제곱; a ** b % c;</p>          </div><div class="tabs" id="example4"><ul class="nav-tabs"><li class="tab"><a href="#example4-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example4-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example4-1"><p>3<br>4<br>5</p></div><div class="tab-pane" id="example4-2"><p>81<br>1</p></div></div></div><div class="note success no-icon">            <p><code>pow()</code> 함수를 사용하는 매우 간단한 문제</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a, b, m = int(input()),int(input()), int(input())</span><br><span class="line">print(pow(a,b),pow(a,b,m),sep=<span class="string">'\n'</span>) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Integers-Come-In-All-Sizes"><a href="#Integers-Come-In-All-Sizes" class="headerlink" title="Integers Come In All Sizes"></a>Integers Come In All Sizes</h2><br><div class="note info">            <p>문제 : 실수 a, b, c, d가 주어졌을 때 a^b + c^d의 값을 구하는 문제<br>입력 : 실수 a; b; c; d<br>출력 : a<strong>b + c</strong>d의 값</p>          </div><div class="tabs" id="example5"><ul class="nav-tabs"><li class="tab"><a href="#example5-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example5-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example5-1"><p>9<br>29<br>7<br>27</p></div><div class="tab-pane" id="example5-2"><p>4710194409608608369201743232</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a, b, c, d = [int(input()) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="string">'1234'</span>]</span><br><span class="line">print(a**b + c**d) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Triangle-Quest"><a href="#Triangle-Quest" class="headerlink" title="Triangle Quest"></a>Triangle Quest</h2><br><div class="note info">            <p>문제 : 양수 N이 주어졌을 때 1에서 N까지 증가하는 numerical triangle을 출력하는 문제<br>입력 : N;<br>출력 : numerical triangle</p>          </div><div class="tabs" id="example6"><ul class="nav-tabs"><li class="tab"><a href="#example6-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example6-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example6-1"><p>5</p></div><div class="tab-pane" id="example6-2"><p>1<br>22<br>333<br>4444</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(input())): <span class="comment">#More than 2 lines will result in 0 score. Do not leave a blank line also</span></span><br><span class="line">print((<span class="number">10</span>\**(i)//<span class="number">9</span>)*i)</span><br></pre></td></tr></table></figure>          </div>
           </div>
 
 <hr>
@@ -837,7 +607,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-pow-vs-mathpow/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200302-PY-pow-vs-mathpow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -857,7 +627,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/PY-pow-vs-mathpow/" class="post-title-link" itemprop="url">(PYTHON) pow() vs math.pow()</a>
+                <a href="/[object Object]/Language-Python-20200302-PY-pow-vs-mathpow/" class="post-title-link" itemprop="url">(PYTHON) pow() vs math.pow()</a>
               
             
           </h2>
@@ -897,21 +667,21 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/TERMINOLOGY/" itemprop="url" rel="index"><span itemprop="name">TERMINOLOGY</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/TERMINOLOGY/" itemprop="url" rel="index"><span itemprop="name">TERMINOLOGY</span></a></span>
 
                 
                 
@@ -929,8 +699,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-pow-vs-mathpow/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-pow-vs-mathpow/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Language-Python-20200302-PY-pow-vs-mathpow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200302-PY-pow-vs-mathpow/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -981,28 +751,234 @@
           </div>
 
 <h1 id="단순한-비교"><a href="#단순한-비교" class="headerlink" title="단순한 비교"></a>단순한 비교</h1><div class="note no-icon">
-            <p>두 함수의 정의를 봤을 때, 내장함수 <code>pow()</code>에만 augment 하나가 더 옵션으로 들어갈 수 있는 것을 볼 수 있습니다.</p><div class="note primary no-icon">            <p>pow(base, exp[, mod])<br>math.pow(x, y)</p>          </div><p>코드를 작성해서 확인해봐도 둘은 분명히 다른 함수인 것을 알 수 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow <span class="keyword">is</span> math.pow)</span><br><span class="line"><span class="literal">False</span> </span><br></pre></td></tr></table></figure>
+            <p>두 함수의 정의를 봤을 때, 내장함수 <code>pow()</code>에만 augment 하나가 더 옵션으로 들어갈 수 있는 것을 볼 수 있습니다.</p><div class="note primary no-icon">            <p>pow(base, exp[, mod])<br>math.pow(x, y)</p>          </div><p>코드를 작성해서 확인해봐도 둘은 분명히 다른 함수인 것을 알 수 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; <span class="keyword">import</span> math</span><br><span class="line">&gt; &gt; &gt; print(pow <span class="keyword">is</span> math.pow)</span><br><span class="line">&gt; &gt; &gt; <span class="literal">False</span> </span><br></pre></td></tr></table></figure>
           </div>
 
 <br>
 
 <h1 id="Built-in-pow"><a href="#Built-in-pow" class="headerlink" title="Built-in pow()"></a>Built-in pow()</h1><div class="note no-icon">
-            <p><code>pow(base, exp)</code> 이렇게 2개의 인자(augment)만 주어진다면 밑(base)의 지수(exp)승(또는, base의 exp제곱)한 값을 반환합니다. 반환되는 값의 자료형은 인자들의 자료형을 따라 Integer, Float, Complex number 등으로 결정됩니다.<br><mark><code>base ** exp</code>는 <code>pow(base, exp)</code>와 똑같은 기능을 합니다.</mark></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">10</span>, <span class="number">2</span>))</span><br><span class="line"><span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">10.0</span>, <span class="number">2</span>))</span><br><span class="line"><span class="number">100.0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">2</span> + <span class="number">3j</span>, <span class="number">2</span>))</span><br><span class="line"><span class="number">-5</span>+<span class="number">12j</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">0b11</span>, <span class="number">2</span>))  <span class="comment"># 0b11 = 3</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">100.0</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line">TypeError: pow() <span class="number">3</span>rd argument <span class="keyword">not</span> allowed unless all arguments are integers</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">100</span>, <span class="number">-1</span>, <span class="number">2</span>))</span><br><span class="line">ValueError: pow() <span class="number">2</span>nd argument cannot be negative when <span class="number">3</span>rd argument specified </span><br></pre></td></tr></table></figure><p><code>pow(base, exp, mod)</code> 세번째 인자[, mod]를 입력하면 base의 exp제곱한 값에 mod를 나눈 나머지 값을 반환합니다. 특히 세번째 인자가 있을 때, base와 exp는 정수형이여야 하고 exp는 양수 값이여야 합니다. <mark><code>pow(base, exp, mod)</code>를 사용하는 것이 <code>pow(base, exp) % mod</code>로 계산하는 것 보다 효율적입니다.</mark></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">10</span>, <span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 10^2 % 3</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">10</span>, <span class="number">2</span>) % <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(pow(<span class="number">0b11</span>, <span class="number">2</span>, <span class="number">2</span>))   <span class="comment"># 9^2 % 2</span></span><br><span class="line"><span class="number">1</span> </span><br></pre></td></tr></table></figure>
+            <p><code>pow(base, exp)</code> 이렇게 2개의 인자(augment)만 주어진다면 밑(base)의 지수(exp)승(또는, base의 exp제곱)한 값을 반환합니다. 반환되는 값의 자료형은 인자들의 자료형을 따라 Integer, Float, Complex number 등으로 결정됩니다.<br><mark><code>base ** exp</code>는 <code>pow(base, exp)</code>와 똑같은 기능을 합니다.</mark></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> &gt;&gt;&gt; print(pow(<span class="number">10</span>, <span class="number">2</span>))</span><br><span class="line"><span class="number">100</span></span><br><span class="line"></span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">10.0</span>, <span class="number">2</span>))</span><br><span class="line">    <span class="number">100.0</span></span><br><span class="line"></span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">2</span> + <span class="number">3j</span>, <span class="number">2</span>))</span><br><span class="line">    <span class="number">-5</span>+<span class="number">12j</span></span><br><span class="line"></span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">0b11</span>, <span class="number">2</span>))  <span class="comment"># 0b11 = 3</span></span><br><span class="line">    <span class="number">9</span></span><br><span class="line"></span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">100.0</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line">    TypeError: pow() <span class="number">3</span>rd argument <span class="keyword">not</span> allowed unless all arguments are integers</span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">100</span>, <span class="number">-1</span>, <span class="number">2</span>))</span><br><span class="line">    ValueError: pow() <span class="number">2</span>nd argument cannot be negative when <span class="number">3</span>rd argument specified </span><br></pre></td></tr></table></figure><p><code>pow(base, exp, mod)</code> 세번째 인자[, mod]를 입력하면 base의 exp제곱한 값에 mod를 나눈 나머지 값을 반환합니다. 특히 세번째 인자가 있을 때, base와 exp는 정수형이여야 하고 exp는 양수 값이여야 합니다. <mark><code>pow(base, exp, mod)</code>를 사용하는 것이 <code>pow(base, exp) % mod</code>로 계산하는 것 보다 효율적입니다.</mark></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> &gt;&gt;&gt; print(pow(<span class="number">10</span>, <span class="number">2</span>, <span class="number">3</span>)) <span class="comment"># 10^2 % 3</span></span><br><span class="line"><span class="number">1</span> &gt;&gt;&gt; print(pow(<span class="number">10</span>, <span class="number">2</span>) % <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"></span><br><span class="line">    &gt;&gt;&gt; print(pow(<span class="number">0b11</span>, <span class="number">2</span>, <span class="number">2</span>))   <span class="comment"># 9^2 % 2</span></span><br><span class="line">    <span class="number">1</span> </span><br></pre></td></tr></table></figure>
           </div>
-
 
 <h1 id="math-pow"><a href="#math-pow" class="headerlink" title="math.pow()"></a>math.pow()</h1><div class="note no-icon">
-            <p><code>math.pow(x, y)</code> 함수는 순수하게 거듭제곱의 연산 기능만 제공합니다.<br><code>pow(base, exp)</code> 함수 혹은 <code>**</code> 연산자와 다른 점으로 <code>math.pow(x,y)</code> 함수는 <span class="label danger"> 두 인자를 float 형으로 바꾼다는 점</span>입니다.</p><ul><li><code>pow(1.0, x)</code>이나 <code>pow(x, 0.0)</code>의 결과값은 무조건 1.0을 반환합니다.(x가 0이거나 NaN 값이라도)</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">inf = float(<span class="string">"inf"</span>)</span><br><span class="line">NaN = float(<span class="string">"nan"</span>)</span><br><span class="line">p = [inf, -inf, NaN, <span class="number">0.0</span>, <span class="number">-0.0</span>, <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> p:</span><br><span class="line">    print(<span class="string">"x is"</span>, <span class="string">f'<span class="subst">&#123;x:<span class="number">4</span>&#125;</span> /'</span>, <span class="string">"pow(1.0, x)="</span>, math.pow(<span class="number">1.0</span>, x), <span class="string">"pow(x, 0.0)="</span>, math.pow(x, <span class="number">0.0</span>)) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x <span class="keyword">is</span>  inf / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> -inf / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span>  nan / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span>  <span class="number">0.0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">-0.0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span>    <span class="number">0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span> </span><br></pre></td></tr></table></figure><ul><li><code>pow(x, y)</code>에서 x와 y가 finite하고, x가 음수이고, y가 정수가 아니면 <span class="label danger"> ValueError</span>를 반환합니다.</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">vals = [(<span class="number">1.23</span>, <span class="number">3.33</span>), (<span class="number">-1.23</span>, <span class="number">2.0</span>), (<span class="number">-1.23</span>, <span class="number">-3.33</span>)]</span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> vals:</span><br><span class="line">    print(<span class="string">f"x is <span class="subst">&#123;x&#125;</span>, y is <span class="subst">&#123;y&#125;</span> /"</span>, math.pow(x, y))  </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x <span class="keyword">is</span> <span class="number">1.23</span>, y <span class="keyword">is</span> <span class="number">3.33</span> / <span class="number">1.9924343529238528</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">-1.23</span>, y <span class="keyword">is</span> <span class="number">2.0</span> / <span class="number">1.5129</span></span><br><span class="line">ValueError: math domain error </span><br></pre></td></tr></table></figure>
+            <p><code>math.pow(x, y)</code> 함수는 순수하게 거듭제곱의 연산 기능만 제공합니다.<br><code>pow(base, exp)</code> 함수 혹은 <code>**</code> 연산자와 다른 점으로 <code>math.pow(x,y)</code> 함수는 <span class="label danger"> 두 인자를 float 형으로 바꾼다는 점</span>입니다.</p><ul><li><code>pow(1.0, x)</code>이나 <code>pow(x, 0.0)</code>의 결과값은 무조건 1.0을 반환합니다.(x가 0이거나 NaN 값이라도)</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">    inf = float(<span class="string">"inf"</span>)</span><br><span class="line">    NaN = float(<span class="string">"nan"</span>)</span><br><span class="line">    p = [inf, -inf, NaN, <span class="number">0.0</span>, <span class="number">-0.0</span>, <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> p:</span><br><span class="line">        print(<span class="string">"x is"</span>, <span class="string">f'<span class="subst">&#123;x:<span class="number">4</span>&#125;</span> /'</span>, <span class="string">"pow(1.0, x)="</span>, math.pow(<span class="number">1.0</span>, x), <span class="string">"pow(x, 0.0)="</span>, math.pow(x, <span class="number">0.0</span>)) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x <span class="keyword">is</span> inf / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> -inf / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> nan / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">0.0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">-0.0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">0</span> / pow(<span class="number">1.0</span>, x)= <span class="number">1.0</span> pow(x, <span class="number">0.0</span>)= <span class="number">1.0</span> </span><br></pre></td></tr></table></figure><ul><li><code>pow(x, y)</code>에서 x와 y가 finite하고, x가 음수이고, y가 정수가 아니면 <span class="label danger"> ValueError</span>를 반환합니다.</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">vals = [(<span class="number">1.23</span>, <span class="number">3.33</span>), (<span class="number">-1.23</span>, <span class="number">2.0</span>), (<span class="number">-1.23</span>, <span class="number">-3.33</span>)]</span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> vals:</span><br><span class="line">print(<span class="string">f"x is <span class="subst">&#123;x&#125;</span>, y is <span class="subst">&#123;y&#125;</span> /"</span>, math.pow(x, y)) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x <span class="keyword">is</span> <span class="number">1.23</span>, y <span class="keyword">is</span> <span class="number">3.33</span> / <span class="number">1.9924343529238528</span></span><br><span class="line">x <span class="keyword">is</span> <span class="number">-1.23</span>, y <span class="keyword">is</span> <span class="number">2.0</span> / <span class="number">1.5129</span></span><br><span class="line">ValueError: math domain error </span><br></pre></td></tr></table></figure>
           </div>
-
 
 <h1 id="수행시간-비교"><a href="#수행시간-비교" class="headerlink" title="수행시간 비교"></a>수행시간 비교</h1><div class="note no-icon">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># executionTime.py written in PyCharm</span></span><br><span class="line"><span class="keyword">from</span> timeit <span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Int ** Int'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'7 ** 5'</span>))</span><br><span class="line">print(<span class="string">'pow(Int, Int)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'pow(7, 5)'</span>))</span><br><span class="line">print(<span class="string">'math.pow(Int, Int)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'math.pow(7, 5)'</span>, setup=<span class="string">'import math'</span>))</span><br><span class="line">print()</span><br><span class="line">print(<span class="string">'float ** float'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'7.0 ** 5.0'</span>))</span><br><span class="line">print(<span class="string">'pow(float, float)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'pow(7.0, 5.0)'</span>))</span><br><span class="line">print(<span class="string">'math.pow(float, float)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'math.pow(7.0, 5.0)'</span>, setup=<span class="string">'import math'</span>)) </span><br></pre></td></tr></table></figure><p><span class="label primary"> <code>**</code> 연산자가 큰 차이로 가장 빠르고 <code>pow()</code>와 <code>math.pow()</code>는 비슷비슷한 시간을 가집니다.</span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Int ** Int                     <span class="number">0.012045001</span></span><br><span class="line">pow(Int, Int)                  <span class="number">0.497163934</span></span><br><span class="line">math.pow(Int, Int)             <span class="number">0.24036590000000002</span></span><br><span class="line"></span><br><span class="line">float ** float                 <span class="number">0.012131208999999976</span></span><br><span class="line">pow(float, float)              <span class="number">0.156296341</span></span><br><span class="line">math.pow(float, float)         <span class="number">0.21024002100000005</span> </span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># executionTime.py written in PyCharm</span></span><br><span class="line"><span class="keyword">from</span> timeit <span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'Int ** Int'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'7 ** 5'</span>))</span><br><span class="line">    print(<span class="string">'pow(Int, Int)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'pow(7, 5)'</span>))</span><br><span class="line">    print(<span class="string">'math.pow(Int, Int)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'math.pow(7, 5)'</span>, setup=<span class="string">'import math'</span>))</span><br><span class="line">    print()</span><br><span class="line">    print(<span class="string">'float ** float'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'7.0 ** 5.0'</span>))</span><br><span class="line">    print(<span class="string">'pow(float, float)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'pow(7.0, 5.0)'</span>))</span><br><span class="line">    print(<span class="string">'math.pow(float, float)'</span>.ljust(<span class="number">30</span>), timeit(<span class="string">'math.pow(7.0, 5.0)'</span>, setup=<span class="string">'import math'</span>)) </span><br></pre></td></tr></table></figure><p><span class="label primary"> <code>**</code> 연산자가 큰 차이로 가장 빠르고 <code>pow()</code>와 <code>math.pow()</code>는 비슷비슷한 시간을 가집니다.</span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Int \*\* Int <span class="number">0.012045001</span></span><br><span class="line">pow(Int, Int) <span class="number">0.497163934</span></span><br><span class="line">math.pow(Int, Int) <span class="number">0.24036590000000002</span></span><br><span class="line"></span><br><span class="line">    float ** float                 <span class="number">0.012131208999999976</span></span><br><span class="line">    pow(float, float)              <span class="number">0.156296341</span></span><br><span class="line">    math.pow(float, float)         <span class="number">0.21024002100000005</span> </span><br></pre></td></tr></table></figure>
           </div>
 
-
 <h1 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h1><div class="note info no-icon">
-            <p>입력되는 인자의 자료형과 상관없이 반환값을 무조건 실수형(float)으로 받고 싶을 때 <code>math.pow()</code> 함수를 사용하는 것이 좋습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>timeit(<span class="string">'float(i) ** j'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line"><span class="number">0.7610865891750791</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>timeit(<span class="string">'i ** float(j)'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line"><span class="number">0.7930400942188385</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>timeit(<span class="string">'float(i ** j)'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line"><span class="number">0.8946636625872202</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>timeit(<span class="string">'math.pow(i, j)'</span>, setup=<span class="string">'import math; i, j = 7, 5'</span>)</span><br><span class="line"><span class="number">0.5699394063529439</span>  </span><br></pre></td></tr></table></figure><p>위 코드 결과와 같이, 정수형으로 반환되는 <code>**</code> 연산(혹은 <code>pow()</code>) 결과를 <code>float()</code> 함수로 형변환 하는 것 보다 <code>math.pow()</code> 함수가 더 빠른 것을 볼 수 있습니다.</p><p><span class="label danger"> 특별한 경우가 아니고 간단한 연산에 필요하다면 <code>**</code> 연산자를 사용하는 것이 가장 좋을 듯 합니다</span></p>
+            <p>입력되는 인자의 자료형과 상관없이 반환값을 무조건 실수형(float)으로 받고 싶을 때 <code>math.pow()</code> 함수를 사용하는 것이 좋습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; timeit(<span class="string">'float(i) ** j'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">0.7610865891750791</span></span><br><span class="line">&gt; &gt; &gt; timeit(<span class="string">'i ** float(j)'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">0.7930400942188385</span></span><br><span class="line">&gt; &gt; &gt; timeit(<span class="string">'float(i \*\* j)'</span>, setup=<span class="string">'i, j = 7, 5'</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">0.8946636625872202</span></span><br><span class="line">&gt; &gt; &gt; timeit(<span class="string">'math.pow(i, j)'</span>, setup=<span class="string">'import math; i, j = 7, 5'</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">0.5699394063529439</span> </span><br></pre></td></tr></table></figure><p>위 코드 결과와 같이, 정수형으로 반환되는 <code>**</code> 연산(혹은 <code>pow()</code>) 결과를 <code>float()</code> 함수로 형변환 하는 것 보다 <code>math.pow()</code> 함수가 더 빠른 것을 볼 수 있습니다.</p><p><span class="label danger"> 특별한 경우가 아니고 간단한 연산에 필요하다면 <code>**</code> 연산자를 사용하는 것이 가장 좋을 듯 합니다</span></p>
+          </div>
+
+<hr>
+<hr>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200302-PY-day12/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Language-Python-20200302-PY-day12/" class="post-title-link" itemprop="url">(PYTHON) Day - 12 Math(1)</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2020-03-02 16:31:37" itemprop="dateCreated datePublished" datetime="2020-03-02T16:31:37+09:00">2020-03-02</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20200302-PY-day12/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200302-PY-day12/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>문제 출처 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZGFzaGJvYXJk" title="https://www.hackerrank.com/dashboard">HackerRank<i class="fa fa-external-link"></i></span></li>
+<li>파이썬 연습 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZG9tYWlucy9weXRob24/ZmlsdGVycyU1QnN0YXR1cyU1RCU1QiU1RD11bnNvbHZlZCZiYWRnZV90eXBlPXB5dGhvbg==" title="https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=python">Practice - Python<i class="fa fa-external-link"></i></span></li>
+<li>math 모듈 - <span class="exturl" data-url="aHR0cHM6Ly8wNzY5MjMuZ2l0aHViLmlvL3Bvc3RzL1B5dGhvbi03Lw==" title="https://076923.github.io/posts/Python-7/">YUN DAE HEE githubpage<i class="fa fa-external-link"></i></span></li>
+</ul>
+<p>개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다<br>문제를 풀고 <span class="label success"> Discussion Tab</span>을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다</p>
+<hr>
+<h1 id="HackerRank"><a href="#HackerRank" class="headerlink" title="HackerRank"></a>HackerRank</h1><div class="spoiler collapsed">
+    <div class="spoiler-title">
+        HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
+    </div>
+    <div class="spoiler-content">
+        <h2 id="Subdomain-Introduction-Basic-Data-Types-Strings-Sets-Math-Itertools-Collections-Date-and-Time-Errors-and-Exceptions-Classes-Built-Ins-Python-Functionals-Regex-and-Parsing-XML-Closures-and-Decorators-Numpy-Debugging"><a href="#Subdomain-Introduction-Basic-Data-Types-Strings-Sets-Math-Itertools-Collections-Date-and-Time-Errors-and-Exceptions-Classes-Built-Ins-Python-Functionals-Regex-and-Parsing-XML-Closures-and-Decorators-Numpy-Debugging" class="headerlink" title="Subdomain - Introduction - Basic Data Types - Strings - Sets - Math - Itertools - Collections - Date and Time - Errors and Exceptions - Classes - Built-Ins - Python Functionals - Regex and Parsing - XML - Closures and Decorators - Numpy - Debugging"></a>Subdomain - <del>Introduction</del> - <del>Basic Data Types</del> - <del>Strings</del> - <del>Sets</del> - <strong style="color:blue">Math</strong> - Itertools - Collections - Date and Time - Errors and Exceptions - Classes - Built-Ins - Python Functionals - Regex and Parsing - XML - Closures and Decorators - Numpy - Debugging</h2>
+    </div>
+</div>
+
+<hr>
+<h1 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h1><div class="note no-icon">
+            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Polar-Coordinates">Polar Coordinates</a></li></ul>          </div><hr><div class="note no-icon">            <h2 id="기본-개념"><a href="#기본-개념" class="headerlink" title="기본 개념"></a>기본 개념</h2><p><span class="label warning"> <strong>수학 관련 Built-in functions</strong></span></p><div class="note no-icon">            <p><span class="label primary"><strong>abs(x)</strong></span><br>인자 x의 절대값을 반환합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; abs(<span class="number">-2</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">2</span> </span><br></pre></td></tr></table></figure><p><span class="label primary"><strong>divmod(a, b)</strong></span><br>복소수가 아닌 인자 a, b에 대한 나눗셈의 몫과 나머지를 반환합니다. 즉, 결과값이 (a//b, a%b)와 같습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; divmod(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">&gt; &gt; &gt; (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">&gt; &gt; &gt; divmod(<span class="number">8.0</span>, <span class="number">2.0</span>)</span><br><span class="line">&gt; &gt; &gt; (<span class="number">4.0</span>, <span class="number">0.0</span>) </span><br></pre></td></tr></table></figure><p><span class="label primary"><strong>min(iterable, *[, key, default])</strong></span> or <span class="label primary"><strong>min(arg1, arg2, *args[, key])</strong></span><br><span class="label primary"><strong>max(iterable, *[, key, default])</strong></span> or <span class="label primary"><strong>max(arg1, arg2, *args[, key])</strong></span><br>각각 최소값, 최대값을 구하는 함수입니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findMax</span><span class="params">(num)</span>:</span></span><br><span class="line">rem = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span>(num):</span><br><span class="line">rem = num%<span class="number">10</span></span><br><span class="line"><span class="keyword">return</span> rem</span><br><span class="line"></span><br><span class="line"><span class="comment"># using max(arg1, arg2, \*args, key)</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Number with max remainder is:'</span>, max(<span class="number">11</span>,<span class="number">48</span>,<span class="number">33</span>,<span class="number">17</span>,<span class="number">19</span>, key=findMax))</span><br><span class="line"></span><br><span class="line"><span class="comment"># using max(iterable, key)</span></span><br><span class="line"></span><br><span class="line">num = [<span class="number">11</span>,<span class="number">48</span>,<span class="number">33</span>,<span class="number">17</span>]</span><br><span class="line">print(<span class="string">'Number with max remainder is:'</span>, max(num, key=findMax)) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Number <span class="keyword">with</span> max remainder <span class="keyword">is</span>: <span class="number">19</span></span><br><span class="line">Number <span class="keyword">with</span> max remainder <span class="keyword">is</span>: <span class="number">48</span> </span><br></pre></td></tr></table></figure><p><span class="label primary"><strong>sum(iterable, /, start=0)</strong></span><br>iterable의 숫자들을 왼쪽부터 차례로 더하여 start의 값에 합한 값을 반환합니다. 즉, 전체합을 반환합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; numbers = [<span class="number">2.5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">-5</span>]</span><br><span class="line"></span><br><span class="line">&gt; &gt; &gt; <span class="comment"># start 인자가 생략된 경우</span></span><br><span class="line">&gt; &gt; &gt;</span><br><span class="line">&gt; &gt; &gt; numbers_sum = sum(numbers)</span><br><span class="line">&gt; &gt; &gt; print(numbers_sum)</span><br><span class="line">&gt; &gt; &gt; <span class="number">4.5</span></span><br><span class="line"></span><br><span class="line">&gt; &gt; &gt; <span class="comment"># start = 10</span></span><br><span class="line">&gt; &gt; &gt;</span><br><span class="line">&gt; &gt; &gt; numbers_sum = sum(numbers, <span class="number">10</span>)</span><br><span class="line">&gt; &gt; &gt; print(numbers_sum)</span><br><span class="line">&gt; &gt; &gt; <span class="number">14.5</span> </span><br></pre></td></tr></table></figure><p><span class="label primary"><strong>pow(base, exp[, mod])</strong></span><br>밑(base)의 지수(exp)만큼 거듭제곱한 값을 반환합니다. 옵션으로 mod 인자가 있는 경우 거듭제곱 값을 mod로 나눈 나머지를 반환합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; pow(<span class="number">38</span>, <span class="number">-1</span>, mod=<span class="number">97</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">23</span></span><br><span class="line">&gt; &gt; &gt; <span class="number">23</span> \* <span class="number">38</span> % <span class="number">97</span> == <span class="number">1</span></span><br><span class="line">&gt; &gt; &gt; <span class="literal">True</span> </span><br></pre></td></tr></table></figure><p><span class="label primary"><strong>round(number[, ndigits])</strong></span><br>반올림한 값을 반환합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; &gt; &gt; <span class="comment">#ndigits 인자 즉, 소수점 자리를 생략한 경우</span></span><br><span class="line">&gt; &gt; &gt; round(<span class="number">1</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">1</span></span><br><span class="line">&gt; &gt; &gt; round(<span class="number">1.4</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">1</span></span><br><span class="line">&gt; &gt; &gt; round(<span class="number">1.6</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">2</span></span><br><span class="line"></span><br><span class="line">&gt; &gt; &gt; <span class="comment">#소수점 자리를 명시한 경우</span></span><br><span class="line">&gt; &gt; &gt; round(<span class="number">1.343</span>,<span class="number">2</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">1.34</span></span><br><span class="line">&gt; &gt; &gt; round(<span class="number">1.346</span>,<span class="number">2</span>)</span><br><span class="line">&gt; &gt; &gt; <span class="number">1.35</span> </span><br></pre></td></tr></table></figure>          </div><p><span class="label warning"> <strong>Math module</strong></span></p><p>수학적 계산과 관련된 함수들을 제공하는 모듈(복소수는 <code>cmath</code> 모듈이 따로 존재)<br>내가 사용하는 환경 3.7.6v에서는 50개의 함수가 있다(작성일 기준 최신버전 3.8에서는 55개가 있음)</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># test.py written in PyCharm</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">s = dir(math)</span><br><span class="line">mod = [n <span class="keyword">for</span> n <span class="keyword">in</span> s <span class="keyword">if</span> <span class="keyword">not</span> n.startswith(<span class="string">'_'</span>)]</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Python 버전:'</span>, sys.version)</span><br><span class="line">print()</span><br><span class="line">print(<span class="string">'function 개수:'</span>, len(mod))</span><br><span class="line">print(mod) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Python 버전: 3.7.6</span><br><span class="line">[Clang 10.0.0 (clang-1000.11.45.5)]</span><br><span class="line"></span><br><span class="line">function 개수: 50</span><br><span class="line">[&apos;acos&apos;, &apos;acosh&apos;, &apos;asin&apos;, &apos;asinh&apos;, &apos;atan&apos;, &apos;atan2&apos;, &apos;atanh&apos;, &apos;ceil&apos;, &apos;copysign&apos;, &apos;cos&apos;, &apos;cosh&apos;, &apos;degrees&apos;, &apos;e&apos;, &apos;erf&apos;, &apos;erfc&apos;, &apos;exp&apos;, &apos;expm1&apos;, &apos;fabs&apos;, &apos;factorial&apos;, &apos;floor&apos;, &apos;fmod&apos;, &apos;frexp&apos;, &apos;fsum&apos;, &apos;gamma&apos;, &apos;gcd&apos;, &apos;hypot&apos;, &apos;inf&apos;, &apos;isclose&apos;, &apos;isfinite&apos;, &apos;isinf&apos;, &apos;isnan&apos;, &apos;ldexp&apos;, &apos;lgamma&apos;, &apos;log&apos;, &apos;log10&apos;, &apos;log1p&apos;, &apos;log2&apos;, &apos;modf&apos;, &apos;nan&apos;, &apos;pi&apos;, &apos;pow&apos;, &apos;radians&apos;, &apos;remainder&apos;, &apos;sin&apos;, &apos;sinh&apos;, &apos;sqrt&apos;, &apos;tan&apos;, &apos;tanh&apos;, &apos;tau&apos;, &apos;trunc&apos;] </span><br></pre></td></tr></table></figure><p><span class="label primary">표현 함수</span></p><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>ceil(x)</td><td>올림</td></tr><tr><td>floor(x)</td><td>내림</td></tr><tr><td>trunc(x)</td><td>절사</td></tr></tbody></table><span class="label primary"> 삼각 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>cos(x)</td><td>코사인</td></tr><tr><td>sin(x)</td><td>사인</td></tr><tr><td>tan(x)</td><td>탄젠트</td></tr><tr><td>acos(x)</td><td>아크코사인</td></tr><tr><td>asin(x)</td><td>아크사인</td></tr><tr><td>atan(x)</td><td>아크탄젠트</td></tr><tr><td>atan2(x, y)</td><td>x/y 아크탄젠트</td></tr></tbody></table><span class="label primary">하이퍼볼릭 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>cosh(x)</td><td>하이퍼볼릭 코사인</td></tr><tr><td>sinh(x)</td><td>하이퍼볼릭 사인</td></tr><tr><td>tanh(x)</td><td>하이퍼볼릭 탄젠트</td></tr><tr><td>acosh(x)</td><td>하이퍼볼릭 아크코사인</td></tr><tr><td>asinh(x)</td><td>하이퍼볼릭 아크사인</td></tr><tr><td>atanh(x)</td><td>하이퍼볼릭 아크탄젠트</td></tr></tbody></table><span class="label primary">각도변환 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>degrees(x)</td><td>60분법으로 변환</td></tr><tr><td>radians(x)</td><td>호도법으로 변환</td></tr></tbody></table><span class="label primary">논리 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>isclose(x, y, rel_tol=z)</td><td>x와 y가 (z*1e+02)% 내외로 가까우면 True, 아니면 False</td></tr><tr><td>isinf(x)</td><td>x가 inf이면 True, 아니면 False</td></tr><tr><td>isfinite(x)</td><td>x가 inf, nan이면 False, 아니면 True</td></tr><tr><td>isnan(x)</td><td>x가 nan이면 True, 아니면 False</td></tr></tbody></table><span class="label primary">로그 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>log(x, y)</td><td>y를 밑으로 하는 x 로그</td></tr><tr><td>log10(x)</td><td>10을 밑으로 하는 x로그</td></tr><tr><td>log1p(x)</td><td>e를 밑으로 하는 x+1로그</td></tr><tr><td>log2(x)</td><td>2를 밑으로 하는 x로그</td></tr></tbody></table><span class="label primary">연산 함수</span><table><thead><tr><th>함수</th><th>설명</th></tr></thead><tbody><tr><td>pow(x, y)</td><td>x의 y승</td></tr><tr><td>sqrt(x)</td><td>루트 x</td></tr><tr><td>erf(x)</td><td>오차함수</td></tr><tr><td>erfc(x)</td><td>여오차함수</td></tr><tr><td>exp(x)</td><td>e의 x승</td></tr><tr><td>expm1</td><td>e의 x-1승</td></tr><tr><td>frexp(x)</td><td>x를 (가수부, 지수부)로 반환</td></tr><tr><td>ldexp(x, y)</td><td>x*(2^y)</td></tr><tr><td>gamma(x)</td><td>감마함수</td></tr><tr><td>lgamma(x)</td><td>감마함수의 자연로그</td></tr><tr><td>factorial(x)</td><td>팩토리얼</td></tr><tr><td>fsum([x, y, z, …])</td><td>리스트의 합</td></tr><tr><td>fmod(x, y)</td><td>x를 y로 나눈 나머지</td></tr><tr><td>fabs(x)</td><td>절대값</td></tr><tr><td>gcd(x, y)</td><td>x와 y의 최대공약수</td></tr><tr><td>hypot(x, y)</td><td>유클리드 놈을 반환</td></tr><tr><td>modf(x)</td><td>x를 (소수부, 정수부)로 반환</td></tr><tr><td>copysign(x, y)</td><td>y의 부호를 사용하는 x를 반환</td></tr></tbody></table><span class="label primary">상수 함수</span><table><thead><tr><th align="center">함수</th><th align="center">설명</th></tr></thead><tbody><tr><td align="center">e</td><td align="center">e</td></tr><tr><td align="center">pi</td><td align="center">π</td></tr><tr><td align="center">tau</td><td align="center">τ</td></tr><tr><td align="center">inf</td><td align="center">∞</td></tr><tr><td align="center">nan</td><td align="center">Not a Number</td></tr></tbody></table><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy9saWJyYXJ5L21hdGguaHRtbA==" title="https://docs.python.org/3/library/math.html">Python 3.8.2 Documentation - Math<i class="fa fa-external-link"></i></span></p><span class="label warning"> **Polar Coordinates**</span><p><span class="exturl" data-url="aHR0cHM6Ly9rby53aWtpcGVkaWEub3JnL3dpa2kvJUVBJUI3JUI5JUVDJUEyJThDJUVEJTkxJTlDJUVBJUIzJTg0IyVFQiVCMyVCNSVFQyU4NiU4QyVFQyU4OCU5OF8lRUMlQjIlQjQlRUElQjMlODQ=" title="https://ko.wikipedia.org/wiki/%EA%B7%B9%EC%A2%8C%ED%91%9C%EA%B3%84#%EB%B3%B5%EC%86%8C%EC%88%98_%EC%B2%B4%EA%B3%84">극좌표계 - 위키피디아<i class="fa fa-external-link"></i></span></p>          </div><hr><h2 id="Polar-Coordinates"><a href="#Polar-Coordinates" class="headerlink" title="Polar Coordinates"></a>Polar Coordinates</h2><br><div class="note info">            <p>문제 : 복소수를 극좌표로 표현하는 문제<br>입력 : 복소수 z;<br>출력 : z를 극좌표에 표현했을 때의 r, ϕ를 출력<br><img data-src="https://s3.amazonaws.com/hr-challenge-images/9951/1440141121-5b051fd241-Capture.PNG"></p><blockquote><p>r : Distance from to origin, i.e.,<br>ϕ : Counter clockwise angle measured from the positive -axis to the line segment</p></blockquote>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><pre><code>1+2j</code></pre></div><div class="tab-pane" id="example1-2"><p>2.23606797749979<br>1.1071487177940904</p></div></div></div><div class="note success no-icon">            <p><code>polar(x)</code> 함수는 <code>abs(x)</code>, <code>phase(x)</code> 의 값을 반환한다<br>즉, 위 그림에서의 r(점까지의 거리), ϕ(위상) 에 해당한다<br>자세한 설명은 - <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMi9saWJyYXJ5L2NtYXRoLmh0bWwjY21hdGgucG9sYXI=" title="https://docs.python.org/2/library/cmath.html#cmath.polar">cmath 모듈<i class="fa fa-external-link"></i></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cmath</span><br><span class="line"></span><br><span class="line">z = complex(input())</span><br><span class="line">print(\*cmath.polar(z), sep=<span class="string">'\n'</span>) </span><br></pre></td></tr></table></figure>          </div>
           </div>
 
 <hr>
@@ -1054,7 +1030,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1098,7 +1074,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1288,13 +1264,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1364,7 +1334,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

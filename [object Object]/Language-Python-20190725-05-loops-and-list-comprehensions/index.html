@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="Reference Kaggle 홈페이지 - Kaggle 9강 ‘Loops and List Comprehensions’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원문을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     반복문(Loops)Loop는 반복적으로 코드를 실행해야 할 때">
+<meta name="keywords" content="파이썬,programming language,python,language,캐글,튜토리얼,kaggle,tutorial,loops,list comprehensions">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(파이썬) 05 Loops and List Comprehensions">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="Reference Kaggle 홈페이지 - Kaggle 9강 ‘Loops and List Comprehensions’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원문을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     반복문(Loops)Loop는 반복적으로 코드를 실행해야 할 때">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:22:03.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(파이썬) 05 Loops and List Comprehensions">
+<meta name="twitter:description" content="Reference Kaggle 홈페이지 - Kaggle 9강 ‘Loops and List Comprehensions’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원문을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     반복문(Loops)Loop는 반복적으로 코드를 실행해야 할 때">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>(파이썬) 05 Loops and List Comprehensions | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">(파이썬) 05 Loops and List Comprehensions
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-07-25 14:49:18" itemprop="dateCreated datePublished" datetime="2019-07-25T14:49:18+09:00">2019-07-25</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>Kaggle 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbQ==" title="https://www.kaggle.com">Kaggle<i class="fa fa-external-link"></i></span></li>
+<li>9강 ‘Loops and List Comprehensions’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9sb29wcy1hbmQtbGlzdC1jb21wcmVoZW5zaW9ucw==" title="https://www.kaggle.com/colinmorris/loops-and-list-comprehensions">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
+</ul>
+<blockquote>
+<p>영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원문을 참고하시길 바랍니다…<br>언젠가는 실력이 나아지기를…</p>
+</blockquote>
+<hr>
+<br>
+
+<h1 id="반복문-Loops"><a href="#반복문-Loops" class="headerlink" title="반복문(Loops)"></a>반복문(Loops)</h1><p>Loop는 반복적으로 코드를 실행해야 할 때 사용됩니다. 아래는 예제입니다:</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets = [<span class="string">'Mercury'</span>, <span class="string">'Venus'</span>, <span class="string">'Earth'</span>, <span class="string">'Mars'</span>, <span class="string">'Jupiter'</span>, <span class="string">'Saturn'</span>, <span class="string">'Uranus'</span>, <span class="string">'Neptune'</span>]</span><br><span class="line"><span class="keyword">for</span> planet <span class="keyword">in</span> planets:</span><br><span class="line">print(planet, end=<span class="string">' '</span>) <span class="comment"># 같은 줄에 출력합니다. </span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p><code>for</code> 반복문에는</p>
+<ul>
+<li>사용할 변수 이름 (이 경우 <code>planet</code>)</li>
+<li>반복할 값들의 집합 (이 경우 <code>planets</code>)</li>
+</ul>
+<p>“<code>in</code>“ 이라는 단어를 사용하여 함께 연결합니다.</p>
+<p>“<code>in</code>“의 오른쪽에는 반복에 사용될 수 있다면 어떠한 객체라도 올 수 있습니다. 대체적으로 어떠한 그룹으로 생각될 수만 있다면 반복문에 사용될 수 있습니다.</p>
+<div class="tabs" id="loop_examples"><ul class="nav-tabs"><li class="tab active"><a href="#loop_examples-1"><i class="fa fa-eye"></i>tuple</a></li><li class="tab"><a href="#loop_examples-2"><i class="fa fa-eye"></i>string</a></li></ul><div class="tab-content"><div class="tab-pane active" id="loop_examples-1"><div class="note no-icon">
+            <p>lists 외에도 tuple의 요소들을 반복 할 수도 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">multiplicands = (<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line">product = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> mult <span class="keyword">in</span> multiplicands:</span><br><span class="line">product = product \* mult</span><br><span class="line">product </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">360</span> </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="loop_examples-2"><div class="note no-icon">
+            <p>string 의 각 character 마다 반복문을 돌릴 수 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">'steganograpHy is the practicE of conceaLing a file, message, image, or video within another fiLe, message, image, Or video.'</span></span><br><span class="line">msg = <span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># s 문자열의 대문자들을 출력. 한번에 하나씩</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> s:</span><br><span class="line"><span class="keyword">if</span> char.isupper():</span><br><span class="line">print(char, end=<span class="string">''</span>) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">HELLO </span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+
+<h2 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h2><p><code>range()</code> 는 일련의 연속적인 숫자들을 반환하는 함수입니다. 이는 반복문을 작성하는데 매우 유용합니다.<br>예를 들어, 우리가 어떤 행동을 5번 반복하고자 한다면 아래와 같이 작성하면 됩니다:</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">print(<span class="string">"Doing important work. i ="</span>, i) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Doing important work. i = 0</span><br><span class="line">Doing important work. i = 1</span><br><span class="line">Doing important work. i = 2</span><br><span class="line">Doing important work. i = 3</span><br><span class="line">Doing important work. i = 4 </span><br></pre></td></tr></table></figure>
+          </div>
+
+<h2 id="while-loops"><a href="#while-loops" class="headerlink" title="while loops"></a>while loops</h2><p>파이썬에는 또 다른 반복문으로 특정 조건을 만족할 때까지 반복하는 <code>while</code> 이 있습니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">print(i, end=<span class="string">' '</span>)</span><br><span class="line">i += <span class="number">1</span> </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0 1 2 3 4 5 6 7 8 9 </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p><code>while</code> 반복문의 인자는 boolean 문으로 평가되고, False로 평가 될 때까지 반복문이 실행됩니다.</p>
+<hr>
+<br>
+
+<h1 id="리스트-내포-List-Comprehensions"><a href="#리스트-내포-List-Comprehensions" class="headerlink" title="리스트 내포(List Comprehensions)"></a>리스트 내포(List Comprehensions)</h1><blockquote>
+<p>리스트 컴프리핸션 이라고 영문 그대로 읽는 경우가 더 많은 것 같습니다…</p>
+</blockquote>
+<p>리스트 내포는 파이썬에서 가장 사랑받고 독특한 특징 중 하나입니다. 자잘한 설명보다는 그냥 몇 가지 예제들을 보는 것이 보다 이해하기 쉬울 것 같습니다.</p>
+<div class="tabs" id="list_comprehensions"><ul class="nav-tabs"><li class="tab active"><a href="#list_comprehensions-1"><i class="fa fa-eye"></i>WITH_LC</a></li><li class="tab"><a href="#list_comprehensions-2"><i class="fa fa-eye"></i>WITHOUT_LC</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list_comprehensions-1"><div class="note no-icon">
+            <p>List comprehension 줄여서 LC라고 하겠습니다. <code>**</code> 은 파이썬 산술 연산자에서 제곱을 의미합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">squares = [n**<span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">squares </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>] </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="list_comprehensions-2"><div class="note no-icon">
+            <p>LC 없이 작성하면 아래와 같습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">squares.append(n\*\*<span class="number">2</span>)</span><br><span class="line">squares </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>] </span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+
+<p><code>if</code> 조건을 추가 할 수도 있습니다:</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">short_planets = [planet <span class="keyword">for</span> planet <span class="keyword">in</span> planets <span class="keyword">if</span> len(planet) &lt; <span class="number">6</span>]</span><br><span class="line">short_planets </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'Venus'</span>, <span class="string">'Earth'</span>, <span class="string">'Mars'</span>] </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>(SQL에 익숙하신 분이라면, “WHERE” 절과 비슷하다고 느끼셨을 겁니다.)<br>다음은 <code>if</code> 조건으로 필터링하고 loop 변수에 일부 변환을 적용하는 예제입니다:</p>
+<div class="tabs" id="if_condition"><ul class="nav-tabs"><li class="tab active"><a href="#if_condition-1"><i class="fa fa-eye"></i>SINGLE_LINE</a></li><li class="tab"><a href="#if_condition-2"><i class="fa fa-eye"></i>MULTI_LINE</a></li></ul><div class="tab-content"><div class="tab-pane active" id="if_condition-1"><div class="note no-icon">
+            <p>대문자로 바꾸고 뒤에 ‘!’를 추가합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># str.upper() 은 모두 대문자로 변환한 string을 반환합니다</span></span><br><span class="line"></span><br><span class="line">loud_short_planets = [planet.upper() + <span class="string">'!'</span> <span class="keyword">for</span> planet <span class="keyword">in</span> planets <span class="keyword">if</span> len(planet) &lt; <span class="number">6</span>]</span><br><span class="line">loud_short_planets </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'VENUS!'</span>, <span class="string">'EARTH!'</span>, <span class="string">'MARS!'</span>] </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="if_condition-2"><div class="note no-icon">
+            <p>대부분의 경우 한줄로 작성하는 것을 선호하지만, 구조를 파악하기 쉽게 하기 위해 3줄로 나눠서 작성할 수도 있습니다.<br>(SQL과 비교하자면, 각 줄은 SELECT, FROM, WHERE로 생각할 수 있겠군요)</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">planet.upper() + <span class="string">'!'</span></span><br><span class="line"><span class="keyword">for</span> planet <span class="keyword">in</span> planets</span><br><span class="line"><span class="keyword">if</span> len(planet) &lt; <span class="number">6</span></span><br><span class="line">] </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'VENUS!'</span>, <span class="string">'EARTH!'</span>, <span class="string">'MARS!'</span>] </span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+
+<p>표현식의 왼쪽에는 꼭 반복문의 변수를 포함할 필요가 없습니다(하지만 이런 경우는 매우 드뭅니다). 아래의 표현식이 어떤 결과를 출력할까요? “output” 탭을 눌러서 확인해 보세요.</p>
+<div class="tabs" id="if_example"><ul class="nav-tabs"><li class="tab active"><a href="#if_example-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#if_example-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="if_example-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">32</span> <span class="keyword">for</span> planet <span class="keyword">in</span> planets] </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="if_example-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>, <span class="number">32</span>] </span><br></pre></td></tr></table></figure></div></div></div>
+
+<p><code>min</code>, <code>max</code> 및 <code>sum</code> 과 같은 기능과 LC가 함께 사용되면 여러 줄로 작성된 코드를 한 줄의 매우 인상적인 코드로 표현할 수 있습니다.</p>
+<div class="tabs" id="lc_condition"><ul class="nav-tabs"><li class="tab active"><a href="#lc_condition-1"><i class="fa fa-eye"></i>ORIGINAL_CODE</a></li><li class="tab"><a href="#lc_condition-2"><i class="fa fa-eye"></i>ONE_LINE_CODE</a></li><li class="tab"><a href="#lc_condition-3"><i class="fa fa-eye"></i>SHORTER_CODE</a></li></ul><div class="tab-content"><div class="tab-pane active" id="lc_condition-1"><div class="note no-icon">
+            <p>예를 들어, 다음과 같이 음수의 개수를 세는 함수를 살펴보겠습니다:</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count_negatives</span><span class="params">(nums)</span>:</span></span><br><span class="line"><span class="string">"""Return the number of negative numbers in the given list.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; count_negatives([5, -1, -2, 0, 3])</span></span><br><span class="line"><span class="string">    2</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    n_negative = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">        <span class="keyword">if</span> num &lt; <span class="number">0</span>:</span><br><span class="line">            n_negative = n_negative + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> n_negative </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="lc_condition-2"><div class="note no-icon">
+            <p>LC를 사용하면 한 줄로 표현 가능합니다. 훨씬 보기 좋지 않은가요?</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count_negatives</span><span class="params">(nums)</span>:</span></span><br><span class="line"><span class="keyword">return</span> len([num <span class="keyword">for</span> num <span class="keyword">in</span> nums <span class="keyword">if</span> num &lt; <span class="number">0</span>]) </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="lc_condition-3"><div class="note no-icon">
+            <p>만약 조금이라도 더 짧은 코드를 원하신다면 다음과 같이 표현할 수도 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count_negatives</span><span class="params">(nums)</span>:</span> <span class="comment"># 기억하기: "booleans and conditionals" 연습문제에서, 파이썬의 별난 특징으로 # True + True + False + True 는 3으로 계산한다는 점을 응용.</span></span><br><span class="line"><span class="keyword">return</span> sum([num &lt; <span class="number">0</span> <span class="keyword">for</span> num <span class="keyword">in</span> nums]) </span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+
+<p>위 3가지 방법 중 어떤 것이 “최고의” 방법인지는 매우 주관적입니다. 보다 적은 코드로 문제를 해결하는 것이 항상 좋은 일이지만, <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvWmVuX29mX1B5dGhvbg==" title="https://en.wikipedia.org/wiki/Zen_of_Python">The Zen of Python<i class="fa fa-external-link"></i></span>에 적힌 다음 내용을 기억해 두는 것이 좋습니다.</p>
+<ul>
+<li>Readability counts. 가독성이 중요합니다.</li>
+<li>Explicit is better than implicit. 명확한 것이 암시적인 것보다 낫습니다.</li>
+</ul>
+<p>이러한 도구들을 사용하여 읽기 쉽고 간결한 프로그램을 짜도록 합시다. 하지만 둘 중 하나를 골라야하는 상황이 온다면, 다른 사람들이 읽고 이해하기 쉬운 코드를 짜는 것을 선호하도록 합시다.</p>
+<p><br><br><br></p>
+<h1 id="연습문제-Your-Turn"><a href="#연습문제-Your-Turn" class="headerlink" title="연습문제(Your Turn)"></a>연습문제(Your Turn)</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE3Nw==" title="https://www.kaggle.com/kernels/fork/1275177">loops and list comprehensions 예제<i class="fa fa-external-link"></i></span></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/파이썬/" rel="tag"># 파이썬</a>
+          
+            <a href="/tags/programming-language/" rel="tag"># programming language</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/language/" rel="tag"># language</a>
+          
+            <a href="/tags/캐글/" rel="tag"># 캐글</a>
+          
+            <a href="/tags/튜토리얼/" rel="tag"># 튜토리얼</a>
+          
+            <a href="/tags/kaggle/" rel="tag"># kaggle</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+            <a href="/tags/loops/" rel="tag"># loops</a>
+          
+            <a href="/tags/list-comprehensions/" rel="tag"># list comprehensions</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/Blog-HexoNextTheme-20190722-hexo-live2d/" rel="next" title="(Hexo_NexT_Theme) 마우스를 따라 움직이는 배경">
+                <i class="fa fa-chevron-left"></i> (Hexo_NexT_Theme) 마우스를 따라 움직이는 배경
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/Language-Python-20190726-06-strings-and-dictionaries/" rel="prev" title="(파이썬) 06 Strings and Dictionaries">
+                (파이썬) 06 Strings and Dictionaries <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#반복문-Loops"><span class="nav-text">반복문(Loops)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#range"><span class="nav-text">range()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while-loops"><span class="nav-text">while loops</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#리스트-내포-List-Comprehensions"><span class="nav-text">리스트 내포(List Comprehensions)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#연습문제-Your-Turn"><span class="nav-text">연습문제(Your Turn)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/";
+    this.page.identifier = "[object Object]/Language-Python-20190725-05-loops-and-list-comprehensions/";
+    this.page.title = '(파이썬) 05 Loops and List Comprehensions';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>

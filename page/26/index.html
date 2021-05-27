@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6222/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190728-sw-6218/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -403,214 +403,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-6222/" class="post-title-link" itemprop="url">(SW Expert Academy) 흐름과 제어 If - 6222번 6226번 6227번</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-07-28 21:51:04" itemprop="dateCreated datePublished" datetime="2019-07-28T21:51:04+09:00">2019-07-28</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6222/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6222/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="5번-6222번"><a href="#5번-6222번" class="headerlink" title="5번 - 6222번"></a>5번 - 6222번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>ASCII 코드 값은 ord()함수 사용<br>대소문자 변환은 32를 더하고 빼도 되고<br>내장함수 lower(), upper()를 사용해도 좋음</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = input()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ord(x)&gt;<span class="number">96</span> <span class="keyword">and</span> ord(x)&lt;<span class="number">123</span>):   <span class="comment"># 소문자</span></span><br><span class="line">    print(<span class="string">"&#123;0&#125;(ASCII: &#123;1&#125;) =&gt; &#123;2&#125;(ASCII: &#123;3&#125;)"</span>.format(x, ord(x), chr(ord(x)<span class="number">-32</span>), ord(x)<span class="number">-32</span>))</span><br><span class="line"><span class="keyword">elif</span>(ord(x)&gt;<span class="number">64</span> <span class="keyword">and</span> ord(x)&lt;<span class="number">91</span>):  <span class="comment"># 대문자</span></span><br><span class="line">    print(<span class="string">"&#123;&#125;(ASCII: &#123;&#125;) =&gt; &#123;&#125;(ASCII: &#123;&#125;)"</span>.format(x, ord(x), x.lower(), ord(x.lower())))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="7번-6226번"><a href="#7번-6226번" class="headerlink" title="7번 - 6226번"></a>7번 - 6226번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>연습문제 6은 없는 것 같다… 바로 7로 넘어감<br>처음에 if문 안에서 바로 print 하려다가 맨 마지막 ‘,’ 쉼표 처리하는게 까다로워서 그냥 string 객체에 추가해서 출력하는 식으로 해결하였다</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ans = <span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">200</span>):</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">7</span>==<span class="number">0</span> <span class="keyword">and</span> i%<span class="number">5</span>!=<span class="number">0</span>):</span><br><span class="line">        ans += str(i) + <span class="string">","</span></span><br><span class="line">print(ans[:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
-          </div>
-
-
-<hr>
-<h1 id="8번-6227번"><a href="#8번-6227번" class="headerlink" title="8번 - 6227번"></a>8번 - 6227번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>이게 될까? 싶은게 된다<br>각 자리수를 string형의 index로 구분하고 int형으로 다시 바꿔서 조건식을 만듬</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ans = <span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">300</span>):</span><br><span class="line">    <span class="keyword">if</span>(int(str(i)[<span class="number">0</span>])%<span class="number">2</span>==<span class="number">0</span> <span class="keyword">and</span> int(str(i)[<span class="number">1</span>])%<span class="number">2</span>==<span class="number">0</span> <span class="keyword">and</span> int(str(i)[<span class="number">2</span>])%<span class="number">2</span>==<span class="number">0</span>):</span><br><span class="line">        ans += str(i) + <span class="string">","</span></span><br><span class="line">print(ans[:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
-          </div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6218/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/sw-6218/" class="post-title-link" itemprop="url">(SW Expert Academy) 흐름과 제어 If - 6218번 6219번 6220번 6221번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6218/" class="post-title-link" itemprop="url">(SW Expert Academy) 흐름과 제어 If - 6218번 6219번 6220번 6221번</a>
               
             
           </h2>
@@ -650,7 +443,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -668,8 +468,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6218/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6218/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6218/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190728-sw-6218/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -712,7 +512,7 @@
 <p>반복문은 뒤에 나오는거 같은데… if문만으로 풀 수 있…나..?</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, a+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span>(a%i==<span class="number">0</span>):</span><br><span class="line">        print(<span class="string">"&#123;&#125;(은)는 &#123;&#125;의 약수입니다."</span>.format(i, a))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, a+<span class="number">1</span>):</span><br><span class="line"><span class="keyword">if</span>(a%i==<span class="number">0</span>):</span><br><span class="line">print(<span class="string">"&#123;&#125;(은)는 &#123;&#125;의 약수입니다."</span>.format(i, a))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -720,9 +520,8 @@
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
-
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line">cnt=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, a+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span>(a%i==<span class="number">0</span>):</span><br><span class="line">        cnt+=<span class="number">1</span></span><br><span class="line">        print(<span class="string">"&#123;&#125;(은)는 &#123;&#125;의 약수입니다."</span>.format(i, a))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(cnt==<span class="number">2</span>):</span><br><span class="line">    print(<span class="string">"&#123;&#125;(은)는 1과 &#123;&#125;로만 나눌 수 있는 소수입니다."</span>.format(a, a))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = int(input())</span><br><span class="line">cnt=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, a+<span class="number">1</span>):</span><br><span class="line"><span class="keyword">if</span>(a%i==<span class="number">0</span>):</span><br><span class="line">cnt+=<span class="number">1</span></span><br><span class="line">print(<span class="string">"&#123;&#125;(은)는 &#123;&#125;의 약수입니다."</span>.format(i, a))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(cnt==<span class="number">2</span>):</span><br><span class="line">print(<span class="string">"&#123;&#125;(은)는 1과 &#123;&#125;로만 나눌 수 있는 소수입니다."</span>.format(a, a))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -734,7 +533,7 @@
 <p>ASCII 코드를 활용</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = input()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ord(a)&gt;<span class="number">96</span>):</span><br><span class="line">    print(<span class="string">"&#123;&#125; 는 소문자 입니다."</span>.format(a))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"&#123;&#125; 는 대문자 입니다."</span>.format(a))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = input()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(ord(a)&gt;<span class="number">96</span>):</span><br><span class="line">print(<span class="string">"&#123;&#125; 는 소문자 입니다."</span>.format(a))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">print(<span class="string">"&#123;&#125; 는 대문자 입니다."</span>.format(a))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -746,7 +545,7 @@
 <p>입력을 랜덤으로 주는게 아닌데 굳이 list를 사용해야 하는가…?</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Man1 = input()</span><br><span class="line">Man2 = input()</span><br><span class="line"></span><br><span class="line">RSP = [<span class="string">"가위"</span>, <span class="string">"바위"</span>, <span class="string">"보"</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(Man1 == Man2):</span><br><span class="line">    print(<span class="string">"Result : Draw"</span>)</span><br><span class="line"><span class="keyword">elif</span>((Man1==RSP[<span class="number">0</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">1</span>]) <span class="keyword">or</span> (Man1==RSP[<span class="number">1</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">2</span>]) <span class="keyword">or</span> (Man1==RSP[<span class="number">2</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">0</span>])):</span><br><span class="line">    print(<span class="string">"Result : Man2 Win!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"Result : Man1 Win!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직접 입력하는게 아니라 랜덤으로 값을 주고 싶다면...</span></span><br><span class="line"><span class="comment"># from random import *</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># RSP = ["가위", "바위", "보"]</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Man1 = RSP[randrange(3)]</span></span><br><span class="line"><span class="comment"># Man2 = RSP[randrange(3)]</span></span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Man1 = input()</span><br><span class="line">Man2 = input()</span><br><span class="line"></span><br><span class="line">RSP = [<span class="string">"가위"</span>, <span class="string">"바위"</span>, <span class="string">"보"</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(Man1 == Man2):</span><br><span class="line">print(<span class="string">"Result : Draw"</span>)</span><br><span class="line"><span class="keyword">elif</span>((Man1==RSP[<span class="number">0</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">1</span>]) <span class="keyword">or</span> (Man1==RSP[<span class="number">1</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">2</span>]) <span class="keyword">or</span> (Man1==RSP[<span class="number">2</span>] <span class="keyword">and</span> Man2==RSP[<span class="number">0</span>])):</span><br><span class="line">print(<span class="string">"Result : Man2 Win!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">print(<span class="string">"Result : Man1 Win!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 직접 입력하는게 아니라 랜덤으로 값을 주고 싶다면...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># from random import \*</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># RSP = ["가위", "바위", "보"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Man1 = RSP[randrange(3)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Man2 = RSP[randrange(3)]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
@@ -806,7 +605,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6204/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190728-sw-6204/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -826,7 +625,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-6204/" class="post-title-link" itemprop="url">(SW Expert Academy) 연산자 - 6204번 6206번 6207번 6209번 6216번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6204/" class="post-title-link" itemprop="url">(SW Expert Academy) 연산자 - 6204번 6206번 6207번 6209번 6216번</a>
               
             
           </h2>
@@ -866,7 +665,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -884,8 +690,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6204/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6204/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6204/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190728-sw-6204/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -928,7 +734,7 @@
 <p>뒤에 2, 3, 4번 문제도 똑같지만, 출력할 때 ‘=&gt;’ 뒤에 띄여쓰기 2칸이다<br>이 미묘한 차이 때문에 몇 번이나 오답으로 처리됨…ㅠ</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(ch).2f inch =&gt;  %(cm).2f cm"</span> % &#123;<span class="string">"ch"</span>: a, <span class="string">"cm"</span>: a*<span class="number">2.54</span>&#125;)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(ch).2f inch =&gt; %(cm).2f cm"</span> % &#123;<span class="string">"ch"</span>: a, <span class="string">"cm"</span>: a\*<span class="number">2.54</span>&#125;)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -936,9 +742,8 @@
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
-
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(kg).2f kg =&gt;  %(lb).2f lb"</span> % &#123;<span class="string">"kg"</span>: a, <span class="string">"lb"</span>: <span class="number">2.2046</span>*a&#125;)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(kg).2f kg =&gt; %(lb).2f lb"</span> % &#123;<span class="string">"kg"</span>: a, <span class="string">"lb"</span>: <span class="number">2.2046</span>\*a&#125;)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -950,7 +755,7 @@
 <p>섭씨를 화로 바꾸기 위해서 32를 빼고 1.8을 곱하고 32를 더함</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(dc).2f ℃ =&gt;  %(fc).2f ℉"</span> % &#123;<span class="string">"dc"</span>: a, <span class="string">"fc"</span>: a/<span class="number">100</span>*<span class="number">180</span>+<span class="number">32</span>&#125;)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(dc).2f ℃ =&gt; %(fc).2f ℉"</span> % &#123;<span class="string">"dc"</span>: a, <span class="string">"fc"</span>: a/<span class="number">100</span>\*<span class="number">180</span>+<span class="number">32</span>&#125;)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -962,7 +767,7 @@
 <p>화씨를 섭씨로 바꾸기 위해서 32를 빼고 100/180을 곱함</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(fc).2f ℉ =&gt;  %(dc).2f ℃"</span> % &#123;<span class="string">"fc"</span>: a, <span class="string">"dc"</span>: (a<span class="number">-32</span>)*<span class="number">100</span>/<span class="number">180</span>&#125;)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = float(input())</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%(fc).2f ℉ =&gt; %(dc).2f ℃"</span> % &#123;<span class="string">"fc"</span>: a, <span class="string">"dc"</span>: (a<span class="number">-32</span>)\*<span class="number">100</span>/<span class="number">180</span>&#125;)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -970,9 +775,194 @@
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
-
 <div class="note success">
             <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">"혼합된 소금물의 농도: &#123;0:.2f&#125;%"</span>.format(<span class="number">20</span>/<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+          </div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190728-sw-6196/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6196/" class="post-title-link" itemprop="url">(SW Expert Academy) 6196번 - 변수</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-07-28 17:16:23" itemprop="dateCreated datePublished" datetime="2019-07-28T17:16:23+09:00">2019-07-28</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Algorithm-SWEA-20190728-sw-6196/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190728-sw-6196/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x= input()</span><br><span class="line">a = int(x)</span><br><span class="line"></span><br><span class="line">print(<span class="number">4</span>*a+<span class="number">3</span>*<span class="number">10</span>*a+<span class="number">2</span>*<span class="number">100</span>*a+<span class="number">1000</span>*a)</span><br></pre></td></tr></table></figure>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
@@ -1021,7 +1011,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1065,7 +1055,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1255,13 +1245,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1331,7 +1315,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

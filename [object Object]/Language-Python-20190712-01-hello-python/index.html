@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="Reference Kaggle 홈페이지 - Kaggle 1강 ‘Hello, Python’ - Python Micro-Course Home Page   개요(Intro)Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으">
+<meta name="keywords" content="파이썬,programming language,python,language,캐글,튜토리얼,kaggle,tutorial">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(파이썬) 01 HELLO, PYTHON!">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/Language-Python-20190712-01-hello-python/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="Reference Kaggle 홈페이지 - Kaggle 1강 ‘Hello, Python’ - Python Micro-Course Home Page   개요(Intro)Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:22:03.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(파이썬) 01 HELLO, PYTHON!">
+<meta name="twitter:description" content="Reference Kaggle 홈페이지 - Kaggle 1강 ‘Hello, Python’ - Python Micro-Course Home Page   개요(Intro)Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/Language-Python-20190712-01-hello-python/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>(파이썬) 01 HELLO, PYTHON! | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20190712-01-hello-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">(파이썬) 01 HELLO, PYTHON!
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-07-12 14:11:51" itemprop="dateCreated datePublished" datetime="2019-07-12T14:11:51+09:00">2019-07-12</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20190712-01-hello-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20190712-01-hello-python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>Kaggle 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbQ==" title="https://www.kaggle.com">Kaggle<i class="fa fa-external-link"></i></span></li>
+<li>1강 ‘Hello, Python’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9oZWxsby1weXRob24=" title="https://www.kaggle.com/colinmorris/hello-python">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
+</ul>
+<hr>
+<h1 id="개요-Intro"><a href="#개요-Intro" class="headerlink" title="개요(Intro)"></a>개요(Intro)</h1><p>Data Science에 필요한 Python의 핵심적인 부분들을 배우는 과정입니다. 본 과정은 기초적인 코딩 경험이나 지식이 있는 사람들을 대상으로 작성되었습니다. (만약 코딩에 익숙하지 않으시다면 “<span class="exturl" data-url="aHR0cHM6Ly93aWtpLnB5dGhvbi5vcmcvbW9pbi9CZWdpbm5lcnNHdWlkZS9Ob25Qcm9ncmFtbWVycw==" title="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">Python for Non-Programmers<i class="fa fa-external-link"></i></span>“ 해당 문서를 참고하는 것을 권장합니다)</p>
+<p>우선, Python의 구문(syntax), 변수 할당(variable assignment), 산술 연산자(arithmetic operators)에 대해 가볍게 다루어 보겠습니다. 만약 Python에 경험이 있으시면 바로 연습문제(<span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE2Mw==" title="https://www.kaggle.com/kernels/fork/1275163">exercise with Kaggle Kernal<i class="fa fa-external-link"></i></span>)로 넘어가셔도 됩니다.</p>
+<p><br><br><br></p>
+<h1 id="Hello-Python"><a href="#Hello-Python" class="headerlink" title="Hello, Python!"></a>Hello, Python!</h1><p><strong>Python</strong> 은 영국의 코미디 그룹 <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTW9udHlfUHl0aG9u" title="https://en.wikipedia.org/wiki/Monty_Python">몬티 파이선(Monty Python)<i class="fa fa-external-link"></i></span>에서 그 이름을 가져왔습니다. 그들에게 존경을 표하는 마음으로 우리의 첫 python 프로그램을 스팸(spam)에 관한 그들의 코미디 스케치(skit)를 만들어 볼까요?<br><code>몬티 파이선의 코미디 스케치 25화 7분 50초부터 해당 에피소드가 등장한다고 합니다</code> - <span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj16TGloLVdRd0JTYw==" title="https://www.youtube.com/watch?v=zLih-WQwBSc">youtube 영상<i class="fa fa-external-link"></i></span></p>
+<div class="tabs" id="spam_skit"><ul class="nav-tabs"><li class="tab active"><a href="#spam_skit-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#spam_skit-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="spam_skit-1"><p>그저 재미로, 아래의 코드를 읽어보시고 어떻게 실행 될지 예상해 보세요.</p>
+<div class="note default">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amout = <span class="number">0</span></span><br><span class="line">print(spam_amout)</span><br><span class="line"></span><br><span class="line">      <span class="comment">#스팸, 계란, 스팸, 스팸, 베이컨과 스팸 주문</span></span><br><span class="line">      spam_amout = spam_amout + <span class="number">4</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> spam_amount &gt;<span class="number">0</span>:</span><br><span class="line">        print(<span class="string">"But I don't want ANY spam!"</span>)</span><br><span class="line"></span><br><span class="line">      viking_song = <span class="string">"Spam "</span> * spam_amount</span><br><span class="line">      print(viking_song)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="spam_skit-2"><p>결과는 아래와 같습니다</p>
+<div class="note success">
+            <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0</span><br><span class="line">But I don&apos;t want ANY spam!</span><br><span class="line">Spam Spam Spam Spam</span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+<br>
+자, 이제 하나하나 분석해보겠습니다. 이 간단한 프로그램은 파이썬 코드가 어떻게 생겼는지, 어떻게 동작하는지를 여러 중요한 측면들을 통해 보여줍니다. 위에서 부터 순서대로 살펴보겠습니다.
+<br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amount = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>변수 선언</strong> : <code>spam_amount</code>라는 변수를 만들고 할당 연산자라고하는 = 을 사용하여 0 값을 할당합니다.</p>
+<blockquote>
+<p><strong>잠깐!</strong> : 만약 기존에 다른 언어(Java 또는 C ++ 등)로 프로그래밍을 하셨던 분의 경우 파이썬 코드에서는 몇 가지 빠져있는 것을 느꼈을 것 입니다.</p>
+<blockquote>
+<p><code>spam_amount</code>를 할당하기 전에 “선언(declar)”할 필요가 없습니다.<br>우리는 파이썬에게 어떤 유형의 값인 <code>spam_amount</code>가 참조 할지를 말할 필요가 없습니다. 사실, 우리는 문자열(string)이나 부울(boolean)과 같은 다른 종류의 것을 참조하기 위해 <code>spam_amount</code>를 재할당 할 수 있습니다.</p>
+</blockquote>
+</blockquote>
+<br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(spam_amout)  <span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>함수 호출</strong> : <code>print</code> 함수는 화면에 전달 된 값을 표시하는 파이썬 함수입니다. 함수 이름 뒤에 괄호를 넣고 그 괄호 안에 입력 (또는 인자)을 넣음으로써 함수를 호출합니다.</p>
+<br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#스팸, 계란, 스팸, 스팸, 베이컨과 스팸 주문</span></span><br><span class="line">spam_amout = spam_amout + <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>첫 줄은 <strong>주석(comment)</strong> 입니다.파이썬에서는 <code>#</code> 기호로 시작하면 주석으로 처리합니다.</p>
+<p>다음으로 우리는 재할당(reassignment)의 예를 볼 수 있습니다. 기존 변수의 값을 재할당하는 것은 변수를 만드는 것과 똑같은 것처럼 보입니다. &lt;- 여전히 할당 연산자 = 을 사용합니다.</p>
+<p>이 경우 <code>spam_amount</code>에 지정하는 값으로 이전 값에 대한 간단한 산술 연산을 한 값을 할당합니다. 파이썬은 (0 + 4 = 4)에서 <code>=</code> 오른쪽에있는 표현식의 값을 왼쪽에있는 변수에 할당합니다.</p>
+<br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> spam_amount &gt; <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">"But I don't want ANY spam!"</span>) <span class="comment"># But I don't want ANY spam!</span></span><br><span class="line"></span><br><span class="line">viking_song = <span class="string">"Spam Spam Spam"</span></span><br><span class="line">print(viking_song)	<span class="comment">#Spam Spam Spam</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>조건문(conditional)</strong>에 대한 설명은 나중에 자세히 다루겠지만, 코드를 전혀 짜본적 없더라도 이 문장이 어떤 것을 의미하는지는 짐작할 수 있을 것 입니다. 파이썬은 가독성과 단순성 때문에 높이 평가됩니다.</p>
+<p>어떤 코드가 <code>if문</code>에 속해 있는지 구별하는 방법을 잘 보십시오. <code>&quot;But I don&#39;t want ANY spam!&quot;</code> 문자열은 <code>spam_amount</code>가 양수일 때만 출력되어야 합니다. 하지만 뒤에 <code>print (viking_song)</code>과 같은 코드는 무슨일이 있어도 실행 되어야합니다. 우리(그리고 파이썬)는 그것을 어떻게 알 수 있습니까?</p>
+<p><code>if문</code> 줄(line)의 끝에있는 콜론 (<code>:</code>)은 새로운 “코드 블록”이 시작되고 있음을 나타냅니다. 들여 쓰기되는 후속 행이 <strong>해당 코드 블록의 일부</strong> 입니다. 다른 언어에서는 <code>{</code> 중괄호 <code>}</code>를 사용하여 코드 블록의 시작과 끝을 표시합니다. Python의 이런 공백을 사용한 코드 블럭은 다른 언어에 익숙한 프로그래머에게는 놀라운 일일 수 있지만, 코드 블록의 들여 쓰기를 시행하지 않는 언어보다 일관되고 읽기 쉬운 코드가 될 수 있습니다.</p>
+<p>이후의 행에서 <code>viking_song</code>을 다루는 줄은 여분의 4 칸으로 들여 쓰이지 않기 때문에 <code>if</code>의 코드 블록에 포함되지 않습니다. 나중에 함수를 정의하고 루프(loops)를 사용할 때 들여 쓰기 된 코드 블록의 예제를 보게 될 것입니다.</p>
+<p>이 스니펫은(snippet)은 파이썬에서의 <strong>문자열(string) 형태</strong> 입니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">"But I don't want ANY spam!"</span></span><br></pre></td></tr></table></figure>
+
+<p>문자열은 <u>큰 따옴표</u> 나 <u>작은 따옴표</u>로 표시 할 수 있습니다. (예제의 문자열에는 작은 따옴표가 포함되어 있으므로 파이썬이 혼동하는 것을 방지하기 위해 큰 따옴표를 사용했습니다.)</p>
+<br>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">viking_song = <span class="string">"Spam "</span> * spam_amount</span><br><span class="line">print(viking_song)	<span class="comment"># Spam Spam Spam Spam</span></span><br></pre></td></tr></table></figure>
+
+<p><code>*</code>연산자는 두 개의 숫자를 곱하는데 사용되기도 하지만(<code>3 * 3</code>은 9로 계산됩니다), 문자열에 숫자를 곱하여 그 수만큼 반복되는 문자열을 만들 수도 있습니다. 파이썬에서 <code>*</code>와 <code>+</code> 같은 연산자는 어디에 적용되는지에 따라 이와 같이 많은 시간 절약 트릭을 제공합니다. (참고: <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3BlcmF0b3Jfb3ZlcmxvYWRpbmc=" title="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading<i class="fa fa-external-link"></i></span>)</p>
+<p><br><br></p>
+<h2 id="파이썬에서의-수와-산술-Numbers-and-arithmetic-in-Python"><a href="#파이썬에서의-수와-산술-Numbers-and-arithmetic-in-Python" class="headerlink" title="파이썬에서의 수와 산술(Numbers and arithmetic in Python)"></a>파이썬에서의 수와 산술(Numbers and arithmetic in Python)</h2><p>위 예제를 통해 우리는 숫자 값을 가지는 변수를 이미 보았습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam_amout = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>변수형(type)을 “Number” 라고 표현하기보다 좀 더 전문적인 표현을 원한다면 우리는 파이썬에게 <code>spam_amout</code> 의 type을 물어볼 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">type(spam_amout)	<span class="comment"># int</span></span><br></pre></td></tr></table></figure>
+
+<p>변수가 <code>ìnt</code> 형 (short for integer) 임을 알 수 있습니다. 파이썬에는 이 외에도 다른 형태의 숫자형이 있습니다</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">type(<span class="number">19.95</span>)	<span class="comment"># float</span></span><br></pre></td></tr></table></figure>
+
+<p><code>float</code>형은 소수점 이하의 숫자를 나타냅니다 - 가중치(weight)나 비율(proportion)을 나타낼 때 유용합니다.</p>
+<p><code>type()</code> 함수는 위에서 다뤘던 <code>print()</code> 함수 이후 두번째로 만나는 내장 함수이며 기억해두시면 좋습니다. 이 함수를 통해 파이썬에게 “이 함수의 형태가 무엇인지?”를 묻고 답을 얻을 수 있습니다.</p>
+<br>
+
+<p>숫자(number)를 다룬다면 빠질 수 없는게 산술(arithmetic)입니다. 우린 이미 <code>+</code> 더하기 연산과, <code>*</code> 곱하기 연산을 위에서 살펴 보았습니다(sort 함수). 파이썬에는 계산기에서 볼 수 있는 기본적인 연산을 지원합니다.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>a + b</code></td>
+<td align="left">Addition</td>
+<td align="left">Sum of <code>a</code> and <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a - b</code></td>
+<td align="left">Subtraction</td>
+<td align="left">Difference of <code>a</code> and <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a * b</code></td>
+<td align="left">Multiplication</td>
+<td align="left">Product of <code>a</code> and <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a / b</code></td>
+<td align="left">True division</td>
+<td align="left">Quotient of <code>a</code> and <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a // b</code></td>
+<td align="left">Floor division</td>
+<td align="left">Quotient of <code>a</code> and <code>b</code>, removing fractional parts</td>
+</tr>
+<tr>
+<td align="left"><code>a % b</code></td>
+<td align="left">Modulus</td>
+<td align="left">Integer remainder after division of <code>a</code> by <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a ** b</code></td>
+<td align="left">Exponentiation</td>
+<td align="left"><code>a</code> raised to the power of <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>-a</code></td>
+<td align="left">Negation</td>
+<td align="left">The negative of <code>a</code></td>
+</tr>
+</tbody></table>
+<br>
+
+<p>하나의 흥미로운 사실은 계산기에는 나누기 버튼이 하나만 있는 반면 파이썬에는 <u>두 가지 종류로 구분</u>되어 있습니다. “True division”이 우리에게 익숙한 기본적인 나눗셈 연산을 수행합니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="number">5</span> / <span class="number">2</span>)	<span class="comment"># 2.5</span></span><br><span class="line">print(<span class="number">6</span> / <span class="number">2</span>)	<span class="comment"># 3.0</span></span><br></pre></td></tr></table></figure>
+
+<p>결과는 항상 <code>float</code> 형으로 반환됩니다.</p>
+<br>
+
+<p><code>//</code> 연산은 나눗셈 된 값을 반올림 한 정수값을 결과로 반환합니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="number">5</span> // <span class="number">2</span>)	<span class="comment"># 2</span></span><br><span class="line">print(<span class="number">6</span> // <span class="number">2</span>)	<span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+
+<p>위 연산이 유용하게 쓰일만한 상황이 떠오르시나요? 곧 예제를 통해 살펴보도록 하겠습니다.</p>
+<p><br><br></p>
+<h3 id="연산-순서-Order-of-operations"><a href="#연산-순서-Order-of-operations" class="headerlink" title="연산 순서(Order of operations)"></a>연산 순서(Order of operations)</h3><p>초등학교에서 다들 산술 연산의 연산 순서 대해 배우셨을겁니다. <code>외국에서는 PEMDAS - Parentheses, Exponents, Multiplication/Division, Addition/Subtraction 로 외우나 봅니다</code> 괄호 -&gt;지수 -&gt; 곱셈 /나눗셈 -&gt; 덧셈 /뺄셈 순서로 계산하면 된다고 기억하실겁니다.</p>
+<p>파이썬에서도 비슷한 규칙으로 계산을 합니다. 그리고 매우 직관적입니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">8</span> - <span class="number">3</span> + <span class="number">2</span> 	<span class="comment"># 7</span></span><br><span class="line"><span class="number">-3</span> + <span class="number">4</span> * <span class="number">2</span>	<span class="comment"># 5</span></span><br></pre></td></tr></table></figure>
+
+<p>기본적인 연산만으로는 우리가 원하는 결과를 얻지 못할 경우도 생깁니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hat_height_cm = <span class="number">25</span></span><br><span class="line">my_height_cm = <span class="number">190</span></span><br><span class="line"><span class="comment"># How tall am I, in meters, when wearing my hat?</span></span><br><span class="line">total_height_meters = hat_height_cm + my_height_cm / <span class="number">100</span></span><br><span class="line">print(<span class="string">"Height in meters ="</span>, total_height_meters, <span class="string">"?"</span>)	<span class="comment"># Height in meters = 26.9 ?</span></span><br></pre></td></tr></table></figure>
+
+<p>이 경우 <strong>괄호(parentheses)</strong>를 사용하면 되겠습니다. 괄호를 사용하면 하위 표현식(sub-expression)을 먼저 계산할 수 있도록 연산의 순서를 조절할 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">total_height_meters = (hat_height_cm + my_height_cm) / <span class="number">100</span></span><br><span class="line">print(<span class="string">"Height in meters ="</span>, total_height_meters) <span class="comment"># Height in meters = 2.15</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="연산-관련-내장함수-Builtin-functions-for-working-with-numbers"><a href="#연산-관련-내장함수-Builtin-functions-for-working-with-numbers" class="headerlink" title="연산 관련 내장함수(Builtin functions for working with numbers)"></a>연산 관련 내장함수(Builtin functions for working with numbers)</h3><p><code>min</code>과 <code>max</code> 는 각각 최소값과 최대값을 반환합니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(min(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))	<span class="comment"># 1</span></span><br><span class="line">print(max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))	<span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+
+<p><code>abs</code>는 절대값을 반환합니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(abs(<span class="number">32</span>))	<span class="comment"># 32</span></span><br><span class="line">print(abs(<span class="number">-32</span>))	<span class="comment"># 32</span></span><br></pre></td></tr></table></figure>
+
+<p><code>int</code>와 <code>float</code>를 사용해서 각자의 형태(type)로 변환이 가능합니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(float(<span class="number">10</span>))	<span class="comment"># 10.0</span></span><br><span class="line">print(int(<span class="number">3.33</span>))	<span class="comment"># 3</span></span><br><span class="line"><span class="comment"># 심지어 문자열(string)에서도 호출 가능하다!</span></span><br><span class="line">print(int(<span class="string">'807'</span>) + <span class="number">1</span>)	<span class="comment"># 808</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br><br></p>
+<h1 id="연습문제-Your-Turn"><a href="#연습문제-Your-Turn" class="headerlink" title="연습문제(Your Turn)"></a>연습문제(Your Turn)</h1><p>학습한 내용을 연습해 보세요. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE2Mw==" title="https://www.kaggle.com/kernels/fork/1275163">first Python programming exercise<i class="fa fa-external-link"></i></span></strong></p>
+<p><br><br><br></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/파이썬/" rel="tag"># 파이썬</a>
+          
+            <a href="/tags/programming-language/" rel="tag"># programming language</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/language/" rel="tag"># language</a>
+          
+            <a href="/tags/캐글/" rel="tag"># 캐글</a>
+          
+            <a href="/tags/튜토리얼/" rel="tag"># 튜토리얼</a>
+          
+            <a href="/tags/kaggle/" rel="tag"># kaggle</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/CS-OS-20190212-os-overview-2/" rel="next" title="운영체제 - Overview_2">
+                <i class="fa fa-chevron-left"></i> 운영체제 - Overview_2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/blog-migration/" rel="prev" title="블로그 테마 변경">
+                블로그 테마 변경 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#개요-Intro"><span class="nav-text">개요(Intro)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello-Python"><span class="nav-text">Hello, Python!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#파이썬에서의-수와-산술-Numbers-and-arithmetic-in-Python"><span class="nav-text">파이썬에서의 수와 산술(Numbers and arithmetic in Python)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#연산-순서-Order-of-operations"><span class="nav-text">연산 순서(Order of operations)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#연산-관련-내장함수-Builtin-functions-for-working-with-numbers"><span class="nav-text">연산 관련 내장함수(Builtin functions for working with numbers)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#연습문제-Your-Turn"><span class="nav-text">연습문제(Your Turn)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/Language-Python-20190712-01-hello-python/";
+    this.page.identifier = "[object Object]/Language-Python-20190712-01-hello-python/";
+    this.page.title = '(파이썬) 01 HELLO, PYTHON!';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>

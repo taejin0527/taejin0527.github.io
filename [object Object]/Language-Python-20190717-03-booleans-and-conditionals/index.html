@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="Reference Kaggle 홈페이지 - Kaggle 5강 ‘Booleans and Conditionals’ - Python Micro-Course Home Page     불리언(Booleans)파이썬에는 True와 False 중 하나의 값을 가지는 bool 타입의 변수가 있습니다. CODECODEx = Trueprint(x)print(type(x))T">
+<meta name="keywords" content="파이썬,programming language,python,language,캐글,튜토리얼,kaggle,tutorial,booleans,conditionals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(파이썬) 03 Booleans and Conditionals">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/Language-Python-20190717-03-booleans-and-conditionals/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="Reference Kaggle 홈페이지 - Kaggle 5강 ‘Booleans and Conditionals’ - Python Micro-Course Home Page     불리언(Booleans)파이썬에는 True와 False 중 하나의 값을 가지는 bool 타입의 변수가 있습니다. CODECODEx = Trueprint(x)print(type(x))T">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:22:03.439Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(파이썬) 03 Booleans and Conditionals">
+<meta name="twitter:description" content="Reference Kaggle 홈페이지 - Kaggle 5강 ‘Booleans and Conditionals’ - Python Micro-Course Home Page     불리언(Booleans)파이썬에는 True와 False 중 하나의 값을 가지는 bool 타입의 변수가 있습니다. CODECODEx = Trueprint(x)print(type(x))T">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/Language-Python-20190717-03-booleans-and-conditionals/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>(파이썬) 03 Booleans and Conditionals | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20190717-03-booleans-and-conditionals/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">(파이썬) 03 Booleans and Conditionals
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-07-17 11:45:34" itemprop="dateCreated datePublished" datetime="2019-07-17T11:45:34+09:00">2019-07-17</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20190717-03-booleans-and-conditionals/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20190717-03-booleans-and-conditionals/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>Kaggle 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbQ==" title="https://www.kaggle.com">Kaggle<i class="fa fa-external-link"></i></span></li>
+<li>5강 ‘Booleans and Conditionals’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9ib29sZWFucy1hbmQtY29uZGl0aW9uYWxz" title="https://www.kaggle.com/colinmorris/booleans-and-conditionals">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
+</ul>
+<hr>
+<br>
+
+<h1 id="불리언-Booleans"><a href="#불리언-Booleans" class="headerlink" title="불리언(Booleans)"></a>불리언(Booleans)</h1><p>파이썬에는 <code>True</code>와 <code>False</code> 중 하나의 값을 가지는 <code>bool</code> 타입의 변수가 있습니다.</p>
+<div class="tabs" id="bool_type"><ul class="nav-tabs"><li class="tab active"><a href="#bool_type-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#bool_type-2"><i class="fa fa-code"></i>CODE</a></li></ul><div class="tab-content"><div class="tab-pane active" id="bool_type-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="literal">True</span></span><br><span class="line">print(x)</span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="bool_type-2"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">True</span><br><span class="line">&lt;class &apos;bool&apos;&gt;</span><br></pre></td></tr></table></figure></div></div></div>
+
+<p>보통 코드에 <code>True</code>나 <code>False</code> 값을 바로 넣기보다 <strong>불리언 연산자들(boolean operators)</strong> 를 통해 boolean 값을 얻습니다. 이 연산자들은 질문에 대한 참/거짓을 알려줍니다. 아래 표와 예제들을 통해 이 연산자들을 알아보겠습니다.</p>
+<h2 id="비교-연산자들-Comparison-Operations"><a href="#비교-연산자들-Comparison-Operations" class="headerlink" title="비교 연산자들(Comparison Operations)"></a>비교 연산자들(Comparison Operations)</h2><table>
+<thead>
+<tr>
+<th align="left">Operation</th>
+<th align="left">Description</th>
+<th align="left"></th>
+<th align="left">Operation</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>a == b</code></td>
+<td align="left"><code>a</code> equal to <code>b</code></td>
+<td align="left"></td>
+<td align="left"><code>a != b</code></td>
+<td align="left"><code>a</code> not equal to <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a &lt; b</code></td>
+<td align="left"><code>a</code> less than <code>b</code></td>
+<td align="left"></td>
+<td align="left"><code>a &gt; b</code></td>
+<td align="left"><code>a</code> greater than <code>b</code></td>
+</tr>
+<tr>
+<td align="left"><code>a &lt;= b</code></td>
+<td align="left"><code>a</code> less than or equal to <code>b</code></td>
+<td align="left"></td>
+<td align="left"><code>a &gt;= b</code></td>
+<td align="left"><code>a</code> greater than or equal to <code>b</code></td>
+</tr>
+</tbody></table>
+<div class="note info no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">can_run_for_president</span><span class="params">(age)</span>:</span></span><br><span class="line"><span class="string">"""Can someone of the given age run for president in the US?"""</span> <span class="comment"># 미국 헌법에는 35세 이상이여야 한다고 명시되어 있습니다"</span></span><br><span class="line"><span class="keyword">return</span> age &gt;= <span class="number">35</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"Can a 19-year-old run for president?"</span>, can_run_for_president(<span class="number">19</span>))</span><br><span class="line">    print(<span class="string">"Can a 45-year-old run for president?"</span>, can_run_for_president(<span class="number">45</span>))</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Can a 19-year-old run for president? False</span><br><span class="line">Can a 45-year-old run for president? True</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>비교 연산자는 조금 영리한거 같지만…</p>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">3.0</span> == <span class="number">3</span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>꼭 그런거 같진 않습니다…</p>
+<div class="note danger">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'3'</span> == <span class="number">3</span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">False</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>비교 연산자들이 앞서 보았던 산술 연산자들(arithmetic operators)과 더해지면 무한한 범위의 수학적 테스트들을 표현하는게 가능합니다.</p>
+<div class="tabs" id="example_1"><ul class="nav-tabs"><li class="tab active"><a href="#example_1-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#example_1-2"><i class="fa fa-terminal"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example_1-1"><div class="note primary">
+            <p>예를 들어, 2 로 나눈 나머지가 1 인지 확인하여 숫자가 홀수 인지를 검사할 수 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> (n % <span class="number">2</span>) == <span class="number">1</span></span><br><span class="line">print(<span class="string">"Is 100 odd?"</span>, is_odd(<span class="number">100</span>))</span><br><span class="line">print(<span class="string">"Is -1 odd?"</span>, is_odd(<span class="number">-1</span>))</span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="example_1-2"><div class="note success">
+            <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Is 100 odd? Fasle</span><br><span class="line">Is -1 odd? True</span><br></pre></td></tr></table></figure><pre><code>비교 연산자를 사용할 때 `=` 대신 `==` 을 사용한다는 것을 기억하십시오. 만약 `n == 2` 라고 적는 다면 n의 값을 묻는 것이고, `n = 2` 라고 적으면 n에 할당된 값을 변경하는 것입니다.</code></pre>
+          </div></div></div></div>
+
+<h2 id="불리언-값-연산-Combining-Boolean-Values"><a href="#불리언-값-연산-Combining-Boolean-Values" class="headerlink" title="불리언 값 연산(Combining Boolean Values)"></a>불리언 값 연산(Combining Boolean Values)</h2><p>파이썬은 보통의 “and”, “or”과 “not” 개념을 사용하여 boolean 값들을 연산하는 기능을 제공합니다. 사실 boolean 관련 파이썬 연산자들은 저게 전부입니다: <code>and</code>, <code>or</code>, <code>not</code></p>
+<p>이것으로 우리는 <code>can_run_for_president</code> 함수를 조금 더 정확하게 만들 수 있습니다.</p>
+<div class="note info no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">can_run_for_president</span><span class="params">(age, is_natural_born_citizen)</span>:</span></span><br><span class="line"><span class="string">"""Can someone of the given age and citizenship status run for president in the US?"""</span> <span class="comment"># 미국 헌법에는 미국에서 태어난 시민이고 35세 이상이여야 한다고 명시되어 있습니다"</span></span><br><span class="line"><span class="keyword">return</span> is_natural_born_citizen <span class="keyword">and</span> (age &gt;= <span class="number">35</span>)</span><br><span class="line"></span><br><span class="line">    print(can_run_for_president(<span class="number">19</span>, <span class="literal">True</span>))</span><br><span class="line">    print(can_run_for_president(<span class="number">55</span>, <span class="literal">False</span>))</span><br><span class="line">    print(can_run_for_president(<span class="number">55</span>, <span class="literal">True</span>))</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">False</span><br><span class="line">False</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>간단하게, 아래 표현식의 결과를 예상할 수 있나요?</p>
+<div class="tabs" id="example_2"><ul class="nav-tabs"><li class="tab active"><a href="#example_2-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#example_2-2"><i class="fa fa-terminal"></i>ANSWER</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example_2-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="example_2-2"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">True</span><br></pre></td></tr></table></figure></div></div></div>
+
+<p>파이썬에는 위와 같은 표현식에서 우선순위 규칙(precedence rule)에 따라 연산의 순서를 결정합니다. 예를 들어, <code>and</code> 는 <code>or</code> 보다 우선순위에 있기 때문에 첫번째 표현식은 참(True)이 됩니다. 만약 왼쪽에서 오른쪽으로 연산했다면 <code>True or True</code> 를 먼저 실행한 다음(결과는 <code>True</code>), 그 결과를 <code>False</code>와 <code>and</code> 연산하여 최종 값인 <code>False</code> 를 얻었을 것입니다.</p>
+<p>우선순위(<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy9yZWZlcmVuY2UvZXhwcmVzc2lvbnMuaHRtbCNvcGVyYXRvci1wcmVjZWRlbmNl" title="https://docs.python.org/3/reference/expressions.html#operator-precedence">order of precedence<i class="fa fa-external-link"></i></span>)를 외우려고 할 수도 있지만 괄호를 사용하는 것이 더 안전한 방법입니다. 이는 버그를 방지하는데 도움이 될 뿐만이 아니라 코드를 읽는 모든 사람이 이해하기 수월해 집니다.</p>
+<p>예를 들어, 아래의 코드를 살펴보세요.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">prepared_for_weather = have_umbrella <span class="keyword">or</span> rain_level &lt; <span class="number">5</span> <span class="keyword">and</span> have_hood <span class="keyword">or</span> <span class="keyword">not</span> rain_level &gt; <span class="number">0</span> <span class="keyword">and</span> is_workday</span><br></pre></td></tr></table></figure>
+
+<p>오늘 날씨에 …</p>
+<ul>
+<li>만약 우산을 가지고 있다면…</li>
+<li>혹은 만약 비가 많이 오는게 아니고 내가 후드를 가지고 있다면…</li>
+<li>아니면 비가 내리지 않고 일하는 날이 아니라면 준비되었는지 말해줍니다</li>
+</ul>
+<p>위 파이썬 코드는 버그가 있을뿐만 아니라 읽기에도 힘듭니다. 괄호를 추가해서 두 가지의 문제점을 해결해 보겠습니다:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">prepared_for_weather = have_umbrella <span class="keyword">or</span> (rain_level &lt; <span class="number">5</span> <span class="keyword">and</span> have_hood) <span class="keyword">or</span> <span class="keyword">not</span> (rain_level &gt; <span class="number">0</span> <span class="keyword">and</span> is_workday)</span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="parentheses"><ul class="nav-tabs"><li class="tab active"><a href="#parentheses-1"><i class="fa fa-eye"></i>Single_parenthese</a></li><li class="tab"><a href="#parentheses-2"><i class="fa fa-eye"></i>More_parenthese</a></li><li class="tab"><a href="#parentheses-3"><i class="fa fa-eye"></i>Multiple_lines</a></li></ul><div class="tab-content"><div class="tab-pane active" id="parentheses-1"><div class="note primary no-icon">
+            <p>각각 괄호로 묶어 주겠습니다.</p><pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;prepared_for_weather = have_umbrella &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; (rain_level &amp;lt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; have_hood) &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; (rain_level &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; is_workday)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre>
+          </div></div><div class="tab-pane" id="parentheses-2"><div class="note primary no-icon">
+            <p>가독성을 높이기 위해 괄호를 더 사용해도 좋습니다</p><pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;prepared_for_weather = have_umbrella &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; ((rain_level &amp;lt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; have_hood) &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; (rain_level &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; is_workday))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre>
+          </div></div><div class="tab-pane" id="parentheses-3"><div class="note primary no-icon">
+            <p>혹은 위에서 언급한 3가지 조건을 강조하기 위해 여러 줄로 작성해도 됩니다.</p><pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;prepared_for_weather = (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  have_umbrella&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; ((rain_level &amp;lt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; have_hood)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; (rain_level &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; is_workday))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre>
+          </div></div></div></div>
+
+<p><br><br><br></p>
+<h1 id="조건문-Conditionals"><a href="#조건문-Conditionals" class="headerlink" title="조건문(Conditionals)"></a>조건문(Conditionals)</h1><p>불리언(boolean)은 그 자체만으로도 매우 유용하지만 <code>if</code>, <code>elif</code>, <code>else</code> 키워드를 사용하는 조건문과 함께 사용되면 진가를 발휘됩니다.</p>
+<p>조건문 혹은, <code>if-then</code> 문을 사용하면 프로그래머는 일정 불리언 조건(참/거짓 조건)에 따라 특정 코드를 실행할 수 있게 됩니다. 파이썬 조건문의 기본 예제는 다음과 같습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inspect</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is zero"</span>)</span><br><span class="line">    <span class="keyword">elif</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is positive"</span>)</span><br><span class="line">    <span class="keyword">elif</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        print(x, <span class="string">"is negative"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(x, <span class="string">"is unlike anything I've ever seen..."</span>)</span><br><span class="line"></span><br><span class="line">inspect(<span class="number">0</span>)</span><br><span class="line">inspect(<span class="number">-15</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0 is zero</span><br><span class="line">-15 is negative</span><br></pre></td></tr></table></figure>
+
+<p>파이썬의 <code>if</code>와 <code>else</code>는 다른 언어에서 주로 사용하는 것과 같습니다; <code>elif</code> 는 조금 독특한 키워드로 <code>else if</code> 를 축약한 단어입니다. 조건문에서 <code>elif</code> 와 <code>else</code> 는 선택사항입니다. <code>elif</code> 는 얼마든지 추가하고 싶은만큼 추가하실 수 있습니다.</p>
+<p>콜론(<code>:</code>)과 공백을 사용하여 별도의 코드 블록을 나타내는 것을 기억하시길 바랍니다. 이는 함수를 정의 할 때와 유사합니다; 함수의 헤더는 <code>:</code>로 끝나고 다음 줄은 4칸 들여 쓰기됩니다. 모든 들여쓰기 된 줄들은 다음 <u>들여쓰기가 안된 줄</u>을 만날 때까지 하나의 함수에 속하게 됩니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">"Only printed when x is positive; x ="</span>, x)</span><br><span class="line">        print(<span class="string">"Also only printed when x is positive; x ="</span>, x)</span><br><span class="line">    print(<span class="string">"Always printed, regardless of x's value; x ="</span>, x)</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>)</span><br><span class="line">f(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Only printed when x is positive; x = 1</span><br><span class="line">Also only printed when x is positive; x = 1</span><br><span class="line">Always printed, regardless of x&apos;s value; x = 1</span><br><span class="line">Always printed, regardless of x&apos;s value; x = 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="불리언-변환-Boolean-conversion"><a href="#불리언-변환-Boolean-conversion" class="headerlink" title="불리언 변환(Boolean conversion)"></a>불리언 변환(Boolean conversion)</h2><p>우리는 앞서 int 형으로 바꿔주는 <code>int()</code> 와, float 형으로 바꾸는 <code>float()</code> 봤기 때문에, bool 형으로 바꿔주는 <code>bool()</code> 이라는 함수가 있다는 것이 별로 놀랍지 않습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(bool(<span class="number">1</span>)) <span class="comment"># all numbers are treated as true, except 0</span></span><br><span class="line">print(bool(<span class="number">0</span>))</span><br><span class="line">print(bool(<span class="string">"asf"</span>)) <span class="comment"># all strings are treated as true, except the empty string ""</span></span><br><span class="line">print(bool(<span class="string">""</span>))</span><br><span class="line"><span class="comment"># Generally empty sequences (strings, lists, and other types we've yet to see like lists and tuples)</span></span><br><span class="line"><span class="comment"># are "falsey" and the rest are "truthy"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+
+<p>boolean이 예상되는 조건문에서 non-boolean 객체를 사용할 수 있습니다. 파이썬은 암시적으로 그에 상응하는 boolean 값으로 처리 할 것입니다 :</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">0</span>:</span><br><span class="line">    print(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">"spam"</span>:</span><br><span class="line">    print(<span class="string">"spam"</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spam</span><br></pre></td></tr></table></figure>
+
+<h2 id="조건식-일명-‘삼항연산-ternary-’"><a href="#조건식-일명-‘삼항연산-ternary-’" class="headerlink" title="조건식(일명 ‘삼항연산(ternary)’)"></a>조건식(일명 ‘삼항연산(ternary)’)</h2><p>어떤 조건에 따라 두 개의 값 중 하나를 변수의 값으로 설정하는 것은 매우 흔한 패턴입니다.</p>
+<div class="note ">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quiz_message</span><span class="params">(grade)</span>:</span></span><br><span class="line"><span class="keyword">if</span> grade &lt; <span class="number">50</span>:</span><br><span class="line">outcome = <span class="string">'failed'</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">outcome = <span class="string">'passed'</span></span><br><span class="line">print(<span class="string">'You'</span>, outcome, <span class="string">'the quiz with a grade of'</span>, grade)</span><br><span class="line"></span><br><span class="line">quiz_message(<span class="number">80</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You passed the quiz with a grade of 80</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>파이썬에는 이러한 경우에 문장을 단순화 시킬 수 있는 단일 라인 조건식 구문(syntax)을 지원합니다.</p>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quiz_message</span><span class="params">(grade)</span>:</span></span><br><span class="line">outcome = <span class="string">'failed'</span> <span class="keyword">if</span> grade &lt; <span class="number">50</span> <span class="keyword">else</span> <span class="string">'passed'</span></span><br><span class="line">print(<span class="string">'You'</span>, outcome, <span class="string">'the quiz with a grade of'</span>, grade)</span><br><span class="line"></span><br><span class="line">quiz_message(<span class="number">45</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You failed the quiz with a grade of 45</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>보시면 다른 언어에 있는 삼항 연산자와 비슷하다는 것을 알 수 있습니다. 예를 들어, javascript에서 라면 우리는 위의 표현을 <code>var outcome = grade &lt;50? &#39;failed&#39;: &#39;passed&#39;</code> 로 작성할 것입니다. (하지만 가독성 측면에서 파이썬이 더 우수하다고 생각합니다.)</p>
+<p><br><br><br></p>
+<h1 id="연습문제-Your-Turn"><a href="#연습문제-Your-Turn" class="headerlink" title="연습문제(Your Turn)"></a>연습문제(Your Turn)</h1><p>booleans and conditionals -&gt; <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE2NQ==" title="https://www.kaggle.com/kernels/fork/1275165">third Python programming exercise<i class="fa fa-external-link"></i></span></strong></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/파이썬/" rel="tag"># 파이썬</a>
+          
+            <a href="/tags/programming-language/" rel="tag"># programming language</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/language/" rel="tag"># language</a>
+          
+            <a href="/tags/캐글/" rel="tag"># 캐글</a>
+          
+            <a href="/tags/튜토리얼/" rel="tag"># 튜토리얼</a>
+          
+            <a href="/tags/kaggle/" rel="tag"># kaggle</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+            <a href="/tags/booleans/" rel="tag"># booleans</a>
+          
+            <a href="/tags/conditionals/" rel="tag"># conditionals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/Language-Python-20190715-02-functions-and-getting-help/" rel="next" title="(파이썬) 02 Functions and Getting Help">
+                <i class="fa fa-chevron-left"></i> (파이썬) 02 Functions and Getting Help
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/Blog-HexoNextTheme-20190717-hexo-seo/" rel="prev" title="(Hexo_NexT_Theme) Hexo SEO - 검색 엔진 최적화">
+                (Hexo_NexT_Theme) Hexo SEO - 검색 엔진 최적화 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#불리언-Booleans"><span class="nav-text">불리언(Booleans)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#비교-연산자들-Comparison-Operations"><span class="nav-text">비교 연산자들(Comparison Operations)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#불리언-값-연산-Combining-Boolean-Values"><span class="nav-text">불리언 값 연산(Combining Boolean Values)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#조건문-Conditionals"><span class="nav-text">조건문(Conditionals)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#불리언-변환-Boolean-conversion"><span class="nav-text">불리언 변환(Boolean conversion)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#조건식-일명-‘삼항연산-ternary-’"><span class="nav-text">조건식(일명 ‘삼항연산(ternary)’)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#연습문제-Your-Turn"><span class="nav-text">연습문제(Your Turn)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/Language-Python-20190717-03-booleans-and-conditionals/";
+    this.page.identifier = "[object Object]/Language-Python-20190717-03-booleans-and-conditionals/";
+    this.page.title = '(파이썬) 03 Booleans and Conditionals';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>

@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="Reference Kaggle 홈페이지 - Kaggle 7강 ‘Lists’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원본을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     리스트(Lists)파이썬의 Lists 는 정렬된 순서의 값을 나냅니다. 아래의 예제를 통해 어떻게 생성하는">
+<meta name="keywords" content="파이썬,programming language,python,language,캐글,튜토리얼,kaggle,tutorial,booleans,conditionals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(파이썬) 04 Lists">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/Language-Python-20190722-04-lists/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="Reference Kaggle 홈페이지 - Kaggle 7강 ‘Lists’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원본을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     리스트(Lists)파이썬의 Lists 는 정렬된 순서의 값을 나냅니다. 아래의 예제를 통해 어떻게 생성하는">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:22:03.468Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(파이썬) 04 Lists">
+<meta name="twitter:description" content="Reference Kaggle 홈페이지 - Kaggle 7강 ‘Lists’ - Python Micro-Course Home Page   영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원본을 참고하시길 바랍니다…언젠가는 실력이 나아지기를…     리스트(Lists)파이썬의 Lists 는 정렬된 순서의 값을 나냅니다. 아래의 예제를 통해 어떻게 생성하는">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/Language-Python-20190722-04-lists/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>(파이썬) 04 Lists | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20190722-04-lists/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">(파이썬) 04 Lists
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-07-22 16:05:45" itemprop="dateCreated datePublished" datetime="2019-07-22T16:05:45+09:00">2019-07-22</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/KAGGLE/" itemprop="url" rel="index"><span itemprop="name">KAGGLE</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20190722-04-lists/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20190722-04-lists/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>Kaggle 홈페이지 - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbQ==" title="https://www.kaggle.com">Kaggle<i class="fa fa-external-link"></i></span></li>
+<li>7강 ‘Lists’ - <span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jb2xpbm1vcnJpcy9saXN0cw==" title="https://www.kaggle.com/colinmorris/lists">Python Micro-Course Home Page<i class="fa fa-external-link"></i></span></li>
+</ul>
+<blockquote>
+<p>영어 실력이 부족하여 문맥이 이해가 가지 않는 부분은 원본을 참고하시길 바랍니다…<br>언젠가는 실력이 나아지기를…</p>
+</blockquote>
+<hr>
+<br>
+
+<h1 id="리스트-Lists"><a href="#리스트-Lists" class="headerlink" title="리스트(Lists)"></a>리스트(Lists)</h1><p>파이썬의 Lists 는 정렬된 순서의 값을 나냅니다. 아래의 예제를 통해 어떻게 생성하는지 살펴보겠습니다.</p>
+<div class="tabs" id="create_lists"><ul class="nav-tabs"><li class="tab active"><a href="#create_lists-1"><i class="fa fa-code"></i>INT_type</a></li><li class="tab"><a href="#create_lists-2"><i class="fa fa-code"></i>string_type</a></li><li class="tab"><a href="#create_lists-3"><i class="fa fa-code"></i>list_of_lists</a></li><li class="tab"><a href="#create_lists-4"><i class="fa fa-code"></i>mix_type</a></li></ul><div class="tab-content"><div class="tab-pane active" id="create_lists-1"><pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;primes = [&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre></div><div class="tab-pane" id="create_lists-2"><p>lists 에는 다른 타입의 데이터도 넣을 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets = [<span class="string">'Mercury'</span>, <span class="string">'Venus'</span>, <span class="string">'Earth'</span>, <span class="string">'Mars'</span>, <span class="string">'Jupiter'</span>, <span class="string">'Saturn'</span>, <span class="string">'Uranus'</span>, <span class="string">'Neptune'</span>]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="create_lists-3"><p>list의 list를 만들 수도 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hands = [</span><br><span class="line">[<span class="string">'J'</span>, <span class="string">'Q'</span>, <span class="string">'K'</span>],</span><br><span class="line">[<span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>],</span><br><span class="line">[<span class="string">'6'</span>, <span class="string">'A'</span>, <span class="string">'K'</span>], <span class="comment"># (Comma after the last element is optional)</span></span><br><span class="line">] <span class="comment"># (I could also have written this on one line, but it can get hard to read)</span></span><br><span class="line">hands = [[<span class="string">'J'</span>, <span class="string">'Q'</span>, <span class="string">'K'</span>], [<span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>], [<span class="string">'6'</span>, <span class="string">'A'</span>, <span class="string">'K'</span>]]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="create_lists-4"><p>서로 다른 타입의 변수들도 같이 넣을 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">my_favourite_things = [<span class="number">32</span>, <span class="string">'raindrops on roses'</span>, help] <span class="comment"># (Yes, Python's help function is _definitely_ one of my favourite things)</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="색인-Indexing"><a href="#색인-Indexing" class="headerlink" title="색인(Indexing)"></a>색인(Indexing)</h2><p>대괄호를 사용하여 list의 각 요소에 접근할 수 있습니다.</p>
+<p><strong>어떤 행성이 태양과 가장 가까울까요?</strong></p>
+<div class="tabs" id="indexing"><ul class="nav-tabs"><li class="tab active"><a href="#indexing-1"><i class="fa fa-code"></i>CLOSEST</a></li><li class="tab"><a href="#indexing-2"><i class="fa fa-code"></i>NEXT_CLOSEST</a></li><li class="tab"><a href="#indexing-3"><i class="fa fa-code"></i>FURTHEST</a></li><li class="tab"><a href="#indexing-4"><i class="fa fa-code"></i>NEXT_FURTHEST</a></li></ul><div class="tab-content"><div class="tab-pane active" id="indexing-1"><p>파이썬은 0부터 시작하는 인덱싱을 사용하므로 첫 번째 요소의 인덱스는 0 입니다.</p>
+<pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;planets[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;apos;Mercury&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre></div><div class="tab-pane" id="indexing-2"><p>다음으로 가까운 행성은 어디일까요?</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;Venus&apos;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="indexing-3"><p>태양으로 부터 가장 먼 행성은 어느 것일까요?<br>목록의 끝에있는 요소는 -1부터 시작하여 음수로 액세스 할 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;Neptune&apos;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="indexing-4"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;Uranus&apos;</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="슬라이싱-Slicing"><a href="#슬라이싱-Slicing" class="headerlink" title="슬라이싱(Slicing)"></a>슬라이싱(Slicing)</h2><p>첫 3개의 행성은 어떤 것인가요? <code>slicing</code> 을 통해 우리는 답을 얻을 수 있습니다.</p>
+<div class="tabs" id="slicing_1"><ul class="nav-tabs"><li class="tab active"><a href="#slicing_1-1"><i class="fa fa-code"></i>CODE_1</a></li><li class="tab"><a href="#slicing_1-2"><i class="fa fa-code"></i>CODE_2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="slicing_1-1"><p><code>planets[0:3]</code> 은 인덱스 0 이상 3 미만의 <code>planet</code> 의 요소들을 가리킵니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[<span class="number">0</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Mercury&apos;, &apos;Venus&apos;, &apos;Earth&apos;]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="slicing_1-2"><p>시작과 끝 인덱스는 모두 선택사항(optional)입니다. 시작 인덱스를 생략하면 0 으로 간주됩니다. 따라서 다음과 같이 작성할 수도 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Mercury&apos;, &apos;Venus&apos;, &apos;Earth&apos;]</span><br></pre></td></tr></table></figure>
+
+<div class="note default no-icon">
+            <p>마지막 인덱스를 생략하면 범위를 list의 길이로 간주합니다.</p><pre><code>&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;planets[&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;:]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&amp;apos;Mars&amp;apos;, &amp;apos;Jupiter&amp;apos;, &amp;apos;Saturn&amp;apos;, &amp;apos;Uranus&amp;apos;, &amp;apos;Neptune&amp;apos;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;즉, 인덱스 3부터 시작하는 모든 요소들을 나타냅니다.</code></pre>
+          </div></div></div></div>
+
+<p>슬라이싱할 때 음수 인덱스를 사용할 수도 있습니다.</p>
+<div class="note no-icon">
+            <p>처음과 마지막을 제외한 모든 행성</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># All the planets except the first and last</span></span><br><span class="line"></span><br><span class="line">planets[<span class="number">1</span>:<span class="number">-1</span>]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Venus&apos;, &apos;Earth&apos;, &apos;Mars&apos;, &apos;Jupiter&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;]</span><br></pre></td></tr></table></figure>
+          </div>
+
+<div class="note no-icon">
+            <p>마지막 행성 3개</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># The last 3 planets</span></span><br><span class="line"></span><br><span class="line">planets[<span class="number">-3</span>:]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Neptune&apos;]</span><br></pre></td></tr></table></figure>
+          </div>
+
+<h2 id="리스트-수정-Changing-lists"><a href="#리스트-수정-Changing-lists" class="headerlink" title="리스트 수정(Changing lists)"></a>리스트 수정(Changing lists)</h2><p>list는 “변경 가능(mutable)” 하며, 이는 “제자리(in place)”에서 수정할 수 있음을 의미합니다.</p>
+<p>list를 수정하는 한 가지 방법은 인덱스 또는 슬라이스를 사용하는 방법입니다.</p>
+<p>예를 들어 Mars(화성)의 이름을 바꾸고 싶다고합시다 :</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[<span class="number">3</span>] = <span class="string">'Malacandra'</span></span><br><span class="line">planets</span><br></pre></td></tr></table></figure><div class="spoiler collapsed">    <div class="spoiler-title">        Malacandra가_뭐지?    </div>    <div class="spoiler-content">        <p>나니아 연대기로 유명한 C. S. Lewis의 소설 <span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3V0X29mX3RoZV9TaWxlbnRfUGxhbmV0" title="https://en.wikipedia.org/wiki/Out_of_the_Silent_Planet">침묵의 행성 밖으로(Out of the Silent Planet)<i class="fa fa-external-link"></i></span>에서 화성인들을 Ma’aleca’andra 라고 부릅니다.</p><pre><code>&lt;/div&gt;</code></pre></div><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Mercury&apos;, &apos;Venus&apos;, &apos;Earth&apos;, &apos;Malacandra&apos;, &apos;Jupiter&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Neptune&apos;]</span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>음… 이름이 너무 긴 것 같군요. 첫 3개 행성들의 이름을 줄여보겠습니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets[:<span class="number">3</span>] = [<span class="string">'Mur'</span>, <span class="string">'Vee'</span>, <span class="string">'Ur'</span>]</span><br><span class="line">print(planets) <span class="comment"># 출력 이후 변경 사항들을 되돌려 놓겠습니다.</span></span><br><span class="line">planets[:<span class="number">4</span>] = [<span class="string">'Mercury'</span>, <span class="string">'Venus'</span>, <span class="string">'Earth'</span>, <span class="string">'Mars'</span>,]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Mur&apos;, &apos;Vee&apos;, &apos;Ur&apos;, &apos;Malacandra&apos;, &apos;Jupiter&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Neptune&apos;]</span><br></pre></td></tr></table></figure>
+          </div>
+
+<h2 id="리스트-함수-List-functions"><a href="#리스트-함수-List-functions" class="headerlink" title="리스트 함수(List functions)"></a>리스트 함수(List functions)</h2><p>파이썬은 list를 사용하는데 매우 유용한 몇 가지 함수들을 제공합니다.</p>
+<div class="tabs" id="list_functions"><ul class="nav-tabs"><li class="tab active"><a href="#list_functions-1"><i class="fa fa-code"></i>LEN</a></li><li class="tab"><a href="#list_functions-2"><i class="fa fa-code"></i>SORT</a></li><li class="tab"><a href="#list_functions-3"><i class="fa fa-code"></i>SUM</a></li><li class="tab"><a href="#list_functions-4"><i class="fa fa-code"></i>MAX</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list_functions-1"><div class="note primary no-icon">
+            <p><code>len</code> 은 list의 길이를 알려줍니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># How many planets are there?</span></span><br><span class="line"></span><br><span class="line">len(planets) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">8 </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="list_functions-2"><div class="note primary no-icon">
+            <p><code>sorted</code> 는 정렬된 list를 반환합니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># The planets sorted in alphabetical order</span></span><br><span class="line"></span><br><span class="line">sorted(planets) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Earth&apos;, &apos;Jupiter&apos;, &apos;Mars&apos;, &apos;Mercury&apos;, &apos;Neptune&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Venus&apos;] </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="list_functions-3"><div class="note primary no-icon">
+            <p><code>sum</code> 은 무엇을 반환할지 눈치채셨을 겁니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">primes = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>]</span><br><span class="line">sum(primes) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">17 </span><br></pre></td></tr></table></figure>
+          </div></div><div class="tab-pane" id="list_functions-4"><div class="note primary no-icon">
+            <p>이전에 <code>min</code> 및 <code>max</code> 를 사용하여 최소 또는 최대 인수를 구해봤습니다. 우리는 하나의 list를 매개 변수로 전달할 수도 있습니다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">max(primes) </span><br></pre></td></tr></table></figure><pre><code>&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;7 &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</code></pre>
+          </div></div></div></div>
+
+<h2 id="참고-객체-Interlude-objects"><a href="#참고-객체-Interlude-objects" class="headerlink" title="참고: 객체(Interlude: objects)"></a>참고: 객체(Interlude: objects)</h2><p>지금까지 ‘Object(객체)’라는 용어를 많이 사용했습니다 - 파이썬에서 모든 것이 객체라는 것을 들어보셨을 수도 있습니다. 이것이 무엇을 의미할까요?<br>간단히 말해서, 객체들은 무언가(변수, 함수 등)를 주변에 가지고 다닙니다. 그리고 우리는 파이썬의 도트 구문(dot syntax)을 사용하여 그것들에 액세스 할 수 있습니다.</p>
+<p>예를 들어 파이썬의 numbers에는 <code>imag</code> 라는 허수를 나타내는 변수를 가지고 있습니다. (특별한 경우의 수학 연산을 하지 않는 한, 이것을 사용할 필요는 없을 것입니다.)</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># x is a real number, so its imaginary part is 0.</span></span><br><span class="line"></span><br><span class="line">print(x.imag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here's how to make a complex number, in case you've ever been curious:</span></span><br><span class="line"></span><br><span class="line">c = <span class="number">12</span> + <span class="number">3j</span></span><br><span class="line">print(c.imag) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">0</span><br><span class="line">3.0 </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>객체가 운반하는 것들 중에는 함수들도 포함되어 있습니다. 객체에 속한 함수를 <strong>메소드(method)</strong> 라고합니다. (<code>imag</code> 와 같이 객체에 속한 기능이 없는 객체를 <strong>속성(attribute)</strong> 이라고 합니다.)</p>
+<p>예를 들어 numbers에는 <code>bit_length</code> 라는 메서드가 있습니다. 다시 말하지만, 도트 ​​구문을 사용하여 액세스할 수 있습니다.</p>
+<div class="note danger">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.bit_length </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;function int.bit_length&gt; </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>메소드를 호출하기 위해서는 괄호를 추가해야 합니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.bit_length() </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">4 </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p><code>help</code> 함수에 함수들을 전달했듯이(e.g. <code>help(max)</code>), 메소드들도 똑같이 전달할 수 있습니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(x.bit_length) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on built-in function bit_length:</span><br><span class="line"></span><br><span class="line">bit_length(...) method of builtins.int instance</span><br><span class="line">int.bit_length() -&gt; int</span><br><span class="line"></span><br><span class="line">    Number of bits necessary to represent self in binary.</span><br><span class="line">    &gt;&gt;&gt; bin(37)</span><br><span class="line">    &apos;0b100101&apos;</span><br><span class="line">    &gt;&gt;&gt; (37).bit_length()</span><br><span class="line">    6 </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>앞선 예들은 매우 애매한 것들이였습니다. 지금까지 살펴본 객체 유형들(numbers, functions, booleans)의 속성이나 메소드들은 흔히 사용되지 않는 것들이기 때문입니다.</p>
+<p>하지만 list에는 항상 자주 사용되는 몇 가지 메소드들이 있습니다.</p>
+<h2 id="리스트-메소드들-List-methods"><a href="#리스트-메소드들-List-methods" class="headerlink" title="리스트 메소드들(List methods)"></a>리스트 메소드들(List methods)</h2><p><code>list.append</code> 를 사용하여 list의 마지막에 item을 추가할 수 있습니다:</p>
+<div class="tabs" id="list_append"><ul class="nav-tabs"><li class="tab active"><a href="#list_append-1"><i class="fa fa-code"></i>.APPEND</a></li><li class="tab"><a href="#list_append-2"><i class="fa fa-book"></i>HELP</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list_append-1"><div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Pluto is a planet darn it!</span></span><br><span class="line"></span><br><span class="line">planets.append(<span class="string">'Pluto'</span>)</span><br><span class="line">planets </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;Mercury&apos;, &apos;Venus&apos;, &apos;Earth&apos;, &apos;Mars&apos;, &apos;Jupiter&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Neptune&apos;, &apos;Pluto&apos;] </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>왜 <code>append()</code> 함수에는 반환값이 없을까요? <code>help(planets.append)</code> 를 호출하여 설명서를 확인해 보세요.</p>
+<blockquote>
+<p><strong>잠깐</strong> : <code>append</code>는 <code>planets</code>에만 있는 메소드가 아니라 모든 리스트 타입의 객체가 가지고 다니는 메소드이므로 <code>help(list.append)</code>를 호출해도 됩니다. 하지만 <code>help(append)</code>는 호출하면 Python에서 “append”라는 변수가 없다고 응답할 것 입니다. “append”는 리스트 내에만 존재합니다 - 내장 함수인 <code>max</code> 나 <code>len</code> 와 같이 독립적으로 존재하지 않습니다.</p>
+</blockquote></div><div class="tab-pane" id="list_append-2"><div class="note info no-icon">
+            <p><code>-&gt; None</code> 은 <code>list.append</code> 가 아무것도 반환하지 않는다는 것을 말합니다. 하지만 <code>planets</code>를 확인해보면 메소드의 호출로 값이 제대로 추가된 것을 볼 수 있습니다 :</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(planets.append) </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Help on built-in function append:</span><br><span class="line"></span><br><span class="line">append(...) method of builtins.list instance</span><br><span class="line">L.append(object) -&gt; None -- append object to end </span><br></pre></td></tr></table></figure>
+          </div></div></div></div>
+
+<p><code>list.pop</code> 은 list의 마지막 element를 제거하고 반환합니다:</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets.pop()</span><br><span class="line">planets </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;Pluto&apos;</span><br><span class="line">[&apos;Mercury&apos;, &apos;Venus&apos;, &apos;Earth&apos;, &apos;Mars&apos;, &apos;Jupiter&apos;, &apos;Saturn&apos;, &apos;Uranus&apos;, &apos;Neptune&apos;] </span><br></pre></td></tr></table></figure>
+          </div>
+
+<h3 id="리스트-검색-Searching-lists"><a href="#리스트-검색-Searching-lists" class="headerlink" title="리스트 검색(Searching lists)"></a>리스트 검색(Searching lists)</h3><p>지구는 태양계의 몇 번째 행성일까요? <code>list.index</code> 를 사용해서 해당 색인(index)을 알아낼 수 있습니다.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets.index(<span class="string">'Earth'</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>3번째 행성이군요.(i.e. 색인은 0에서 시작하기 때문)<br>그렇다면 플루토 행성은 몇 번째 일까요?</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">planets.index(<span class="string">'Pluto'</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line">ValueError                                Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-30</span><span class="number">-3</span>a8584cba91a&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 planets.index('Pluto')</span><br><span class="line"></span><br><span class="line">ValueError: <span class="string">'Pluto'</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">in</span> list</span><br></pre></td></tr></table></figure>
+
+<p>저런, 이전 예제에서 ‘Pluto’를 삭제 했었다는걸 까먹었군요<br>이와 같은 예상치 못한 상황을 피하기 위해 <code>in</code> 연산자를 사용하여 목록에 특정한 값이 들어 있는지를 확인할 수 있습니다.</p>
+<div class="tabs" id="search_examples"><ul class="nav-tabs"><li class="tab active"><a href="#search_examples-1"><i class="fa fa-eye"></i>EXAMPLE_1</a></li><li class="tab"><a href="#search_examples-2"><i class="fa fa-eye"></i>EXAMPLE_2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="search_examples-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Is Earth a planet?</span></span><br><span class="line"></span><br><span class="line"><span class="string">"Earth"</span> <span class="keyword">in</span> planets </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">True </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="search_examples-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Is Calbefraques a planet?</span></span><br><span class="line"></span><br><span class="line"><span class="string">"Calbefraques"</span> <span class="keyword">in</span> planets </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">False </span><br></pre></td></tr></table></figure></div></div></div>
+
+<p>이 외에도 여기서 다루지 않은 몇 가지 흥미로운 list 메소드들이 있습니다. 특정 객체에 포함된 모든 메소드와 속성들을 알고 싶다면 객체 자체에서 <code>help()</code> 를 호출하시면 됩니다. 예를 들어, <code>help(planets)</code> 는 모든 list 메서드에 대해 알려줍니다.</p>
+<div class="tabs" id="help_planets"><ul class="nav-tabs"><li class="tab active"><a href="#help_planets-1"><i class="fa fa-code"></i>CODE</a></li><li class="tab"><a href="#help_planets-2"><i class="fa fa-terminal"></i>output</a></li></ul><div class="tab-content"><div class="tab-pane active" id="help_planets-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">help(planets) </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="help_planets-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Help on list object:</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">list</span><span class="params">(object)</span></span></span><br><span class="line"><span class="class">| <span class="title">list</span><span class="params">()</span> -&gt; new empty list</span></span><br><span class="line"><span class="class">| list(iterable) -&gt; new list initialized from iterable's items</span></span><br><span class="line"><span class="class">|  </span></span><br><span class="line"><span class="class"> | Methods defined here:</span></span><br><span class="line">|  </span><br><span class="line"> | **add**(self, value, /)</span><br><span class="line">| Return self+value.</span><br><span class="line">|  </span><br><span class="line"> | **contains**(self, key, /)</span><br><span class="line">| Return key <span class="keyword">in</span> self.</span><br><span class="line">|  </span><br><span class="line"> | **delitem**(self, key, /)</span><br><span class="line">| Delete self[key].</span><br><span class="line">|  </span><br><span class="line"> | **eq**(self, value, /)</span><br><span class="line">| Return self==value.</span><br><span class="line">|  </span><br><span class="line"> | **ge**(self, value, /)</span><br><span class="line">| Return self&gt;=value.</span><br><span class="line">|  </span><br><span class="line"> | **getattribute**(self, name, /)</span><br><span class="line">| Return getattr(self, name).</span><br><span class="line">|  </span><br><span class="line"> | **getitem**(...)</span><br><span class="line">| x.**getitem**(y) &lt;==&gt; x[y]</span><br><span class="line">|  </span><br><span class="line"> | **gt**(self, value, /)</span><br><span class="line">| Return self&gt;value.</span><br><span class="line">|  </span><br><span class="line"> | **iadd**(self, value, /)</span><br><span class="line">| Implement self+=value.</span><br><span class="line">|  </span><br><span class="line"> | **imul**(self, value, /)</span><br><span class="line">| Implement self*=value.</span><br><span class="line">|  </span><br><span class="line"> | **init**(self, /, *args, **kwargs)</span><br><span class="line">| Initialize self. See help(type(self)) <span class="keyword">for</span> accurate signature.</span><br><span class="line">|  </span><br><span class="line"> | **iter**(self, /)</span><br><span class="line">| Implement iter(self).</span><br><span class="line">|  </span><br><span class="line"> | **le**(self, value, /)</span><br><span class="line">| Return self&lt;=value.</span><br><span class="line">|  </span><br><span class="line"> | **len**(self, /)</span><br><span class="line">| Return len(self).</span><br><span class="line">|  </span><br><span class="line"> | **lt**(self, value, /)</span><br><span class="line">| Return self&lt;value.</span><br><span class="line">|  </span><br><span class="line"> | **mul**(self, value, /)</span><br><span class="line">| Return self*value.</span><br><span class="line">|  </span><br><span class="line"> | **ne**(self, value, /)</span><br><span class="line">| Return self!=value.</span><br><span class="line">|  </span><br><span class="line"> | **new**(*args, **kwargs) <span class="keyword">from</span> builtins.type</span><br><span class="line">| Create <span class="keyword">and</span> <span class="keyword">return</span> a new object. See help(type) <span class="keyword">for</span> accurate signature.</span><br><span class="line">|  </span><br><span class="line"> | **repr**(self, /)</span><br><span class="line">| Return repr(self).</span><br><span class="line">|  </span><br><span class="line"> | **reversed**(...)</span><br><span class="line">| L.**reversed**() -- <span class="keyword">return</span> a reverse iterator over the list</span><br><span class="line">|  </span><br><span class="line"> | **rmul**(self, value, /)</span><br><span class="line">| Return value*self.</span><br><span class="line">|  </span><br><span class="line"> | **setitem**(self, key, value, /)</span><br><span class="line">| Set self[key] to value.</span><br><span class="line">|  </span><br><span class="line"> | **sizeof**(...)</span><br><span class="line">| L.**sizeof**() -- size of L <span class="keyword">in</span> memory, <span class="keyword">in</span> bytes</span><br><span class="line">|  </span><br><span class="line"> | append(...)</span><br><span class="line">| L.append(object) -&gt; None -- append object to end</span><br><span class="line">|  </span><br><span class="line"> | clear(...)</span><br><span class="line">| L.clear() -&gt; None -- remove all items from L</span><br><span class="line">|  </span><br><span class="line"> | copy(...)</span><br><span class="line">| L.copy() -&gt; list -- a shallow copy of L</span><br><span class="line">|  </span><br><span class="line"> | count(...)</span><br><span class="line">| L.count(value) -&gt; integer -- return number of occurrences of value</span><br><span class="line">|  </span><br><span class="line"> | extend(...)</span><br><span class="line">| L.extend(iterable) -&gt; None -- extend list by appending elements from the iterable</span><br><span class="line">|  </span><br><span class="line"> | index(...)</span><br><span class="line">| L.index(value, [start, [stop]]) -&gt; integer -- return first index of value.</span><br><span class="line">| Raises ValueError <span class="keyword">if</span> the value <span class="keyword">is</span> <span class="keyword">not</span> present.</span><br><span class="line">|  </span><br><span class="line"> | insert(...)</span><br><span class="line">| L.insert(index, object) -- insert object before index</span><br><span class="line">|  </span><br><span class="line"> | pop(...)</span><br><span class="line">| L.pop([index]) -&gt; item -- remove and return item at index (default last).</span><br><span class="line">| Raises IndexError <span class="keyword">if</span> list <span class="keyword">is</span> empty <span class="keyword">or</span> index <span class="keyword">is</span> out of range.</span><br><span class="line">|  </span><br><span class="line"> | remove(...)</span><br><span class="line">| L.remove(value) -&gt; None -- remove first occurrence of value.</span><br><span class="line">| Raises ValueError <span class="keyword">if</span> the value <span class="keyword">is</span> <span class="keyword">not</span> present.</span><br><span class="line">|  </span><br><span class="line"> | reverse(...)</span><br><span class="line">| L.reverse() -- reverse *IN PLACE*</span><br><span class="line">|  </span><br><span class="line"> | sort(...)</span><br><span class="line">| L.sort(key=None, reverse=False) -&gt; None -- stable sort *IN PLACE\*</span><br><span class="line">|  </span><br><span class="line"> | ----------------------------------------------------------------------</span><br><span class="line">| Data <span class="keyword">and</span> other attributes defined here:</span><br><span class="line">|  </span><br><span class="line"> | **hash** = <span class="literal">None</span> </span><br></pre></td></tr></table></figure></div></div></div>
+
+<p>“output” 탭을 클릭해서 전체 도움말을 살펴 보세요. list 에는 <code>__eq__</code> 및 <code>__iadd__</code> 와 같은 이상한 이름의 메소드들이 많이 있습니다. 지금은 이것들에 대해 크게 신경쓸 필요가 없습니다. (이러한 메서드를 아마 평생 여러분이 직접 호출하지는 않을 것입니다. 그러나 색인 연산자나 비교 연산자와 같은 구문을 사용할 때, 이들은 배후에서 호출됩니다) 가장 흥미로운 메서드들은 목록 맨 아래에 있습니다(<code>append</code>, <code>clear</code>, <code>copy</code> 등).</p>
+<h2 id="튜플-Tuples"><a href="#튜플-Tuples" class="headerlink" title="튜플(Tuples)"></a>튜플(Tuples)</h2><p>Tuple은 list와 매우 비슷합니다. 단 2 가지 면에서 조금 다릅니다.</p>
+<p><strong>1:</strong> 대괄호 대신 소괄호를 사용하여 생성합니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) </span><br></pre></td></tr></table></figure>혹은<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> <span class="comment"># 위와 동일한 내용입니다</span></span><br><span class="line">t </span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1, 2, 3) </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p><strong>2:</strong> 수정이 불가능 합니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">0.125</span></span><br><span class="line">x.as_integer_ratio() </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">TypeError Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-36</span>-e6cf7836e708&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 t[0] = 100</span><br><span class="line"></span><br><span class="line">TypeError: <span class="string">'tuple'</span> object does <span class="keyword">not</span> support item assignment </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>튜플은 여러 개의 반환 값을 갖는 함수에 자주 사용됩니다.<br>예를 들어, float 객체의 <code>as_integer_ratio()</code> 메소드는 분자와 분모를 튜플 형태로 반환합니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">0.125</span></span><br><span class="line">x.as_integer_ratio() </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(<span class="number">1</span>, <span class="number">8</span>) </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>여러 개의 값들을 각각의 변수로 할당이 가능합니다.</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numerator, denominator = x.as_integer_ratio()</span><br><span class="line">print(numerator / denominator) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">0.125</span> </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p>이제 우리는 두 개의 변수를 교환하는 것 처럼 보이는 고전적인 Stupid Python Trick™ (파이썬 속임수?)의 본질을 꿰뚫어볼 수 있게 되었습니다!</p>
+<div class="note no-icon">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">0</span></span><br><span class="line">a, b = b, a</span><br><span class="line">print(a, b) </span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> </span><br></pre></td></tr></table></figure>
+          </div>
+
+<p><br><br><br></p>
+<h1 id="연습문제-Your-Turn"><a href="#연습문제-Your-Turn" class="headerlink" title="연습문제(Your Turn)"></a>연습문제(Your Turn)</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9rZXJuZWxzL2ZvcmsvMTI3NTE3Mw==" title="https://www.kaggle.com/kernels/fork/1275173">리스트(lists) 예제<i class="fa fa-external-link"></i></span></p>
+</div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/파이썬/" rel="tag"># 파이썬</a>
+          
+            <a href="/tags/programming-language/" rel="tag"># programming language</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/language/" rel="tag"># language</a>
+          
+            <a href="/tags/캐글/" rel="tag"># 캐글</a>
+          
+            <a href="/tags/튜토리얼/" rel="tag"># 튜토리얼</a>
+          
+            <a href="/tags/kaggle/" rel="tag"># kaggle</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+            <a href="/tags/booleans/" rel="tag"># booleans</a>
+          
+            <a href="/tags/conditionals/" rel="tag"># conditionals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/Blog-HexoNextTheme-20190717-hexo-adsense-1/" rel="next" title="(Hexo_NexT_Theme) Hexo 블로그에 Google Adsense 설정_1">
+                <i class="fa fa-chevron-left"></i> (Hexo_NexT_Theme) Hexo 블로그에 Google Adsense 설정_1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/Blog-HexoNextTheme-20190722-hexo-live2d/" rel="prev" title="(Hexo_NexT_Theme) 마우스를 따라 움직이는 배경">
+                (Hexo_NexT_Theme) 마우스를 따라 움직이는 배경 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#리스트-Lists"><span class="nav-text">리스트(Lists)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#색인-Indexing"><span class="nav-text">색인(Indexing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#슬라이싱-Slicing"><span class="nav-text">슬라이싱(Slicing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#리스트-수정-Changing-lists"><span class="nav-text">리스트 수정(Changing lists)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#리스트-함수-List-functions"><span class="nav-text">리스트 함수(List functions)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고-객체-Interlude-objects"><span class="nav-text">참고: 객체(Interlude: objects)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#리스트-메소드들-List-methods"><span class="nav-text">리스트 메소드들(List methods)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#리스트-검색-Searching-lists"><span class="nav-text">리스트 검색(Searching lists)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#튜플-Tuples"><span class="nav-text">튜플(Tuples)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#연습문제-Your-Turn"><span class="nav-text">연습문제(Your Turn)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/Language-Python-20190722-04-lists/";
+    this.page.identifier = "[object Object]/Language-Python-20190722-04-lists/";
+    this.page.title = '(파이썬) 04 Lists';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>

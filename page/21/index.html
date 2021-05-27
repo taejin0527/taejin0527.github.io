@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6232/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190805-sw-6259/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -403,245 +403,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-6232/" class="post-title-link" itemprop="url">(SW Expert Academy) 문자열 - 6232번 6239번 6241번 6678번 6243번 6248번</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-08-05 12:35:38" itemprop="dateCreated datePublished" datetime="2019-08-05T12:35:38+09:00">2019-08-05</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6232/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6232/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1번-6232번"><a href="#1번-6232번" class="headerlink" title="1번 - 6232번"></a>1번 - 6232번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>나눗셈 몫으로 정수를 원하면 ‘//‘ 사용!</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_palindrome</span><span class="params">(word)</span>:</span></span><br><span class="line">    word_list = list(word)</span><br><span class="line">    length = len(word)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,length//<span class="number">2</span>):</span><br><span class="line">        <span class="keyword">if</span> word_list[i] != word_list[length<span class="number">-1</span>-i]:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">word = input()</span><br><span class="line">print(word)</span><br><span class="line"><span class="keyword">if</span>(is_palindrome(word)):</span><br><span class="line">    print(<span class="string">"입력하신 단어는 회문(Palindrome)입니다."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"입력하신 단어는 회문(Palindrome)이 아닙니다."</span>)</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="2번-6239번"><a href="#2번-6239번" class="headerlink" title="2번 - 6239번"></a>2번 - 6239번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>단어 역순 출력</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">' '</span>.join(input().split(<span class="string">' '</span>)[::<span class="number">-1</span>]))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="3번-6241번"><a href="#3번-6241번" class="headerlink" title="3번 - 6241번"></a>3번 - 6241번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">URL = <span class="string">'http://www.example.com/test?p=1&amp;q=2'</span></span><br><span class="line">protocol = URL[:URL.find(<span class="string">'://'</span>)]</span><br><span class="line">host = URL[URL.find(<span class="string">'://'</span>)+<span class="number">3</span>:URL.rfind(<span class="string">'/'</span>)]</span><br><span class="line">others = URL[URL.rfind(<span class="string">'/'</span>)+<span class="number">1</span>:]</span><br><span class="line"></span><br><span class="line">print(<span class="string">"protocol: &#123;&#125;\nhost: &#123;&#125;\nothers: &#123;&#125;"</span>.format(protocol,host,others))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="4번-6678번"><a href="#4번-6678번" class="headerlink" title="4번 - 6678번"></a>4번 - 6678번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>아래와 같은 방법으로 제출하면 메모리 에러가 뜬다. 즉, 아무 입력 없이 엔터를 눌러도 종료되지 않고 계속 돌아간다는거 같은데<br>다른 IDE를 사용하여 프로그램을 돌려보면 정상적으로 작동된다</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    words = input()</span><br><span class="line">    <span class="keyword">if</span> words==<span class="string">''</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(<span class="string">"&gt;&gt; &#123;&#125;"</span>.format(words.upper()))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="5번-6243번"><a href="#5번-6243번" class="headerlink" title="5번 - 6243번"></a>5번 - 6243번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<blockquote>
-<p>.split(‘ ‘)으로 공백 구분, set() 으로 중복값 없애고 sorted()로 순서를 정렬</p>
-</blockquote>
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">','</span>.join(sorted(list(set(input().split(<span class="string">' '</span>))))))</span><br></pre></td></tr></table></figure>
-          </div>
-
-<hr>
-<h1 id="7번-6248번"><a href="#7번-6248번" class="headerlink" title="7번 - 6248번"></a>7번 - 6248번</h1><div class="note ">
-            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
-          </div>
-
-<div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">raw_str = list(input())</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(raw_str), <span class="number">2</span>):</span><br><span class="line">    print(<span class="string">''</span>.join(raw_str[i]), end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
-          </div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6259/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/sw-6259/" class="post-title-link" itemprop="url">(SW Expert Academy) 셋, 딕셔너리 - 6259번 6260번 6261번 6262번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6259/" class="post-title-link" itemprop="url">(SW Expert Academy) 셋, 딕셔너리 - 6259번 6260번 6261번 6262번</a>
               
             
           </h2>
@@ -681,7 +443,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -699,8 +468,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6259/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6259/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190805-sw-6259/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190805-sw-6259/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -743,7 +512,7 @@
 <p>문자인지 확인 - isalpha() / 숫자인지 확인 - isdigit() 함수를 사용해도 됨<br>배우지 않았다는 가정하에 아래와 같이 코딩함</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_num_or_str</span><span class="params">(str_list)</span>:</span></span><br><span class="line">    ans_dict = dict(letters=<span class="number">0</span>, digits=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> str_list:</span><br><span class="line">        <span class="comment"># if letter.isalpha():</span></span><br><span class="line">        <span class="keyword">if</span> (letter&gt;=<span class="string">'a'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'z'</span>) <span class="keyword">or</span> (letter&gt;=<span class="string">'A'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'Z'</span>):</span><br><span class="line">            ans_dict[<span class="string">'letters'</span>] += <span class="number">1</span></span><br><span class="line">        <span class="comment"># elif letter.isdigit():</span></span><br><span class="line">        <span class="keyword">elif</span> letter&gt;=<span class="string">'0'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'9'</span>:</span><br><span class="line">            ans_dict[<span class="string">'digits'</span>] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ans_dict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sentence = list(input())</span><br><span class="line">ans = is_num_or_str(sentence)</span><br><span class="line">print(<span class="string">"LETTERS &#123;&#125;\nDIGITS &#123;&#125;"</span>.format(*ans.values()))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_num_or_str</span><span class="params">(str_list)</span>:</span></span><br><span class="line">ans_dict = dict(letters=<span class="number">0</span>, digits=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> str_list: <span class="comment"># if letter.isalpha():</span></span><br><span class="line"><span class="keyword">if</span> (letter&gt;=<span class="string">'a'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'z'</span>) <span class="keyword">or</span> (letter&gt;=<span class="string">'A'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'Z'</span>):</span><br><span class="line">ans_dict[<span class="string">'letters'</span>] += <span class="number">1</span> <span class="comment"># elif letter.isdigit():</span></span><br><span class="line"><span class="keyword">elif</span> letter&gt;=<span class="string">'0'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'9'</span>:</span><br><span class="line">ans_dict[<span class="string">'digits'</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">return</span> ans_dict</span><br><span class="line"></span><br><span class="line">sentence = list(input())</span><br><span class="line">ans = is_num_or_str(sentence)</span><br><span class="line">print(<span class="string">"LETTERS &#123;&#125;\nDIGITS &#123;&#125;"</span>.format(\*ans.values()))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -755,9 +524,11 @@
 <p>대 소문자 구분</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_num_or_str</span><span class="params">(str_list)</span>:</span></span><br><span class="line">    ans_dict = dict(upper=<span class="number">0</span>, lower=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> str_list:</span><br><span class="line">        <span class="keyword">if</span> letter&gt;=<span class="string">'a'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'z'</span>:</span><br><span class="line">            ans_dict[<span class="string">'lower'</span>] += <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> letter&gt;=<span class="string">'A'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'Z'</span>:</span><br><span class="line">            ans_dict[<span class="string">'upper'</span>] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ans_dict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sentence = list(input())</span><br><span class="line">ans = is_num_or_str(sentence)</span><br><span class="line">print(<span class="string">"UPPER CASE &#123;&#125;\nLOWER CASE &#123;&#125;"</span>.format(*ans.values()))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_num_or_str</span><span class="params">(str_list)</span>:</span></span><br><span class="line">ans_dict = dict(upper=<span class="number">0</span>, lower=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> str_list:</span><br><span class="line"><span class="keyword">if</span> letter&gt;=<span class="string">'a'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'z'</span>:</span><br><span class="line">ans_dict[<span class="string">'lower'</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">elif</span> letter&gt;=<span class="string">'A'</span> <span class="keyword">and</span> letter&lt;=<span class="string">'Z'</span>:</span><br><span class="line">ans_dict[<span class="string">'upper'</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">return</span> ans_dict</span><br><span class="line"></span><br><span class="line">sentence = list(input())</span><br><span class="line">ans = is_num_or_str(sentence)</span><br><span class="line">print(<span class="string">"UPPER CASE &#123;&#125;\nLOWER CASE &#123;&#125;"</span>.format(\*ans.values()))</span><br></pre></td></tr></table></figure>
           </div>
-<h2 id><a href="#" class="headerlink" title="**"></a>**</h2><h1 id="9번-6261번"><a href="#9번-6261번" class="headerlink" title="9번 - 6261번"></a>9번 - 6261번</h1><div class="note ">
+<p>**</p>
+<hr>
+<h1 id="9번-6261번"><a href="#9번-6261번" class="headerlink" title="9번 - 6261번"></a>9번 - 6261번</h1><div class="note ">
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
@@ -765,16 +536,18 @@
 <p>문제에서 제시한 출력 값이랑 채점할 때 비교되는 출력 값이랑 차이가 있음(이거 찾는다고 여러번 틀림)<br>주석 처리된 부분 ‘# 인상 전, # 인상 후’ 이 부분은 출력 안해도됨</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">beer = &#123;<span class="string">'하이트'</span>: <span class="number">2000</span>, <span class="string">'카스'</span>: <span class="number">2100</span>, <span class="string">'칭따오'</span>: <span class="number">2500</span>, <span class="string">'하이네켄'</span>: <span class="number">4000</span>, <span class="string">'버드와이저'</span>: <span class="number">500</span>&#125;</span><br><span class="line">print(beer)</span><br><span class="line">beer_raise = &#123;key:beer[key]*<span class="number">1.05</span> <span class="keyword">for</span> key <span class="keyword">in</span> beer&#125;</span><br><span class="line">print(beer_raise)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">beer = &#123;<span class="string">'하이트'</span>: <span class="number">2000</span>, <span class="string">'카스'</span>: <span class="number">2100</span>, <span class="string">'칭따오'</span>: <span class="number">2500</span>, <span class="string">'하이네켄'</span>: <span class="number">4000</span>, <span class="string">'버드와이저'</span>: <span class="number">500</span>&#125;</span><br><span class="line">print(beer)</span><br><span class="line">beer_raise = &#123;key:beer[key]\*<span class="number">1.05</span> <span class="keyword">for</span> key <span class="keyword">in</span> beer&#125;</span><br><span class="line">print(beer_raise)</span><br></pre></td></tr></table></figure>
           </div>
-<h2 id="-1"><a href="#-1" class="headerlink" title="**"></a>**</h2><h1 id="10번-6262번"><a href="#10번-6262번" class="headerlink" title="10번 - 6262번"></a>10번 - 6262번</h1><div class="note ">
+<p>**</p>
+<hr>
+<h1 id="10번-6262번"><a href="#10번-6262번" class="headerlink" title="10번 - 6262번"></a>10번 - 6262번</h1><div class="note ">
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
 <blockquote>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">letters = input()</span><br><span class="line">alpha = dict()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> letters:</span><br><span class="line">    alpha[i] = alpha.get(i, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> alpha.items():</span><br><span class="line">    print(<span class="string">"&#123;&#125;,&#123;&#125;"</span>.format(key, value))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">letters = input()</span><br><span class="line">alpha = dict()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> letters:</span><br><span class="line">alpha[i] = alpha.get(i, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> alpha.items():</span><br><span class="line">print(<span class="string">"&#123;&#125;,&#123;&#125;"</span>.format(key, value))</span><br></pre></td></tr></table></figure>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
@@ -834,7 +607,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/sw-6254/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190804-sw-6254/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -854,7 +627,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/sw-6254/" class="post-title-link" itemprop="url">(SW Expert Academy) 셋, 딕셔너리 - 6254번 6255번 6256번 6257번 6258번</a>
+                <a href="/[object Object]/Algorithm-SWEA-20190804-sw-6254/" class="post-title-link" itemprop="url">(SW Expert Academy) 셋, 딕셔너리 - 6254번 6255번 6256번 6257번 6258번</a>
               
             
           </h2>
@@ -894,7 +667,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
 
                 
                 
@@ -912,8 +692,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/sw-6254/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/sw-6254/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Algorithm-SWEA-20190804-sw-6254/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190804-sw-6254/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -956,7 +736,7 @@
 <p>등록된 학생 이름 출력</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_student</span><span class="params">(name, student_dict)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> name <span class="keyword">in</span> student_dict:</span><br><span class="line">        print(<span class="string">"&#123;&#125;의 전화번호는 &#123;&#125;입니다."</span>.format(name, student_dict[name]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"등록된 학생이 아닙니다."</span>)</span><br><span class="line"></span><br><span class="line">student = &#123;</span><br><span class="line">    <span class="string">'홍길동'</span>:<span class="string">'010-1111-1111'</span>,</span><br><span class="line">    <span class="string">'이순신'</span>:<span class="string">'010-1111-2222'</span>,</span><br><span class="line">    <span class="string">'강감찬'</span>:<span class="string">'010-1111-3333'</span>&#125;</span><br><span class="line"></span><br><span class="line">notice = <span class="string">"아래 학생들의 전화번호를 조회할 수 있습니다.\n홍길동\n이순신\n강감찬\n전화번호를 조회하고자 하는 학생의 이름을 입력하십시오."</span></span><br><span class="line">print(notice)</span><br><span class="line">name = input()</span><br><span class="line">find_student(name,student)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_student</span><span class="params">(name, student_dict)</span>:</span></span><br><span class="line"><span class="keyword">if</span> name <span class="keyword">in</span> student_dict:</span><br><span class="line">print(<span class="string">"&#123;&#125;의 전화번호는 &#123;&#125;입니다."</span>.format(name, student_dict[name]))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">print(<span class="string">"등록된 학생이 아닙니다."</span>)</span><br><span class="line"></span><br><span class="line">student = &#123;</span><br><span class="line"><span class="string">'홍길동'</span>:<span class="string">'010-1111-1111'</span>,</span><br><span class="line"><span class="string">'이순신'</span>:<span class="string">'010-1111-2222'</span>,</span><br><span class="line"><span class="string">'강감찬'</span>:<span class="string">'010-1111-3333'</span>&#125;</span><br><span class="line"></span><br><span class="line">notice = <span class="string">"아래 학생들의 전화번호를 조회할 수 있습니다.\n홍길동\n이순신\n강감찬\n전화번호를 조회하고자 하는 학생의 이름을 입력하십시오."</span></span><br><span class="line">print(notice)</span><br><span class="line">name = input()</span><br><span class="line">find_student(name,student)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -968,7 +748,7 @@
 <p>정렬 함수의 사용법을 새롭게 익혔다</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">furniture = &#123;<span class="string">"TV"</span>: <span class="number">2000000</span>,</span><br><span class="line">         <span class="string">"냉장고"</span>: <span class="number">1500000</span>,</span><br><span class="line">         <span class="string">"책상"</span>: <span class="number">350000</span>,</span><br><span class="line">         <span class="string">"노트북"</span>: <span class="number">1200000</span>,</span><br><span class="line">         <span class="string">"가스레인지"</span>: <span class="number">200000</span>,</span><br><span class="line">         <span class="string">"세탁기"</span>: <span class="number">1000000</span>&#125;</span><br><span class="line"></span><br><span class="line">r_dict = &#123;r: furniture[r] <span class="keyword">for</span> r <span class="keyword">in</span> sorted(furniture, key=furniture.get, reverse=<span class="literal">True</span>)&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> r_dict.items():</span><br><span class="line">    print(<span class="string">"&#123;&#125;: &#123;&#125;"</span>.format(key, value))</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">furniture = &#123;<span class="string">"TV"</span>: <span class="number">2000000</span>,</span><br><span class="line"><span class="string">"냉장고"</span>: <span class="number">1500000</span>,</span><br><span class="line"><span class="string">"책상"</span>: <span class="number">350000</span>,</span><br><span class="line"><span class="string">"노트북"</span>: <span class="number">1200000</span>,</span><br><span class="line"><span class="string">"가스레인지"</span>: <span class="number">200000</span>,</span><br><span class="line"><span class="string">"세탁기"</span>: <span class="number">1000000</span>&#125;</span><br><span class="line"></span><br><span class="line">r_dict = &#123;r: furniture[r] <span class="keyword">for</span> r <span class="keyword">in</span> sorted(furniture, key=furniture.get, reverse=<span class="literal">True</span>)&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> r_dict.items():</span><br><span class="line">print(<span class="string">"&#123;&#125;: &#123;&#125;"</span>.format(key, value))</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -992,7 +772,7 @@
 <p>모든 공백제거 : str.replace(“ “, “”)<br>양끝 공백만 제거 : str.strip()</p>
 </blockquote>
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fruit = [<span class="string">'   apple    '</span>,<span class="string">'banana'</span>,<span class="string">'  melon'</span>]</span><br><span class="line">fruit_dict = &#123;key.replace(<span class="string">" "</span>,<span class="string">""</span>): len(key.replace(<span class="string">" "</span>,<span class="string">""</span>)) <span class="keyword">for</span> key <span class="keyword">in</span> fruit&#125;</span><br><span class="line"></span><br><span class="line">print(fruit_dict)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fruit = [<span class="string">' apple '</span>,<span class="string">'banana'</span>,<span class="string">' melon'</span>]</span><br><span class="line">fruit_dict = &#123;key.replace(<span class="string">" "</span>,<span class="string">""</span>): len(key.replace(<span class="string">" "</span>,<span class="string">""</span>)) <span class="keyword">for</span> key <span class="keyword">in</span> fruit&#125;</span><br><span class="line"></span><br><span class="line">print(fruit_dict)</span><br></pre></td></tr></table></figure>
           </div>
 
 <hr>
@@ -1000,10 +780,236 @@
             <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
           </div>
 
-
 <div class="note success">
-            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num = int(input())</span><br><span class="line">num_dict = &#123;n: n**<span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,num+<span class="number">1</span>)&#125;</span><br><span class="line"></span><br><span class="line">print(num_dict)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num = int(input())</span><br><span class="line">num_dict = &#123;n: n\*\*<span class="number">2</span> <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,num+<span class="number">1</span>)&#125;</span><br><span class="line"></span><br><span class="line">print(num_dict)</span><br></pre></td></tr></table></figure>
           </div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Algorithm-SWEA-20190804-sw-6301/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Algorithm-SWEA-20190804-sw-6301/" class="post-title-link" itemprop="url">(SW Expert Academy) 리스트, 튜플 - 6301번 6302번 6303번 6305번</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-04 19:53:11" itemprop="dateCreated datePublished" datetime="2019-08-04T19:53:11+09:00">2019-08-04</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/" itemprop="url" rel="index"><span itemprop="name">ALGORITHM 🎯</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ALGORITHM-🎯/SW-아카데미/" itemprop="url" rel="index"><span itemprop="name">SW 아카데미</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Algorithm-SWEA-20190804-sw-6301/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Algorithm-SWEA-20190804-sw-6301/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="24번-6301번"><a href="#24번-6301번" class="headerlink" title="24번 - 6301번"></a>24번 - 6301번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>3차원 배열</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">array_3d = [[[<span class="number">0</span> <span class="keyword">for</span> a <span class="keyword">in</span> range(<span class="number">4</span>)] <span class="keyword">for</span> b <span class="keyword">in</span> range(<span class="number">3</span>)] <span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">2</span>)]</span><br><span class="line">print(array_3d)</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="25번-6302번"><a href="#25번-6302번" class="headerlink" title="25번 - 6302번"></a>25번 - 6302번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>enumerate()로 리스트의 인덱스 값을 받아 1, 5, 6번 값을 삭제(idx는 0부터 시작)</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">given_list = [<span class="number">12</span>, <span class="number">24</span>, <span class="number">35</span>, <span class="number">70</span>, <span class="number">88</span>, <span class="number">120</span>, <span class="number">155</span>]</span><br><span class="line">erased_list = [num <span class="keyword">for</span> idx, num <span class="keyword">in</span> enumerate(given_list) <span class="keyword">if</span> idx!=<span class="number">0</span> <span class="keyword">and</span> idx!=<span class="number">4</span> <span class="keyword">and</span> idx!=<span class="number">5</span>]</span><br><span class="line">print(erased_list)</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="26번-6303번"><a href="#26번-6303번" class="headerlink" title="26번 - 6303번"></a>26번 - 6303번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>단순 2중 for문을 활용한 비교</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">78</span>,<span class="number">35</span>,<span class="number">55</span>]</span><br><span class="line">list_2 = [<span class="number">12</span>,<span class="number">24</span>,<span class="number">35</span>,<span class="number">24</span>,<span class="number">88</span>,<span class="number">120</span>,<span class="number">155</span>]</span><br><span class="line"></span><br><span class="line">ans = [num <span class="keyword">for</span> num <span class="keyword">in</span> list_1 <span class="keyword">for</span> comp <span class="keyword">in</span> list_2 <span class="keyword">if</span> num==comp]</span><br><span class="line">print(ans)</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
+<h1 id="27번-6305번"><a href="#27번-6305번" class="headerlink" title="27번 - 6305번"></a>27번 - 6305번</h1><div class="note ">
+            <ul><li>시간 : 1개 테스트케이스를 합쳐서 Python의 경우 1초</li><li>메모리 : 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내</li></ul>
+          </div>
+
+<blockquote>
+<p>list comprehension 으로 한번에 해결 해보려고 list(set(..))을 사용해 봤지만, set() 함수는 순서가 없기 때문에 실패…</p>
+</blockquote>
+<div class="note success">
+            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_duplicated</span><span class="params">(duplicate_list)</span>:</span></span><br><span class="line">has = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> duplicate_list:</span><br><span class="line"><span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> has:</span><br><span class="line">has.append(i)</span><br><span class="line"><span class="keyword">return</span> has</span><br><span class="line"></span><br><span class="line">given_list = [<span class="number">12</span>,<span class="number">24</span>,<span class="number">35</span>,<span class="number">24</span>,<span class="number">88</span>,<span class="number">120</span>,<span class="number">155</span>,<span class="number">88</span>,<span class="number">120</span>,<span class="number">155</span>]</span><br><span class="line"></span><br><span class="line">print(remove_duplicated(given_list))</span><br></pre></td></tr></table></figure>
+          </div>
+
+<hr>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
         
@@ -1051,7 +1057,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1095,7 +1101,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1285,13 +1291,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1361,7 +1361,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

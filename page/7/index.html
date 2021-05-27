@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-day22-1/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200312-PY-day21/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -403,231 +403,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/PY-day22-1/" class="post-title-link" itemprop="url">(PYTHON) Day - 22 Regex and Parsing(1)</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2020-03-13 15:48:45" itemprop="dateCreated datePublished" datetime="2020-03-13T15:48:45+09:00">2020-03-13</time>
-            </span>
-          
-
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-day22-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-day22-1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li>문제 출처 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZGFzaGJvYXJk" title="https://www.hackerrank.com/dashboard">HackerRank<i class="fa fa-external-link"></i></span></li>
-<li>파이썬 연습 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZG9tYWlucy9weXRob24/ZmlsdGVycyU1QnN0YXR1cyU1RCU1QiU1RD11bnNvbHZlZCZiYWRnZV90eXBlPXB5dGhvbg==" title="https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=python">Practice - Python<i class="fa fa-external-link"></i></span></li>
-</ul>
-<p>개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다<br>문제를 풀고 <span class="label success"> Discussion Tab</span>을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다</p>
-<hr>
-<h1 id="HackerRank"><a href="#HackerRank" class="headerlink" title="HackerRank"></a>HackerRank</h1><div class="spoiler collapsed">
-    <div class="spoiler-title">
-        HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
-    </div>
-    <div class="spoiler-content">
-        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul>
-<li><del>Introduction</del></li>
-<li><del>Basic Data Types</del></li>
-<li><del>Strings</del></li>
-<li><del>Sets</del></li>
-<li><del>Math</del></li>
-<li><del>Itertools</del></li>
-<li><del>Collections</del></li>
-<li><del>Date and Time</del></li>
-<li><del>Errors and Exceptions</del></li>
-<li><del>Classes</del></li>
-<li><del>Built-Ins</del></li>
-<li><del>Python Functionals</del></li>
-<li><strong style="color:blue">Regex and Parsing</strong></li>
-<li>XML</li>
-<li>Closures and Decorators</li>
-<li>Numpy</li>
-<li>Debugging</li>
-</ul>
-
-    </div>
-</div>
-
-<hr>
-<h1 id="Regex-and-Parsing"><a href="#Regex-and-Parsing" class="headerlink" title="Regex and Parsing"></a>Regex and Parsing</h1><div class="note no-icon">
-            <div class="note primary no-icon">            <h2 id="기본개념"><a href="#기본개념" class="headerlink" title="기본개념"></a>기본개념</h2><p>정규 표현식 시작하기 - <span class="exturl" data-url="aHR0cHM6Ly93aWtpZG9jcy5uZXQvNDMwOA==" title="https://wikidocs.net/4308">점프 투 파이썬<i class="fa fa-external-link"></i></span><br>파이썬 정규 표현식 - <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vZWR1L3B5dGhvbi9yZWd1bGFyLWV4cHJlc3Npb25z" title="https://developers.google.com/edu/python/regular-expressions">Google for Education<i class="fa fa-external-link"></i></span></p><p><span class="label danger"> 주의해야하는 메타 문자</span><br>메타 문자 중 <code>^</code> 는 <code>[]</code> 문자 클래스 안에 있을 때랑 밖에 있을 때 의미가 다른 것을 주의!!</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[^<span class="number">0</span><span class="number">-9</span>] <span class="comment"># 숫자를 제외한 문자만 매치</span></span><br><span class="line">[^abc] <span class="comment"># a, b, c를 제외한 모든 문자와 매치</span></span><br><span class="line">^a     <span class="comment"># a로 시작하는 문자</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">  a    # 매치</span></span><br><span class="line"><span class="string">  aaa  # 매치</span></span><br><span class="line"><span class="string">  baaa # 매치 안됨</span></span><br><span class="line"><span class="string">'''</span> </span><br></pre></td></tr></table></figure><p><span class="label danger"> 자주 사용하는 문자 클래스</span></p><ul><li>\d - 숫자와 매치, [0-9]와 동일한 표현식이다.</li><li>\D - 숫자가 아닌 것과 매치, [^0-9]와 동일한 표현식이다.</li><li>\s - whitespace 문자와 매치, [ \t\n\r\f\v]와 동일한 표현식이다. 맨 앞의 빈 칸은 공백문자를 의미한다.</li><li>\S - whitespace 문자가 아닌 것과 매치, [^ \t\n\r\f\v]와 동일한 표현식이다.</li><li>\w - 문자+숫자(alphanumeric)와 매치, [a-zA-Z0-9_]와 동일한 표현식이다.</li><li>\W - 문자+숫자(alphanumeric)가 아닌 문자와 매치, [^a-zA-Z0-9_]와 동일한 표현식이다.</li></ul><div class="note primary no-icon">            <h3 id="패턴-매칭"><a href="#패턴-매칭" class="headerlink" title="패턴 매칭"></a>패턴 매칭</h3><p><span class="label warning"> <strong>search()</strong></span><br>패턴이 발견되는 첫번째 위치를 찾는다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(bool(re.search(<span class="string">r"ly"</span>,<span class="string">"similarly"</span>)))</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(re.search(<span class="string">r"ly"</span>,<span class="string">"similarly"</span>))</span><br><span class="line">&lt;re.Match object; span=(<span class="number">7</span>, <span class="number">9</span>), match=<span class="string">'ly'</span>&gt;  </span><br></pre></td></tr></table></figure><p><span class="label warning"> <strong>match()</strong></span><br>문자열의 첫 부분이 패턴과 일치하는지 확인한다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(bool(re.match(<span class="string">r"ly"</span>,<span class="string">"similarly"</span>)))</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(re.match(<span class="string">r"ly"</span>,<span class="string">"similarly"</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(bool(re.match(<span class="string">r"ly"</span>,<span class="string">"ly should be in the beginning"</span>)))</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(re.match(<span class="string">r"ly"</span>,<span class="string">"ly should be in the beginning"</span>))</span><br><span class="line">&lt;re.Match object; span=(<span class="number">0</span>, <span class="number">2</span>), match=<span class="string">'ly'</span>&gt;  </span><br></pre></td></tr></table></figure>          </div><div class="note primary no-icon">            <h3 id="구분-split"><a href="#구분-split" class="headerlink" title="구분 (split)"></a>구분 (split)</h3><p><span class="label warning"> <strong>split()</strong></span><br>re 모듈의 <code>split()</code> 함수는 여러 구분자를 동시에 사용하여 구분할 수 있는 장점이 있다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.split(<span class="string">r"-"</span>,<span class="string">"+91-011-2711-1111"</span>)</span><br><span class="line">[<span class="string">'+91'</span>, <span class="string">'011'</span>, <span class="string">'2711'</span>, <span class="string">'1111'</span>]  </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.split(<span class="string">r"[@\.]"</span>, <span class="string">"username@hackerrank.com"</span>)</span><br><span class="line">[<span class="string">'username'</span>, <span class="string">'hackerrank'</span>, <span class="string">'com'</span>] </span><br></pre></td></tr></table></figure>          </div><div class="note primary no-icon">            <h3 id="그룹-group"><a href="#그룹-group" class="headerlink" title="그룹 (group)"></a>그룹 (group)</h3><p>음.. dict 자료형으로 정리할 때 유용할 것 같다</p><p><span class="label warning"> <strong>group()</strong></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = re.match(<span class="string">r'(\w+)@(\w+)\.(\w+)'</span>,<span class="string">'username@hackerrank.com'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="number">0</span>)       <span class="comment"># The entire match</span></span><br><span class="line"><span class="string">'username@hackerrank.com'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="number">1</span>)       <span class="comment"># The first parenthesized subgroup.</span></span><br><span class="line"><span class="string">'username'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="number">2</span>)       <span class="comment"># The second parenthesized subgroup.</span></span><br><span class="line"><span class="string">'hackerrank'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="number">3</span>)       <span class="comment"># The third parenthesized subgroup.</span></span><br><span class="line"><span class="string">'com'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)   <span class="comment"># Multiple arguments give us a tuple.</span></span><br><span class="line">(<span class="string">'username'</span>, <span class="string">'hackerrank'</span>, <span class="string">'com'</span>) </span><br></pre></td></tr></table></figure><p><span class="label warning"> <strong>groups()</strong></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = re.match(<span class="string">r'(\w+)@(\w+)\.(\w+)'</span>,<span class="string">'username@hackerrank.com'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.groups()</span><br><span class="line">(<span class="string">'username'</span>, <span class="string">'hackerrank'</span>, <span class="string">'com'</span>)  </span><br></pre></td></tr></table></figure><p><span class="label warning"> <strong>groupdict()</strong></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = re.match(<span class="string">r'(?P&lt;user&gt;\w+)@(?P&lt;website&gt;\w+)\.(?P&lt;extension&gt;\w+)'</span>,<span class="string">'myname@hackerrank.com'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.groupdict()</span><br><span class="line">&#123;<span class="string">'website'</span>: <span class="string">'hackerrank'</span>, <span class="string">'user'</span>: <span class="string">'myname'</span>, <span class="string">'extension'</span>: <span class="string">'com'</span>&#125; </span><br></pre></td></tr></table></figure>          </div><div class="note primary no-icon">            <h3 id="검색-find"><a href="#검색-find" class="headerlink" title="검색 (find)"></a>검색 (find)</h3><p><span class="label warning"> <strong>findall()</strong></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.findall(<span class="string">r'\w'</span>,<span class="string">'http://www.hackerrank.com/'</span>)</span><br><span class="line">[<span class="string">'h'</span>, <span class="string">'t'</span>, <span class="string">'t'</span>, <span class="string">'p'</span>, <span class="string">'w'</span>, <span class="string">'w'</span>, <span class="string">'w'</span>, <span class="string">'h'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'k'</span>, <span class="string">'e'</span>, <span class="string">'r'</span>, <span class="string">'r'</span>, <span class="string">'a'</span>, <span class="string">'n'</span>, <span class="string">'k'</span>, <span class="string">'c'</span>, <span class="string">'o'</span>, <span class="string">'m'</span>]  </span><br></pre></td></tr></table></figure><p><span class="label warning"> <strong>finditer()</strong></span></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.finditer(<span class="string">r'\w'</span>,<span class="string">'http://www.hackerrank.com/'</span>)</span><br><span class="line">&lt;callable-iterator object at <span class="number">0x0266C790</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x.group(),re.finditer(<span class="string">r'\w'</span>,<span class="string">'http://www.hackerrank.com/'</span>))</span><br><span class="line">[<span class="string">'h'</span>, <span class="string">'t'</span>, <span class="string">'t'</span>, <span class="string">'p'</span>, <span class="string">'w'</span>, <span class="string">'w'</span>, <span class="string">'w'</span>, <span class="string">'h'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'k'</span>, <span class="string">'e'</span>, <span class="string">'r'</span>, <span class="string">'r'</span>, <span class="string">'a'</span>, <span class="string">'n'</span>, <span class="string">'k'</span>, <span class="string">'c'</span>, <span class="string">'o'</span>, <span class="string">'m'</span>]  </span><br></pre></td></tr></table></figure>          </div><div class="note primary no-icon">            <h3 id="치환"><a href="#치환" class="headerlink" title="치환"></a>치환</h3><p><span class="label warning"> <strong>sub()</strong></span><br>간단한 기본 예제</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment">#Squaring numbers</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(match)</span>:</span></span><br><span class="line">  number = int(match.group(<span class="number">0</span>))</span><br><span class="line">  <span class="keyword">return</span> str(number**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> re.sub(<span class="string">r"\d+"</span>, square, <span class="string">"1 2 3 4 5 6 7 8 9"</span>)</span><br><span class="line"><span class="comment"># output: 1 4 9 16 25 36 49 64 81 </span></span><br></pre></td></tr></table></figure><p>흔히 html 문서에서 tag 들을 없앨 때 자주 사용된다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;head&gt;</span></span><br><span class="line"><span class="string">&lt;title&gt;HTML&lt;/title&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;object type="application/x-flash"</span></span><br><span class="line"><span class="string">  data="your-file.swf"</span></span><br><span class="line"><span class="string">  width="0" height="0"&gt;</span></span><br><span class="line"><span class="string">  &lt;!-- &lt;param name="movie"  value="your-file.swf" /&gt; --&gt;</span></span><br><span class="line"><span class="string">  &lt;param name="quality" value="high"/&gt;</span></span><br><span class="line"><span class="string">&lt;/object&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> re.sub(<span class="string">"(&lt;!--.*?--&gt;)"</span>, <span class="string">""</span>, html) <span class="comment">#remove comment  </span></span><br></pre></td></tr></table></figure><figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;HTML&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;object type=&quot;application/x-flash&quot;</span><br><span class="line">  data=&quot;your-file.swf&quot;</span><br><span class="line">  width=&quot;0&quot; height=&quot;0&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;param name=&quot;quality&quot; value=&quot;high&quot;/&gt;</span><br><span class="line">&lt;/object&gt; </span><br></pre></td></tr></table></figure>          </div>          </div>
-          </div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-day21/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="NUNU">
-      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
-      <meta itemprop="image" content="/img/jjang.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AttackOnNunu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/[object Object]/PY-day21/" class="post-title-link" itemprop="url">(PYTHON) Day - 21 Python Functionals</a>
+                <a href="/[object Object]/Language-Python-20200312-PY-day21/" class="post-title-link" itemprop="url">(PYTHON) Day - 21 Python Functionals</a>
               
             
           </h2>
@@ -667,21 +443,21 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
 
                 
                 
@@ -699,8 +475,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-day21/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-day21/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Language-Python-20200312-PY-day21/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200312-PY-day21/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -746,32 +522,29 @@
         HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
     </div>
     <div class="spoiler-content">
-        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul>
-<li><del>Introduction</del></li>
-<li><del>Basic Data Types</del></li>
-<li><del>Strings</del></li>
-<li><del>Sets</del></li>
-<li><del>Math</del></li>
-<li><del>Itertools</del></li>
-<li><del>Collections</del></li>
-<li><del>Date and Time</del></li>
-<li><del>Errors and Exceptions</del></li>
-<li><del>Classes</del></li>
-<li><del>Built-Ins</del></li>
-<li><strong style="color:blue">Python Functionals</strong></li>
-<li>Regex and Parsing</li>
-<li>XML</li>
-<li>Closures and Decorators</li>
-<li>Numpy</li>
-<li>Debugging</li>
-</ul>
-
+        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><pre><code>- ~~Introduction~~
+- ~~Basic Data Types~~
+- ~~Strings~~
+- ~~Sets~~
+- ~~Math~~
+- ~~Itertools~~
+- ~~Collections~~
+- ~~Date and Time~~
+- ~~Errors and Exceptions~~
+- ~~Classes~~
+- ~~Built-Ins~~
+- &lt;strong style=&quot;color:blue&quot;&gt;Python Functionals&lt;/strong&gt;
+- Regex and Parsing
+- XML
+- Closures and Decorators
+- Numpy
+- Debugging</code></pre>
     </div>
 </div>
 
 <hr>
 <h1 id="Python-Functionals"><a href="#Python-Functionals" class="headerlink" title="Python Functionals"></a>Python Functionals</h1><div class="note no-icon">
-            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Map-and-Lambda-Function">Map and Lambda Function</a></li><li><a href="#Validating-Email-Addresses-With-a-Filter">Validating Email Addresses With a Filter</a></li><li><a href="#Reduce-Function">Reduce Function</a></li></ul>          </div><hr><h2 id="Map-and-Lambda-Function"><a href="#Map-and-Lambda-Function" class="headerlink" title="Map and Lambda Function"></a>Map and Lambda Function</h2><br><div class="note info">            <p>문제 : 피보나치 수열을 출력하는 문제<br>입력 : 수열의 길이<br>출력 : 피보나치 수열 리스트</p>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>5</p></div><div class="tab-pane" id="example1-2"><p>[0, 1, 1, 8, 27]</p></div></div></div><div class="note default no-icon">            <p>기본 형식에 맞춰서 문제를 풀면 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cube = <span class="keyword">lambda</span> x: x**<span class="number">3</span>  <span class="comment"># complete the lambda function</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="comment"># return a list of fibonacci numbers</span></span><br><span class="line">    fibo = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, n):</span><br><span class="line">        fibo.append(fibo[i<span class="number">-1</span>]+fibo[i<span class="number">-2</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibo[<span class="number">0</span>:n]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    n = int(input())</span><br><span class="line">    print(list(map(cube, fibonacci(n))))  </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>피보나치 수열을 재귀함수로 풀면서 lambda 함수로 표현하면 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cube = <span class="keyword">lambda</span> x: x**<span class="number">3</span>  <span class="comment"># complete the lambda function</span></span><br><span class="line"></span><br><span class="line">fibonacci = <span class="keyword">lambda</span> x: x <span class="keyword">if</span> x &lt;= <span class="number">1</span> <span class="keyword">else</span> fibonacci(x<span class="number">-1</span>) + fibonacci(x<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    n = int(input())</span><br><span class="line">    print(list(map(cube, map(fibonacci, range(n)))))  </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Validating-Email-Addresses-With-a-Filter"><a href="#Validating-Email-Addresses-With-a-Filter" class="headerlink" title="Validating Email Addresses With a Filter"></a>Validating Email Addresses With a Filter</h2><br><div class="note info">            <p>문제 : 유효한 이메일 주소를 사전순으로 출력하는 문제<br>입력 : 이메일 개수 N; (N 반복) 이메일 주소<br>출력 : 사전순으로 정렬된 리스트로 출력<br>조건 :<br><code>username@websitename.extension</code> 형식을 따른다<br>username은 오직 문자, 숫자, 대시 그리고 언더스코어만 가질 수 있다<br>websitename은 오직 문자와 숫자만 가질 수 있다<br>extension의 최대 길이는 3 이다</p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>3<br><span class="exturl" data-url="bWFpbHRvOmxhcmFAaGFja2VycmFuay5jb20=" title="mailto:lara@hackerrank.com">lara@hackerrank.com<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="bWFpbHRvOmJyaWFuLTIzQGhhY2tlcnJhbmsuY29t" title="mailto:brian-23@hackerrank.com">brian-23@hackerrank.com<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="bWFpbHRvOmJyaXR0c181NEBoYWNrZXJyYW5rLmNvbQ==" title="mailto:britts_54@hackerrank.com">britts_54@hackerrank.com<i class="fa fa-external-link"></i></span></p></div><div class="tab-pane" id="example2-2"><p>[‘brian-23@hackerrank.com’, ‘britts_54@hackerrank.com’, ‘lara@hackerrank.com’]</p></div></div></div><div class="note default no-icon">            <p><code>isalnum()</code> 함수를 사용하여 문자나 숫자로 이루어졌는지 확인할 수 있다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(s)</span>:</span></span><br><span class="line">  <span class="comment"># return True if s is a valid email, else return False</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">      username, site = s.split(<span class="string">'@'</span>)</span><br><span class="line">      websitename, extension = site.split(<span class="string">'.'</span>)</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">  username = <span class="string">''</span>.join(i <span class="keyword">for</span> i <span class="keyword">in</span> username <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">"-_"</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> username.isalnum() <span class="keyword">and</span> websitename.isalnum() <span class="keyword">and</span> len(extension) &lt;= <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">filter_mail</span><span class="params">(emails)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> list(filter(fun, emails))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    n = int(input())</span><br><span class="line">    emails = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(n):</span><br><span class="line">        emails.append(input())</span><br><span class="line"></span><br><span class="line">    filtered_emails = filter_mail(emails)</span><br><span class="line">    filtered_emails.sort()</span><br><span class="line">    print(filtered_emails)</span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>정규표현식을 사용하면서 <code>and</code> 연산자가 아닌 <code>all</code> 연산자로 마지막을 확인하는 방법(fun 함수만 작성 이하 동일)</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        user,website,domain=re.split(<span class="string">'\@|\.'</span>,s)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    processed=user.replace(<span class="string">'-'</span>,<span class="string">''</span>).replace(<span class="string">'_'</span>,<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">return</span> all( [processed.isalnum(), website.isalnum(), len(domain)&lt;=<span class="number">3</span>] ) </span><br></pre></td></tr></table></figure>          </div><p>__</p><hr><h2 id="Reduce-Function"><a href="#Reduce-Function" class="headerlink" title="Reduce Function"></a>Reduce Function</h2><br><div class="note info">            <p>문제 : (분수로 표현되는)유리수들의 곱셈 결과를 출력하는 문제<br>입력 : 유리수 개수 n; (n 반복) 분자, 분모 형식으로 입력;<br>출력 : 곱셈의 결과</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>3<br>1 2<br>3 4<br>10 6</p></div><div class="tab-pane" id="example3-2"><p>5 8</p></div></div></div><div class="note success no-icon">            <p><code>reduce()</code> 함수 안에서 lambda 식을 사용하지 않고도 operator 모듈을 사용해서 구현할 수 있는 것을 배웠다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fractions <span class="keyword">import</span> Fraction</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="comment"># from operator import mul</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">product</span><span class="params">(fracs)</span>:</span></span><br><span class="line">    t = reduce(<span class="keyword">lambda</span> x, y: x * y, fracs)</span><br><span class="line">    <span class="comment"># t = reduce(mul, fracs)</span></span><br><span class="line">    <span class="keyword">return</span> t.numerator, t.denominator</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    fracs = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(int(input())):</span><br><span class="line">        fracs.append(Fraction(*map(int, input().split())))</span><br><span class="line">    result = product(fracs)</span><br><span class="line">    print(*result) </span><br></pre></td></tr></table></figure>          </div>
+            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Map-and-Lambda-Function">Map and Lambda Function</a></li><li><a href="#Validating-Email-Addresses-With-a-Filter">Validating Email Addresses With a Filter</a></li><li><a href="#Reduce-Function">Reduce Function</a></li></ul>          </div><hr><h2 id="Map-and-Lambda-Function"><a href="#Map-and-Lambda-Function" class="headerlink" title="Map and Lambda Function"></a>Map and Lambda Function</h2><br><div class="note info">            <p>문제 : 피보나치 수열을 출력하는 문제<br>입력 : 수열의 길이<br>출력 : 피보나치 수열 리스트</p>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>5</p></div><div class="tab-pane" id="example1-2"><p>[0, 1, 1, 8, 27]</p></div></div></div><div class="note default no-icon">            <p>기본 형식에 맞춰서 문제를 풀면 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cube = <span class="keyword">lambda</span> x: x\*\*<span class="number">3</span> <span class="comment"># complete the lambda function</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span> <span class="comment"># return a list of fibonacci numbers</span></span><br><span class="line">fibo = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, n):</span><br><span class="line">fibo.append(fibo[i<span class="number">-1</span>]+fibo[i<span class="number">-2</span>])</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> fibo[<span class="number">0</span>:n]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">n = int(input())</span><br><span class="line">print(list(map(cube, fibonacci(n)))) </span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>피보나치 수열을 재귀함수로 풀면서 lambda 함수로 표현하면 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cube = <span class="keyword">lambda</span> x: x\*\*<span class="number">3</span> <span class="comment"># complete the lambda function</span></span><br><span class="line"></span><br><span class="line">fibonacci = <span class="keyword">lambda</span> x: x <span class="keyword">if</span> x &lt;= <span class="number">1</span> <span class="keyword">else</span> fibonacci(x<span class="number">-1</span>) + fibonacci(x<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">n = int(input())</span><br><span class="line">print(list(map(cube, map(fibonacci, range(n))))) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Validating-Email-Addresses-With-a-Filter"><a href="#Validating-Email-Addresses-With-a-Filter" class="headerlink" title="Validating Email Addresses With a Filter"></a>Validating Email Addresses With a Filter</h2><br><div class="note info">            <p>문제 : 유효한 이메일 주소를 사전순으로 출력하는 문제<br>입력 : 이메일 개수 N; (N 반복) 이메일 주소<br>출력 : 사전순으로 정렬된 리스트로 출력<br>조건 :<br><code>username@websitename.extension</code> 형식을 따른다<br>username은 오직 문자, 숫자, 대시 그리고 언더스코어만 가질 수 있다<br>websitename은 오직 문자와 숫자만 가질 수 있다<br>extension의 최대 길이는 3 이다</p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>3<br><span class="exturl" data-url="bWFpbHRvOmxhcmFAaGFja2VycmFuay5jb20=" title="mailto:lara@hackerrank.com">lara@hackerrank.com<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="bWFpbHRvOmJyaWFuLTIzQGhhY2tlcnJhbmsuY29t" title="mailto:brian-23@hackerrank.com">brian-23@hackerrank.com<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="bWFpbHRvOmJyaXR0c181NEBoYWNrZXJyYW5rLmNvbQ==" title="mailto:britts_54@hackerrank.com">britts_54@hackerrank.com<i class="fa fa-external-link"></i></span></p></div><div class="tab-pane" id="example2-2"><p>[‘brian-23@hackerrank.com’, ‘britts_54@hackerrank.com’, ‘lara@hackerrank.com’]</p></div></div></div><div class="note default no-icon">            <p><code>isalnum()</code> 함수를 사용하여 문자나 숫자로 이루어졌는지 확인할 수 있다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(s)</span>:</span> <span class="comment"># return True if s is a valid email, else return False</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">username, site = s.split(<span class="string">'@'</span>)</span><br><span class="line">websitename, extension = site.split(<span class="string">'.'</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    username = <span class="string">''</span>.join(i <span class="keyword">for</span> i <span class="keyword">in</span> username <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">"-_"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> username.isalnum() <span class="keyword">and</span> websitename.isalnum() <span class="keyword">and</span> len(extension) &lt;= <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">filter_mail</span><span class="params">(emails)</span>:</span></span><br><span class="line"><span class="keyword">return</span> list(filter(fun, emails))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">n = int(input())</span><br><span class="line">emails = []</span><br><span class="line"><span class="keyword">for</span> \_ <span class="keyword">in</span> range(n):</span><br><span class="line">emails.append(input())</span><br><span class="line"></span><br><span class="line">      filtered_emails = filter_mail(emails)</span><br><span class="line">      filtered_emails.sort()</span><br><span class="line">      print(filtered_emails)</span><br><span class="line"></span><br></pre></td></tr></table></figure>          </div><div class="note success no-icon">            <p>정규표현식을 사용하면서 <code>and</code> 연산자가 아닌 <code>all</code> 연산자로 마지막을 확인하는 방법(fun 함수만 작성 이하 동일)</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(s)</span>:</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">user,website,domain=re.split(<span class="string">'\@|\.'</span>,s)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">processed=user.replace(<span class="string">'-'</span>,<span class="string">''</span>).replace(<span class="string">'\_'</span>,<span class="string">''</span>)</span><br><span class="line"><span class="keyword">return</span> all( [processed.isalnum(), website.isalnum(), len(domain)&lt;=<span class="number">3</span>] ) </span><br></pre></td></tr></table></figure>          </div><p>__</p><hr><h2 id="Reduce-Function"><a href="#Reduce-Function" class="headerlink" title="Reduce Function"></a>Reduce Function</h2><br><div class="note info">            <p>문제 : (분수로 표현되는)유리수들의 곱셈 결과를 출력하는 문제<br>입력 : 유리수 개수 n; (n 반복) 분자, 분모 형식으로 입력;<br>출력 : 곱셈의 결과</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>3<br>1 2<br>3 4<br>10 6</p></div><div class="tab-pane" id="example3-2"><p>5 8</p></div></div></div><div class="note success no-icon">            <p><code>reduce()</code> 함수 안에서 lambda 식을 사용하지 않고도 operator 모듈을 사용해서 구현할 수 있는 것을 배웠다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fractions <span class="keyword">import</span> Fraction</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line"><span class="comment"># from operator import mul</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">product</span><span class="params">(fracs)</span>:</span></span><br><span class="line">t = reduce(<span class="keyword">lambda</span> x, y: x \* y, fracs) <span class="comment"># t = reduce(mul, fracs)</span></span><br><span class="line"><span class="keyword">return</span> t.numerator, t.denominator</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">fracs = []</span><br><span class="line"><span class="keyword">for</span> \_ <span class="keyword">in</span> range(int(input())):</span><br><span class="line">fracs.append(Fraction(*map(int, input().split())))</span><br><span class="line">result = product(fracs)</span><br><span class="line">print(*result) </span><br></pre></td></tr></table></figure>          </div>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
@@ -831,7 +604,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/PY-day20/">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200311-PY-day20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NUNU">
@@ -851,7 +624,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/[object Object]/PY-day20/" class="post-title-link" itemprop="url">(PYTHON) Day - 20 Built-Ins</a>
+                <a href="/[object Object]/Language-Python-20200311-PY-day20/" class="post-title-link" itemprop="url">(PYTHON) Day - 20 Built-Ins</a>
               
             
           </h2>
@@ -891,21 +664,21 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
 
                 
                 
@@ -923,8 +696,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/[object Object]/PY-day20/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/PY-day20/" itemprop="commentCount"></span>
+                <a href="/[object Object]/Language-Python-20200311-PY-day20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200311-PY-day20/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -970,32 +743,250 @@
         HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
     </div>
     <div class="spoiler-content">
-        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul>
-<li><del>Introduction</del></li>
-<li><del>Basic Data Types</del></li>
-<li><del>Strings</del></li>
-<li><del>Sets</del></li>
-<li><del>Math</del></li>
-<li><del>Itertools</del></li>
-<li><del>Collections</del></li>
-<li><del>Date and Time</del></li>
-<li><del>Errors and Exceptions</del></li>
-<li><del>Classes</del></li>
-<li><strong style="color:blue">Built-Ins</strong></li>
-<li>Python Functionals</li>
-<li>Regex and Parsing</li>
-<li>XML</li>
-<li>Closures and Decorators</li>
-<li>Numpy</li>
-<li>Debugging</li>
-</ul>
-
+        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><pre><code>- ~~Introduction~~
+- ~~Basic Data Types~~
+- ~~Strings~~
+- ~~Sets~~
+- ~~Math~~
+- ~~Itertools~~
+- ~~Collections~~
+- ~~Date and Time~~
+- ~~Errors and Exceptions~~
+- ~~Classes~~
+- &lt;strong style=&quot;color:blue&quot;&gt;Built-Ins&lt;/strong&gt;
+- Python Functionals
+- Regex and Parsing
+- XML
+- Closures and Decorators
+- Numpy
+- Debugging</code></pre>
     </div>
 </div>
 
 <hr>
 <h1 id="Built-Ins"><a href="#Built-Ins" class="headerlink" title="Built-Ins"></a>Built-Ins</h1><div class="note no-icon">
-            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Zipped">Zipped!</a></li><li><a href="#Input">Input()</a></li><li><a href="#Python-Evaluation">Python Evaluation</a></li><li><a href="#Athlete-Sort">Athlete Sort</a></li><li><a href="#Any-or-All">Any or All</a></li><li><a href="#ginortS">ginortS</a></li></ul>          </div><hr><h2 id="Zipped"><a href="#Zipped" class="headerlink" title="Zipped!"></a>Zipped!</h2><br><div class="note info">            <p>문제 : 학생들의 성적 평균을 구하는 문제<br>입력 : 학생수 N, 과목수 X; (X 반복) 과목당 학생들의 성적 score;<br>출력 : 과목별 평균</p><p>mark sheet은 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Student ID → ___1_____2_____3_____4_____5__               </span><br><span class="line">Subject <span class="number">1</span>   |  <span class="number">89</span>    <span class="number">90</span>    <span class="number">78</span>    <span class="number">93</span>    <span class="number">80</span></span><br><span class="line">Subject <span class="number">2</span>   |  <span class="number">90</span>    <span class="number">91</span>    <span class="number">85</span>    <span class="number">88</span>    <span class="number">86</span>  </span><br><span class="line">Subject <span class="number">3</span>   |  <span class="number">91</span>    <span class="number">92</span>    <span class="number">83</span>    <span class="number">89</span>    <span class="number">90.5</span></span><br><span class="line">            |______________________________</span><br><span class="line">Average        <span class="number">90</span>    <span class="number">91</span>    <span class="number">82</span>    <span class="number">90</span>    <span class="number">85.5</span> </span><br></pre></td></tr></table></figure>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>5 3<br>89 90 78 93 80<br>90 91 85 88 86<br>91 92 83 89 90.5</p></div><div class="tab-pane" id="example1-2"><p>90.0<br>91.0<br>82.0<br>90.0<br>85.5   </p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">N, X = map(int, input().split())</span><br><span class="line">subjects = []</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(X):</span><br><span class="line">    subjects.append(map(float, input().split()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> scores <span class="keyword">in</span> zip(*subjects):</span><br><span class="line">    print(sum(scores)/len(scores)) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Input"><a href="#Input" class="headerlink" title="Input()"></a>Input()</h2><br><div class="note info">            <p>문제 : 입력받은 x와 k의 값이 식을 만족하는지 확인하는 문제<br>입력 : x, k; 다항식 P;<br>출력 : 다항식에 x의 값을 대입했을 때 k와 같으면 True, 아니면 False 출력</p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>1 4<br>x<strong>3 + x</strong>2 + x + 1</p></div><div class="tab-pane" id="example2-2"><p>True</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x, k = map(int, input().split())</span><br><span class="line">print(eval(input()) == k)</span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Python-Evaluation"><a href="#Python-Evaluation" class="headerlink" title="Python Evaluation"></a>Python Evaluation</h2><br><div class="note info">            <p>문제 : 단순히 <code>eval()</code> 함수를 사용하면 되는 문제<br>입력 : 실행할 표현식<br>출력 : 표현식의 결과값</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>print(2 + 3)</p></div><div class="tab-pane" id="example3-2"><p>5</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">eval(input()) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Athlete-Sort"><a href="#Athlete-Sort" class="headerlink" title="Athlete Sort"></a>Athlete Sort</h2><br><div class="note info">            <p>문제 : 데이터를 k번째 속성을 기준으로 정렬하는 문제<br>입력 : 데이터수 N, 속성수 M; (N 반복) 데이터 입력; 기준이 될 속성 K;<br>출력 : k번째 원소 기준으로 정렬된 결과값</p><p><img alt="example" data-src="https://s3.amazonaws.com/hr-assets/0/1514874268-6fabad07aa-AthleteSort2.png"></p>          </div><div class="tabs" id="example4"><ul class="nav-tabs"><li class="tab"><a href="#example4-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example4-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example4-1"><p>5 3<br>10 2 5<br>7 1 0<br>9 9 9<br>1 23 12<br>6 5 9<br>1</p></div><div class="tab-pane" id="example4-2"><p>7 1 0<br>10 2 5<br>6 5 9<br>9 9 9<br>1 23 12</p></div></div></div><div class="note success no-icon">            <p>정렬할 때, key를 잘 신경써주면 쉽게 풀리는 문제</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">N, M = map(int, input().split())</span><br><span class="line">data = [input().split() <span class="keyword">for</span> _ <span class="keyword">in</span> range(N)]</span><br><span class="line">k = int(input())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> d <span class="keyword">in</span> sorted(data, key=<span class="keyword">lambda</span> d: int(d[k])):</span><br><span class="line">    print(*d) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Any-or-All"><a href="#Any-or-All" class="headerlink" title="Any or All"></a>Any or All</h2><br><div class="note info">            <p>문제 : 입력받은 정수들이 모두 양수인지 확인하고 대칭수(palindromic number)가 있는지 확인하는 문제<br>입력 : 정수의 개수 N; 정수들;<br>출력 : True/False</p>          </div><div class="tabs" id="example5"><ul class="nav-tabs"><li class="tab"><a href="#example5-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example5-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example5-1"><p>5<br>12 9 61 5 14</p></div><div class="tab-pane" id="example5-2"><p>True</p></div></div></div><div class="note success no-icon">            <p>commet</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">_, numbers = input(), input().split()</span><br><span class="line">print(all(map(<span class="keyword">lambda</span> x: int(x)&gt;=<span class="number">0</span>, numbers)) <span class="keyword">and</span> any(map(<span class="keyword">lambda</span> x: x==x[::<span class="number">-1</span>], numbers)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 혹은</span></span><br><span class="line">_, numbers = input(),input().split()</span><br><span class="line">print(all(int(x)&gt;<span class="number">0</span> <span class="keyword">for</span> x <span class="keyword">in</span> numbers) <span class="keyword">and</span> any(x==x[::<span class="number">-1</span>] <span class="keyword">for</span> x <span class="keyword">in</span> numbers)) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="ginortS"><a href="#ginortS" class="headerlink" title="ginortS"></a>ginortS</h2><br><div class="note info">            <p>문제 : 조건에 맞게 문자열을 재정렬 하는 문제<br>입력 : 문자열 S<br>조건 : 소문자 &gt; 대문자 &gt; 숫자 순으로 정렬한다. 홀수가 짝수 앞에 온다.<br>출력 : 새로 정렬된 문자열</p><p><img alt="ginortS" data-src="http://i.imgur.com/u7WkSk7.gif"></p>          </div><div class="tabs" id="example6"><ul class="nav-tabs"><li class="tab"><a href="#example6-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example6-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example6-1"><p>Sorting1234</p></div><div class="tab-pane" id="example6-2"><p>ginortS1324</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getKey</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x.islower():</span><br><span class="line">        <span class="keyword">return</span>(<span class="number">1</span>,x)</span><br><span class="line">    <span class="keyword">elif</span> x.isupper():</span><br><span class="line">        <span class="keyword">return</span>(<span class="number">2</span>,x)</span><br><span class="line">    <span class="keyword">elif</span> x.isdigit() :</span><br><span class="line">        <span class="keyword">if</span> int(x)%<span class="number">2</span>==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span>(<span class="number">3</span>,x)</span><br><span class="line">        <span class="keyword">else</span> :</span><br><span class="line">            <span class="keyword">return</span>(<span class="number">4</span>,x)</span><br><span class="line"></span><br><span class="line">print(*sorted(input(),key=getKey),sep=<span class="string">''</span>)   </span><br></pre></td></tr></table></figure>          </div>
+            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Zipped">Zipped!</a></li><li><a href="#Input">Input()</a></li><li><a href="#Python-Evaluation">Python Evaluation</a></li><li><a href="#Athlete-Sort">Athlete Sort</a></li><li><a href="#Any-or-All">Any or All</a></li><li><a href="#ginortS">ginortS</a></li></ul>          </div><hr><h2 id="Zipped"><a href="#Zipped" class="headerlink" title="Zipped!"></a>Zipped!</h2><br><div class="note info">            <p>문제 : 학생들의 성적 평균을 구하는 문제<br>입력 : 학생수 N, 과목수 X; (X 반복) 과목당 학생들의 성적 score;<br>출력 : 과목별 평균</p><p>mark sheet은 다음과 같다</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Student ID → **\_1\_\_\_**<span class="number">2</span>**\_**<span class="number">3</span>**\_**<span class="number">4</span>**\_**<span class="number">5</span>**  </span><br><span class="line"> Subject <span class="number">1</span> | <span class="number">89</span> <span class="number">90</span> <span class="number">78</span> <span class="number">93</span> <span class="number">80</span></span><br><span class="line">Subject <span class="number">2</span> | <span class="number">90</span> <span class="number">91</span> <span class="number">85</span> <span class="number">88</span> <span class="number">86</span>  </span><br><span class="line"> Subject <span class="number">3</span> | <span class="number">91</span> <span class="number">92</span> <span class="number">83</span> <span class="number">89</span> <span class="number">90.5</span></span><br><span class="line">|************\_\_\_\_**************</span><br><span class="line">Average <span class="number">90</span> <span class="number">91</span> <span class="number">82</span> <span class="number">90</span> <span class="number">85.5</span> </span><br></pre></td></tr></table></figure>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>5 3<br>89 90 78 93 80<br>90 91 85 88 86<br> 91 92 83 89 90.5</p></div><div class="tab-pane" id="example1-2"><p>90.0<br>91.0<br>82.0<br>90.0<br>85.5</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">N, X = map(int, input().split())</span><br><span class="line">subjects = []</span><br><span class="line"><span class="keyword">for</span> \_ <span class="keyword">in</span> range(X):</span><br><span class="line">subjects.append(map(float, input().split()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> scores <span class="keyword">in</span> zip(\*subjects):</span><br><span class="line">print(sum(scores)/len(scores)) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Input"><a href="#Input" class="headerlink" title="Input()"></a>Input()</h2><br><div class="note info">            <p>문제 : 입력받은 x와 k의 값이 식을 만족하는지 확인하는 문제<br>입력 : x, k; 다항식 P;<br>출력 : 다항식에 x의 값을 대입했을 때 k와 같으면 True, 아니면 False 출력</p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>1 4<br>x<strong>3 + x</strong>2 + x + 1</p></div><div class="tab-pane" id="example2-2"><p>True</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x, k = map(int, input().split())</span><br><span class="line">print(eval(input()) == k)</span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Python-Evaluation"><a href="#Python-Evaluation" class="headerlink" title="Python Evaluation"></a>Python Evaluation</h2><br><div class="note info">            <p>문제 : 단순히 <code>eval()</code> 함수를 사용하면 되는 문제<br>입력 : 실행할 표현식<br>출력 : 표현식의 결과값</p>          </div><div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example3-1"><p>print(2 + 3)</p></div><div class="tab-pane" id="example3-2"><p>5</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">eval(input()) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Athlete-Sort"><a href="#Athlete-Sort" class="headerlink" title="Athlete Sort"></a>Athlete Sort</h2><br><div class="note info">            <p>문제 : 데이터를 k번째 속성을 기준으로 정렬하는 문제<br>입력 : 데이터수 N, 속성수 M; (N 반복) 데이터 입력; 기준이 될 속성 K;<br>출력 : k번째 원소 기준으로 정렬된 결과값</p><p><img alt="example" data-src="https://s3.amazonaws.com/hr-assets/0/1514874268-6fabad07aa-AthleteSort2.png"></p>          </div><div class="tabs" id="example4"><ul class="nav-tabs"><li class="tab"><a href="#example4-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example4-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example4-1"><p>5 3<br>10 2 5<br>7 1 0<br>9 9 9<br>1 23 12<br>6 5 9<br>1</p></div><div class="tab-pane" id="example4-2"><p>7 1 0<br>10 2 5<br>6 5 9<br>9 9 9<br>1 23 12</p></div></div></div><div class="note success no-icon">            <p>정렬할 때, key를 잘 신경써주면 쉽게 풀리는 문제</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">N, M = map(int, input().split())</span><br><span class="line">data = [input().split() <span class="keyword">for</span> _ <span class="keyword">in</span> range(N)]</span><br><span class="line">k = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> d <span class="keyword">in</span> sorted(data, key=<span class="keyword">lambda</span> d: int(d[k])):</span><br><span class="line">print(\*d) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Any-or-All"><a href="#Any-or-All" class="headerlink" title="Any or All"></a>Any or All</h2><br><div class="note info">            <p>문제 : 입력받은 정수들이 모두 양수인지 확인하고 대칭수(palindromic number)가 있는지 확인하는 문제<br>입력 : 정수의 개수 N; 정수들;<br>출력 : True/False</p>          </div><div class="tabs" id="example5"><ul class="nav-tabs"><li class="tab"><a href="#example5-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example5-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example5-1"><p>5<br>12 9 61 5 14</p></div><div class="tab-pane" id="example5-2"><p>True</p></div></div></div><div class="note success no-icon">            <p>commet</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">\_, numbers = input(), input().split()</span><br><span class="line">print(all(map(<span class="keyword">lambda</span> x: int(x)&gt;=<span class="number">0</span>, numbers)) <span class="keyword">and</span> any(map(<span class="keyword">lambda</span> x: x==x[::<span class="number">-1</span>], numbers)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 혹은</span></span><br><span class="line"></span><br><span class="line">\_, numbers = input(),input().split()</span><br><span class="line">print(all(int(x)&gt;<span class="number">0</span> <span class="keyword">for</span> x <span class="keyword">in</span> numbers) <span class="keyword">and</span> any(x==x[::<span class="number">-1</span>] <span class="keyword">for</span> x <span class="keyword">in</span> numbers)) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="ginortS"><a href="#ginortS" class="headerlink" title="ginortS"></a>ginortS</h2><br><div class="note info">            <p>문제 : 조건에 맞게 문자열을 재정렬 하는 문제<br>입력 : 문자열 S<br>조건 : 소문자 &gt; 대문자 &gt; 숫자 순으로 정렬한다. 홀수가 짝수 앞에 온다.<br>출력 : 새로 정렬된 문자열</p><p><img alt="ginortS" data-src="http://i.imgur.com/u7WkSk7.gif"></p>          </div><div class="tabs" id="example6"><ul class="nav-tabs"><li class="tab"><a href="#example6-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example6-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example6-1"><p>Sorting1234</p></div><div class="tab-pane" id="example6-2"><p>ginortS1324</p></div></div></div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getKey</span><span class="params">(x)</span>:</span></span><br><span class="line"><span class="keyword">if</span> x.islower():</span><br><span class="line"><span class="keyword">return</span>(<span class="number">1</span>,x)</span><br><span class="line"><span class="keyword">elif</span> x.isupper():</span><br><span class="line"><span class="keyword">return</span>(<span class="number">2</span>,x)</span><br><span class="line"><span class="keyword">elif</span> x.isdigit() :</span><br><span class="line"><span class="keyword">if</span> int(x)%<span class="number">2</span>==<span class="number">1</span>:</span><br><span class="line"><span class="keyword">return</span>(<span class="number">3</span>,x)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line"><span class="keyword">return</span>(<span class="number">4</span>,x)</span><br><span class="line"></span><br><span class="line">print(\*sorted(input(),key=getKey),sep=<span class="string">''</span>) </span><br></pre></td></tr></table></figure>          </div>
+          </div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200310-PY-day19-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/[object Object]/Language-Python-20200310-PY-day19-2/" class="post-title-link" itemprop="url">(PYTHON) Day - 19 Classes</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2020-03-10 14:01:15" itemprop="dateCreated datePublished" datetime="2020-03-10T14:01:15+09:00">2020-03-10</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20200310-PY-day19-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200310-PY-day19-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>문제 출처 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZGFzaGJvYXJk" title="https://www.hackerrank.com/dashboard">HackerRank<i class="fa fa-external-link"></i></span></li>
+<li>파이썬 연습 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZG9tYWlucy9weXRob24/ZmlsdGVycyU1QnN0YXR1cyU1RCU1QiU1RD11bnNvbHZlZCZiYWRnZV90eXBlPXB5dGhvbg==" title="https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=python">Practice - Python<i class="fa fa-external-link"></i></span></li>
+</ul>
+<p>개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다<br>문제를 풀고 <span class="label success"> Discussion Tab</span>을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다</p>
+<hr>
+<h1 id="HackerRank"><a href="#HackerRank" class="headerlink" title="HackerRank"></a>HackerRank</h1><div class="spoiler collapsed">
+    <div class="spoiler-title">
+        HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다
+    </div>
+    <div class="spoiler-content">
+        <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><pre><code>- ~~Introduction~~
+- ~~Basic Data Types~~
+- ~~Strings~~
+- ~~Sets~~
+- ~~Math~~
+- ~~Itertools~~
+- ~~Collections~~
+- ~~Date and Time~~
+- ~~Errors and Exceptions~~
+- &lt;strong style=&quot;color:blue&quot;&gt;Classes&lt;/strong&gt;
+- Built-Ins
+- Python Functionals
+- Regex and Parsing
+- XML
+- Closures and Decorators
+- Numpy
+- Debugging</code></pre>
+    </div>
+</div>
+
+<hr>
+<h1 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h1><div class="note no-icon">
+            <div class="note primary no-icon">            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Classes-Dealing-with-Complex-Numbers">Classes: Dealing with Complex Numbers</a></li><li><a href="#Class-2-Find-the-Torsional-Angle">Class 2 - Find the Torsional Angle</a></li></ul>          </div><hr><h2 id="Classes-Dealing-with-Complex-Numbers"><a href="#Classes-Dealing-with-Complex-Numbers" class="headerlink" title="Classes: Dealing with Complex Numbers"></a>Classes: Dealing with Complex Numbers</h2><br><div class="note info">            <p>문제 : 복소수 2개를 입력 받고 4칙연산과 나머지를 구하는 문제<br>입력 : 실수와 허수 부분을 정수로 입력(e.g. 2 1 -&gt; 2.00 + 1.00i)<br>출력 : 더하기, 빼기, 곱하기, 나누기, 나머지를 출력</p><p><strong>복소수의 사칙연산</strong> - <span class="exturl" data-url="aHR0cDovL2hpLWthbS5ibG9nc3BvdC5jb20vMjAxNi8wMS9ibG9nLXBvc3QuaHRtbA==" title="http://hi-kam.blogspot.com/2016/01/blog-post.html">HI-KIM<i class="fa fa-external-link"></i></span><br><img alt="덧셈" data-src="http://4.bp.blogspot.com/-3CEDX4qCRKk/VofRXlDOZJI/AAAAAAAABXE/B6vdJgCdswU/s320/%25EC%25A0%2595%25EB%25A6%25AC%2B1.PNG"><br><img alt="뺄셈" data-src="http://2.bp.blogspot.com/-xTaOoTt7ksw/VofRXobJT9I/AAAAAAAABXA/MQkGOEsqVTo/s320/%25EC%25A0%2595%25EB%25A6%25AC%2B2.PNG"><br><img alt="곱셈" data-src="http://1.bp.blogspot.com/-G1-2w3MSJmA/VofRXpmQe3I/AAAAAAAABXI/XVGJsQBaLdc/s320/%25EC%25A0%2595%25EB%25A6%25AC%2B3.PNG"><br><img alt="나눗셈" data-src="http://1.bp.blogspot.com/-Kk6B5p-7ycA/VofRYB_YPAI/AAAAAAAABXM/1QJ6GfNI100/s200/%25EC%25A0%2595%25EB%25A6%25AC%2B4.PNG"><br><img alt="모듈러스" data-src="http://2.bp.blogspot.com/-SJ6sVnZwkkw/VofRYTtqdOI/AAAAAAAABXU/k6E1coYOTnY/s320/%25EC%25A0%2595%25EB%25A6%25AC%2B5.PNG"></p>          </div><div class="tabs" id="example1"><ul class="nav-tabs"><li class="tab"><a href="#example1-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example1-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example1-1"><p>2 1<br>5 6</p></div><div class="tab-pane" id="example1-2"><p>7.00+7.00i<br>-3.00-5.00i<br>4.00+17.00i<br>0.26-0.11i<br>2.24+0.00i<br>7.81+0.00i</p></div></div></div><div class="note success no-icon">            <p>나눗셈이 가장 까다로웠다. 공식대로 푸는 방법과 실수, 허수 부분을 구분해서 구하는 방법 2가지로 구현할 수 있다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span><span class="params">(object)</span>:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> **<span class="title">init</span>**<span class="params">(self, real, imaginary)</span>:</span></span><br><span class="line">self.real = real</span><br><span class="line">self.imaginary = imaginary</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__add__</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          real = self.real + no.real</span><br><span class="line">          imaginary = self.imaginary + no.imaginary</span><br><span class="line">          <span class="keyword">return</span> Complex(real, imaginary)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__sub__</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          real = self.real - no.real</span><br><span class="line">          imaginary = self.imaginary - no.imaginary</span><br><span class="line">          <span class="keyword">return</span> Complex(real, imaginary)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__mul__</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          real = (self.real * no.real) - (self.imaginary * no.imaginary)</span><br><span class="line">          imaginary = (self.real * no.imaginary) + (self.imaginary * no.real)</span><br><span class="line">          <span class="keyword">return</span> Complex(real, imaginary)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__truediv__</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          <span class="comment"># 공식 대입</span></span><br><span class="line">          <span class="comment"># calc = self.__mul__(Complex(no.real, -1 * no.imaginary).__mul__(Complex(1.0/(no.mod().real**2), 0)))</span></span><br><span class="line"></span><br><span class="line">          <span class="comment"># 실수 허수 따로 계산</span></span><br><span class="line">          denom = no.real**<span class="number">2</span> + no.imaginary**<span class="number">2</span></span><br><span class="line">          real = (self.real * no.real + self.imaginary * no.imaginary) / denom</span><br><span class="line">          imaginary = (self.imaginary * no.real - self.real * no.imaginary) / denom</span><br><span class="line">          calc = Complex(real, imaginary)</span><br><span class="line">          <span class="keyword">return</span> calc</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">mod</span><span class="params">(self)</span>:</span></span><br><span class="line">          <span class="keyword">return</span> Complex(math.sqrt(self.real**<span class="number">2</span> + self.imaginary**<span class="number">2</span>), <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">          <span class="keyword">if</span> self.imaginary == <span class="number">0</span>:</span><br><span class="line">              result = <span class="string">"%.2f+0.00i"</span> % (self.real)</span><br><span class="line">          <span class="keyword">elif</span> self.real == <span class="number">0</span>:</span><br><span class="line">              <span class="keyword">if</span> self.imaginary &gt;= <span class="number">0</span>:</span><br><span class="line">                  result = <span class="string">"0.00+%.2fi"</span> % (self.imaginary)</span><br><span class="line">              <span class="keyword">else</span>:</span><br><span class="line">                  result = <span class="string">"0.00-%.2fi"</span> % (abs(self.imaginary))</span><br><span class="line">          <span class="keyword">elif</span> self.imaginary &gt; <span class="number">0</span>:</span><br><span class="line">              result = <span class="string">"%.2f+%.2fi"</span> % (self.real, self.imaginary)</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              result = <span class="string">"%.2f-%.2fi"</span> % (self.real, abs(self.imaginary))</span><br><span class="line">          <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">A = Complex(*map(float, input().split()))</span><br><span class="line">B = Complex(*map(float, input().split()))</span><br><span class="line"></span><br><span class="line">      print(A + B)</span><br><span class="line">      print(A - B)</span><br><span class="line">      print(A * B)</span><br><span class="line">      print(A / B)</span><br><span class="line">      print(A.mod())</span><br><span class="line">      print(B.mod()) </span><br></pre></td></tr></table></figure>          </div><hr><h2 id="Class-2-Find-the-Torsional-Angle"><a href="#Class-2-Find-the-Torsional-Angle" class="headerlink" title="Class 2 - Find the Torsional Angle"></a>Class 2 - Find the Torsional Angle</h2><br><div class="note info">            <p>문제 : 3차원 공간에서 평면 ABC와 BCD가 이루는 각도를 구하는 문제<br>입력 : 3차원 직교 좌표계로 입력<br>출력 : (radian이 아닌) degree로 출력</p><p><img alt="angle" data-src="https://lh3.googleusercontent.com/proxy/3SjfJZxTtJMPkKLowpzxCxSef02_6uEMgNpBDd6ry0HAZ9fENMk9JRwvWvPeeslTRezyzzYA2eiCbTg4w0xdVw4yneM4q-WEkFYMG6DghbnEuJEMjI42MX0OEDCMwulZgvI12WV--fNP0vz0hrkJFvN5alt4tjRe5okDKR1F25y1otT-3h0lR47ljil53O2xgNAfng_GteK6q4Nw866rgU9Nz7SdIgL9URgmXc3XETZQSV-U_4LP16apXw9Ej9kMC2m1n3OFY2yewGTVwwgIbGULU8JkZ2z8dz2nguLmFbSh5w"></p>          </div><div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane" id="example2-1"><p>0 4 5<br>1 7 6<br>0 5 9<br>1 7 2</p></div><div class="tab-pane" id="example2-2"><p>8.19</p></div></div></div><div class="note info no-icon">            <p>matplotlib 를 사용하여 예제의 좌표를 찍고 ABC, BCD 삼각형을 그려보았다.<br><img alt="matplotlib" data-src="/img/class_2.png"></p><div class="spoiler collapsed">    <div class="spoiler-title">        소스코드    </div>    <div class="spoiler-content">        <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> axes3d</span><br><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d.art3d <span class="keyword">import</span> Poly3DCollection <span class="comment"># appropriate import to draw 3d polygons</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> style</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = fig.gca(projection=<span class="string">'3d'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4개의 좌표 입력</span></span><br><span class="line"></span><br><span class="line">points = defaultdict(list)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> \_ <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">xi, yi, zi = map(int, input().split())</span><br><span class="line">points[<span class="string">'x'</span>].append(xi)</span><br><span class="line">points[<span class="string">'y'</span>].append(yi)</span><br><span class="line">points[<span class="string">'z'</span>].append(zi)</span><br><span class="line"></span><br><span class="line">ax.scatter(points[<span class="string">'x'</span>], points[<span class="string">'y'</span>], points[<span class="string">'z'</span>]) <span class="comment"># 좌표 찍어보기</span></span><br><span class="line"><span class="comment">#########################################################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 삼각형 ABC, BCD 좌표 저장</span></span><br><span class="line"></span><br><span class="line">ABC = defaultdict(list)</span><br><span class="line">BCD = defaultdict(list)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">ABC[<span class="string">'x'</span>].append(points[<span class="string">'x'</span>][i])</span><br><span class="line">ABC[<span class="string">'y'</span>].append(points[<span class="string">'y'</span>][i])</span><br><span class="line">ABC[<span class="string">'z'</span>].append(points[<span class="string">'z'</span>][i])</span><br><span class="line">BCD[<span class="string">'x'</span>].append(points[<span class="string">'x'</span>][i+<span class="number">1</span>])</span><br><span class="line">BCD[<span class="string">'y'</span>].append(points[<span class="string">'y'</span>][i+<span class="number">1</span>])</span><br><span class="line">BCD[<span class="string">'z'</span>].append(points[<span class="string">'z'</span>][i+<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> ABC.items():</span><br><span class="line">print(*i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> BCD.items():</span><br><span class="line">print(*i)</span><br><span class="line"><span class="comment">#########################################################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 두 삼각형을 좌표계에 추가</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. create vertices from points</span></span><br><span class="line"></span><br><span class="line">tri_1 = [list(zip(ABC[<span class="string">'x'</span>], ABC[<span class="string">'y'</span>], ABC[<span class="string">'z'</span>]))]</span><br><span class="line">tri_2 = [list(zip(BCD[<span class="string">'x'</span>], BCD[<span class="string">'y'</span>], BCD[<span class="string">'z'</span>]))]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. create 3d polygons and specify parameters</span></span><br><span class="line"></span><br><span class="line">srf_1 = Poly3DCollection(tri_1, alpha=<span class="number">.5</span>, facecolor=<span class="string">'#800000'</span>)</span><br><span class="line">srf_2 = Poly3DCollection(tri_2, alpha=<span class="number">.5</span>, facecolors=<span class="string">'C0'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. add polygon to the figure (current axes)</span></span><br><span class="line"></span><br><span class="line">plt.gca().add_collection3d(srf_1)</span><br><span class="line">plt.gca().add_collection3d(srf_2)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(<span class="string">'X'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Y'</span>)</span><br><span class="line">ax.set_zlabel(<span class="string">'Z'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ax.set_xlim(0, 10)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ax.set_ylim(0, 10)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ax.set_zlim(0, 10)</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>    </div></div>          </div><div class="note success no-icon">            <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Points</span><span class="params">(object)</span>:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> **<span class="title">init</span>**<span class="params">(self, x, y, z)</span>:</span></span><br><span class="line">(self.x, self.y, self.z) = (x, y, z)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__sub__</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          <span class="keyword">return</span> Points((self.x - no.x), (self.y - no.y), (self.z - no.z))</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">dot</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          <span class="keyword">return</span> (self.x * no.x) + (self.y * no.y) + (self.z * no.z)</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">cross</span><span class="params">(self, no)</span>:</span></span><br><span class="line">          <span class="keyword">return</span> Points((self.y * no.z - self.z * no.y), (self.z * no.x - self.x * no.z),</span><br><span class="line">                        (self.x * no.y - self.y * no.x))</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">absolute</span><span class="params">(self)</span>:</span></span><br><span class="line">          <span class="keyword">return</span> pow((self.x ** <span class="number">2</span> + self.y ** <span class="number">2</span> + self.z ** <span class="number">2</span>), <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">points = list()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">a = list(map(float, input().split()))</span><br><span class="line">points.append(a)</span><br><span class="line"></span><br><span class="line">      a, b, c, d = Points(*points[<span class="number">0</span>]), Points(*points[<span class="number">1</span>]), Points(*points[<span class="number">2</span>]), Points(*points[<span class="number">3</span>])</span><br><span class="line">      x = (b - a).cross(c - b)</span><br><span class="line">      y = (c - b).cross(d - c)</span><br><span class="line">      angle = math.acos(x.dot(y) / (x.absolute() * y.absolute()))</span><br><span class="line"></span><br><span class="line">      print(<span class="string">"%.2f"</span> % math.degrees(angle)) </span><br></pre></td></tr></table></figure>          </div>
           </div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
           
@@ -1044,7 +1035,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1088,7 +1079,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">100</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1278,13 +1269,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1354,7 +1339,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+  <meta name="google-site-verification" content="1AoB1Oj70vYeXdFCLMbgUhTbU9kMwMXDsCNGRrqqvhM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    fancybox: false,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '복사',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="Reference 문제 출처 - HackerRank 파이썬 연습 - Practice - Python 파이썬 기본 자료형 - w3schools.com  개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다문제를 풀고 Discussion Tab을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다    HackerRank Numpy 패키지와 관련된 내용은">
+<meta name="keywords" content="파이썬,programming language,python,language">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(PYTHON) Day - 4 Basic Data Types">
+<meta property="og:url" content="https://taejin0527.github.io/[object Object]/Language-Python-20200122-PY-day4/index.html">
+<meta property="og:site_name" content="AttackOnNunu">
+<meta property="og:description" content="Reference 문제 출처 - HackerRank 파이썬 연습 - Practice - Python 파이썬 기본 자료형 - w3schools.com  개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다문제를 풀고 Discussion Tab을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다    HackerRank Numpy 패키지와 관련된 내용은">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2021-05-27T14:22:03.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(PYTHON) Day - 4 Basic Data Types">
+<meta name="twitter:description" content="Reference 문제 출처 - HackerRank 파이썬 연습 - Practice - Python 파이썬 기본 자료형 - w3schools.com  개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다문제를 풀고 Discussion Tab을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다    HackerRank Numpy 패키지와 관련된 내용은">
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="AttackOnNunu" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://taejin0527.github.io/[object Object]/Language-Python-20200122-PY-day4/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>(PYTHON) Day - 4 Basic Data Types | AttackOnNunu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- Google Adsense start -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8226968057315512",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <!-- Google Adsense end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ko">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AttackOnNunu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Once more into the fray</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>홈</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>태그</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>카테고리</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>아카이브</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>검색</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taejin0527.github.io/[object Object]/Language-Python-20200122-PY-day4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NUNU">
+      <meta itemprop="description" content="개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.">
+      <meta itemprop="image" content="/img/jjang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AttackOnNunu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">(PYTHON) Day - 4 Basic Data Types
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2020-01-22 15:10:24" itemprop="dateCreated datePublished" datetime="2020-01-22T15:10:24+09:00">2020-01-22</time>
+            </span>
+          
+
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/" itemprop="url" rel="index"><span itemprop="name">LANGUAGE 🚀</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/" itemprop="url" rel="index"><span itemprop="name">PYTHON</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LANGUAGE-🚀/PYTHON/HACKERRANK/" itemprop="url" rel="index"><span itemprop="name">HACKERRANK</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/[object Object]/Language-Python-20200122-PY-day4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="[object Object]/Language-Python-20200122-PY-day4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>문제 출처 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZGFzaGJvYXJk" title="https://www.hackerrank.com/dashboard">HackerRank<i class="fa fa-external-link"></i></span></li>
+<li>파이썬 연습 - <span class="exturl" data-url="aHR0cHM6Ly93d3cuaGFja2VycmFuay5jb20vZG9tYWlucy9weXRob24/ZmlsdGVycyU1QnN0YXR1cyU1RCU1QiU1RD11bnNvbHZlZCZiYWRnZV90eXBlPXB5dGhvbg==" title="https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=python">Practice - Python<i class="fa fa-external-link"></i></span></li>
+<li>파이썬 기본 자료형 - <span class="exturl" data-url="aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9weXRob24vcHl0aG9uX2RhdGF0eXBlcy5hc3A=" title="https://www.w3schools.com/python/python_datatypes.asp">w3schools.com<i class="fa fa-external-link"></i></span></li>
+</ul>
+<p>개인적인 생각과 상상으로 작성한 내용들이 포함되어 있습니다<br>문제를 풀고 <span class="label success">Discussion Tab</span>을 참고하며 코드 스타일을 개선하려고 노력하고자 합니다</p>
+<hr>
+<br>
+
+<h1 id="HackerRank"><a href="#HackerRank" class="headerlink" title="HackerRank"></a>HackerRank</h1><blockquote>
+<p>Numpy 패키지와 관련된 내용은 수학적 내용들과 함께 다루기 위해 나중에 다시 정리하기로 했다.</p>
+</blockquote>
+<p>HackerRank의 Python 연습문제들은 아래와 같은 카테고리로 분류 된다:</p>
+<div class="note default">
+            <h2 id="Subdomain"><a href="#Subdomain" class="headerlink" title="Subdomain"></a>Subdomain</h2><ul><li><del>Introduction</del></li><li><strong style="color:blue">Basic Data Types</strong></li><li>Strings</li><li>Sets</li><li>Math</li><li>Itertools</li><li>Collections</li><li>Date and Time</li><li>Errors and Exceptions</li><li>Classes</li><li>Built-Ins</li><li>Python Functionals</li><li>Regex and Parsing</li><li>XML</li><li>Closures and Decorators</li><li>Numpy</li><li>Debugging</li></ul>
+          </div>
+
+<hr>
+<br>
+
+<h1 id="Basic-Data-Types"><a href="#Basic-Data-Types" class="headerlink" title="Basic Data Types"></a>Basic Data Types</h1><div class="note primary">
+            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul><li><a href="#Lists">Lists</a></li><li><a href="#Tuples">Tuples</a></li><li><a href="#List-Comprehensions">List Comprehensions</a></li><li><a href="#Find-the-Runner-Up-Score">Find the Runner-Up Score!</a></li><li><a href="#Nested-Lists">Nested Lists</a></li><li><a href="#Finding-the-percentage">Finding the percentage</a></li></ul>
+          </div>
+
+<h2 id="개념-공부"><a href="#개념-공부" class="headerlink" title="개념 공부"></a>개념 공부</h2><p>파이썬의 기본 데이터 타입들에 대해 알아보자</p>
+<div class="tabs" id="python-내장-데이터-타입"><ul class="nav-tabs"><li class="tab"><a href="#python-내장-데이터-타입-1"><i class="fa fa-archive"></i>Built-in Data Types</a></li><li class="tab"><a href="#python-내장-데이터-타입-2"><i class="fa fa-archive"></i>Getting the Data Type</a></li><li class="tab"><a href="#python-내장-데이터-타입-3"><i class="fa fa-Python"></i>Setting the Data Type</a></li></ul><div class="tab-content"><div class="tab-pane" id="python-내장-데이터-타입-1"><table>
+<thead>
+<tr>
+<th align="center">categories</th>
+<th align="right">python code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Text Type:</td>
+<td align="right"><span style="color:red; text-align:right">str</span></td>
+</tr>
+<tr>
+<td align="center">Numeric Types:</td>
+<td align="right"><span style="color:red; text-align:right">int, float, complex</span></td>
+</tr>
+<tr>
+<td align="center">Sequence Types:</td>
+<td align="right"><span style="color:red">list, tuple, range</span></td>
+</tr>
+<tr>
+<td align="center">Mapping Type:</td>
+<td align="right"><span style="color:red">dict</span></td>
+</tr>
+<tr>
+<td align="center">Set Types:</td>
+<td align="right"><span style="color:red">set, frozenset</span></td>
+</tr>
+<tr>
+<td align="center">Boolean Type:</td>
+<td align="right"><span style="color:red">bool</span></td>
+</tr>
+<tr>
+<td align="center">Binary Types:</td>
+<td align="right"><span style="color:red">bytes, bytearray, memoryview</span></td>
+</tr>
+</tbody></table></div><div class="tab-pane" id="python-내장-데이터-타입-2"><ul>
+<li><strong>type()</strong> 함수를 통해 객체의 데이터 타입을 알 수 있다<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">print(type(x))</span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># &lt;class 'int'&gt; </span></span><br></pre></td></tr></table></figure>
+</li>
+</ul></div><div class="tab-pane" id="python-내장-데이터-타입-3"><ul>
+<li>Python에서는 <strong>변수에 값을 할당하면</strong> 자동으로 데이터 타입이 결정된다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Example</th>
+<th align="right">Data type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x = “Hello World”</td>
+<td align="right"><strong>str</strong></td>
+</tr>
+<tr>
+<td align="center">x = 20</td>
+<td align="right"><strong>int</strong></td>
+</tr>
+<tr>
+<td align="center">x = 20.5</td>
+<td align="right"><strong>float</strong></td>
+</tr>
+<tr>
+<td align="center">x = 1j</td>
+<td align="right"><strong>complex</strong></td>
+</tr>
+<tr>
+<td align="center">x = [“apple”, “banana”, “cherry”]</td>
+<td align="right"><strong>list</strong></td>
+</tr>
+<tr>
+<td align="center">x = (“apple”, “banana”, “cherry”)</td>
+<td align="right"><strong>tuple</strong></td>
+</tr>
+<tr>
+<td align="center">x = range(6)</td>
+<td align="right"><strong>range</strong></td>
+</tr>
+<tr>
+<td align="center">x = {“name” : “John”, “age” : 36}</td>
+<td align="right"><strong>dict</strong></td>
+</tr>
+<tr>
+<td align="center">x = {“apple”, “banana”, “cherry”}</td>
+<td align="right"><strong>set</strong></td>
+</tr>
+<tr>
+<td align="center">x = frozenset({“apple”, “banana”, “cherry”})</td>
+<td align="right"><strong>frozenset</strong></td>
+</tr>
+<tr>
+<td align="center">x = True</td>
+<td align="right"><strong>bool</strong></td>
+</tr>
+<tr>
+<td align="center">x = b”Hello”</td>
+<td align="right"><strong>bytes</strong></td>
+</tr>
+<tr>
+<td align="center">x = bytearray(5)</td>
+<td align="right"><strong>bytearray</strong></td>
+</tr>
+<tr>
+<td align="center">x = memoryview(bytes(5))</td>
+<td align="right"><strong>memoryview</strong></td>
+</tr>
+</tbody></table></div></div></div>
+
+<h3 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h3><ul>
+<li><strong>INPUT</strong><br>입력받을 커맨드 개수 n을 입력받는다<br>n 줄에 거쳐 커맨드를 입력받는다<blockquote>
+<p>1 insert i e: Insert integer at position .<br>2 print: Print the list.<br>3 remove e: Delete the first occurrence of integer .<br>4 append e: Insert integer at the end of the list.<br>5 sort: Sort the list.<br>6 pop: Pop the last element from the list.<br>7 reverse: Reverse the list.</p>
+</blockquote>
+</li>
+</ul>
+<div class="note no-icon">
+            <p>if-else문이나 switch문을 사용하면 되는 간단한 예제<br>하지만 python에는 switch문이 없기 때문에 dict 자료형으로 정리해서 적용하는 스타일로 코딩</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">N = int(input())</span><br><span class="line"></span><br><span class="line">my*list = []</span><br><span class="line">command = &#123;</span><br><span class="line"><span class="string">'insert'</span>: my_list.insert,</span><br><span class="line"><span class="string">'print'</span>: <span class="keyword">lambda</span> : print(my_list),</span><br><span class="line"><span class="string">'remove'</span>: my_list.remove,</span><br><span class="line"><span class="string">'append'</span>: my_list.append,</span><br><span class="line"><span class="string">'sort'</span>: my_list.sort,</span><br><span class="line"><span class="string">'pop'</span>: my_list.pop,</span><br><span class="line"><span class="string">'reverse'</span>: my_list.reverse</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> * <span class="keyword">in</span> range(N):</span><br><span class="line">usr_c, \*args = input().split()</span><br><span class="line"></span><br><span class="line">      command[usr_c](*map(int, args))  </span><br></pre></td></tr></table></figure>
+          </div>
+
+<div class="note success">
+            <p>@lordmauve 사용자의 말에 따르면,</p><ul><li>‘if/else문’ 은 많은 반복성과 유지/보수성이 떨어진다</li><li>‘eval()’ 함수를 사용하는 것은 보안과 성능 면에서 모두 떨어진다</li><li>‘dict 자료형’ 에 명령어들을 담아서 사용하는 것은 나쁘지 않으나,<br>모든 메소드들을 정확히 입력해야하며 약간의 반복성을 띈다</li><li>확장성을 위해 ‘getattr()’를 사용하는 것을 권장 <del>(하는데 아직은 잘 이해가 안된다)</del><br>(print() 메소드를 따로 설정하는 것을 봤을 때,<br>아마 내장함수 list의 네임스페이스에 명령어들이 이미 포함되어 있어서 그런 것 같다)</li></ul><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mylist = []</span><br><span class="line"><span class="keyword">for</span> \_ <span class="keyword">in</span> range(int(input())):</span><br><span class="line">inst = input().split()</span><br><span class="line"><span class="keyword">if</span> inst[<span class="number">0</span>] == <span class="string">'print'</span>:</span><br><span class="line">print(mylist)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">getattr(mylist, inst[<span class="number">0</span>])(\*map(int, inst[<span class="number">1</span>:])) </span><br></pre></td></tr></table></figure>
+          </div>
+
+<h3 id="Tuples"><a href="#Tuples" class="headerlink" title="Tuples"></a>Tuples</h3><ul>
+<li><strong>tuple</strong> 보다는 <code>hash()</code> 함수에 대해 궁금해지는 문제…</li>
+</ul>
+<div class="note no-icon">
+            <ul><li>tuple의 해시 값을 알아내는 문제<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">n = int(input())</span><br><span class="line">integer_list = tuple(map(int, input().split()))</span><br><span class="line"></span><br><span class="line">    print(hash(integer_list))  </span><br></pre></td></tr></table></figure></li></ul>
+          </div>
+
+<h3 id="List-Comprehensions"><a href="#List-Comprehensions" class="headerlink" title="List Comprehensions"></a>List Comprehensions</h3><ul>
+<li><p>직육면체의 크기(차원)를 나타내는 세 정수 (x, y, z)를 입력 받고 비교값 N을 입력받는다<br>3차원 공간에서 해당 직육면체 범위 안의 값들 중 임의의 (i, j, k) 좌표를 가져왔을 때,<br>i + j + k의 값이 N과 다른 모든 좌표값을 출력하는 문제<br>(문제 설명부터 길다…)</p>
+<div class="tabs" id="example"><ul class="nav-tabs"><li class="tab active"><a href="#example-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example-1"><p>1<br>1<br>1<br>2</p></div><div class="tab-pane" id="example-2"><p>[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]</p></div></div></div>
+
+<div class="note no-icon">
+            <ul><li>python의 comprehension은 반복적으로 생성가능한 객체를 생성하는 방법이다<br>본 예제에서 사용되는 list 외에도 set, dict, generator expression에서 사용될 수 있다<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">  x, y, z, n = (int(input()) <span class="keyword">for</span> \_ <span class="keyword">in</span> range(<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">print([[i, j, k] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, x+<span class="number">1</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, y+<span class="number">1</span>) <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>, z+<span class="number">1</span>) <span class="keyword">if</span> (i+j+k != n)]) </span><br></pre></td></tr></table></figure></li></ul>
+          </div>
+
+</li>
+</ul>
+<h3 id="Find-the-Runner-Up-Score"><a href="#Find-the-Runner-Up-Score" class="headerlink" title="Find the Runner-Up Score"></a>Find the Runner-Up Score</h3><ul>
+<li><p>Runner up이 2등을 말한다는걸 처음 알게 되었다<br>그냥 단순히 1등, 2등, 3등을 first prize, second prize, third prize로만 알고 있었는데<br>1등을 grand prize 혹은 winner라고 표현하듯이 2등도 runner up이라는 표현이 있었다<br>(3등까지 표현하고 싶다면, 2등을 first runner up 3등을 second runner up 이라고 한다)</p>
+</li>
+<li><p>몇 명의 주자가 있는지 n으로 입력 받고<br>각 주자들의 성적(score)을 배열에 입력 받아 2등의 성적을 출력하는 문제</p>
+<div class="tabs" id="example2"><ul class="nav-tabs"><li class="tab active"><a href="#example2-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example2-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example2-1"><p>5<br>2 3 6 6 5</p></div><div class="tab-pane" id="example2-2"><p>5</p></div></div></div>
+
+<div class="note no-icon">
+            <ul><li>2등만 찾으면 되기 때문에 최대값(1등)을 제거하고 다시 최대값을 찾는 방식으로 접근했다<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">  n = int(input())</span><br><span class="line">  arr = list(map(int, input().split()))</span><br><span class="line"></span><br><span class="line">winner_score = max(arr)</span><br><span class="line">runner_up_score = max([runner <span class="keyword">for</span> runner <span class="keyword">in</span> arr <span class="keyword">if</span> runner != winner_score])</span><br><span class="line">print(runner_up_score) </span><br></pre></td></tr></table></figure></li></ul>
+          </div>
+
+</li>
+</ul>
+<h3 id="Nested-Lists"><a href="#Nested-Lists" class="headerlink" title="Nested Lists"></a>Nested Lists</h3><ul>
+<li><p>물리 수업을 듣는 학생 수 N을 입력 받고, 학생 이름과 성적을 n번 반복하며 입력 받음<br>성적이 밑에서 2번째인 학생을 출력하는 문제 (성적이 같은 학생은 알파벳 순으로 출력)<br>(nested list를 사용해야 함)</p>
+<div class="tabs" id="example3"><ul class="nav-tabs"><li class="tab active"><a href="#example3-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example3-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example3-1"><p>5<br>Harry<br>37.21<br>Berry<br>37.21<br>Tina<br>37.2<br>Akriti<br>41<br>Harsh<br>39</p></div><div class="tab-pane" id="example3-2"><p>Berry<br>Harry</p></div></div></div>
+
+<div class="note no-icon">
+            <ul><li>dict 자료형으로 접근하려고 했는데 key, value로 정렬하는 등 아직 익숙하지 못해서 에러가 많이 발생함<br>2번째로 낮은 값을 찾는데 <code>set()</code> 집합을 이용하는 것이 좋다는 것을 복습함<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">marksheet = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">0</span>,int(input())):</span><br><span class="line">        marksheet.append([input(), float(input())])</span><br><span class="line"></span><br><span class="line">    second_highest = sorted(list(set([marks <span class="keyword">for</span> name, marks <span class="keyword">in</span> marksheet])))[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    print(<span class="string">'\n'</span>.join([a <span class="keyword">for</span> a,b <span class="keyword">in</span> sorted(marksheet) <span class="keyword">if</span> b == second_highest]))  </span><br></pre></td></tr></table></figure></li></ul>
+          </div>
+
+</li>
+</ul>
+<h3 id="Finding-the-percentage"><a href="#Finding-the-percentage" class="headerlink" title="Finding the percentage"></a>Finding the percentage</h3><ul>
+<li>학생 수 N을 입력 받고,<br>각 학생의 이름과 수학, 물리, 화학 성적을 입력 받는다<br>마지막 줄에 입력받은 학생의 이름의 성적의 평균을 출력하는 문제<br>(dict 자료형을 꼭 사용하라고 나와있다)</li>
+</ul>
+<div class="tabs" id="example4"><ul class="nav-tabs"><li class="tab active"><a href="#example4-1"><i class="fa fa-code"></i>INPUT</a></li><li class="tab"><a href="#example4-2"><i class="fa fa-code"></i>OUTPUT</a></li></ul><div class="tab-content"><div class="tab-pane active" id="example4-1"><p>3<br>Krishna 67 68 69<br>Arjun 70 98 63<br>Malika 52 56 60<br>Malika</p></div><div class="tab-pane" id="example4-2"><p>56.00</p></div></div></div>
+
+<div class="note no-icon">
+            <ul><li>출력을 소수점 2번째 자리까지 지정해 줘야 하는 것을 주의!<br><code>{0:.2f}.format()</code> 복습 복습<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> **name** == <span class="string">'**main**'</span>:</span><br><span class="line">n = int(input())</span><br><span class="line">student*marks = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> * <span class="keyword">in</span> range(n):</span><br><span class="line">name, \*line = input().split()</span><br><span class="line">scores = list(map(float, line))</span><br><span class="line">student_marks[name] = scores</span><br><span class="line">query_name = input()</span><br><span class="line"></span><br><span class="line">    target = student_marks[query_name]</span><br><span class="line"></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> target:</span><br><span class="line">        sum += float(num)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"&#123;0:.2f&#125;"</span>.format(sum/len(target)))  </span><br></pre></td></tr></table></figure></li></ul>
+          </div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/파이썬/" rel="tag"># 파이썬</a>
+          
+            <a href="/tags/programming-language/" rel="tag"># programming language</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/language/" rel="tag"># language</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/[object Object]/Language-Python-20200121-PY-day3/" rel="next" title="(PYTHON) Day - 3">
+                <i class="fa fa-chevron-left"></i> (PYTHON) Day - 3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/Language-Python-20200123-PY-day5/" rel="prev" title="(PYTHON) Day - 5 Strings(1)">
+                (PYTHON) Day - 5 Strings(1) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/jjang.png" alt="NUNU">
+            
+              <p class="site-author-name" itemprop="name">NUNU</p>
+              <div class="site-description motion-element" itemprop="description">개인적으로 공부하면서 정리한 내용들을 블로그에 남기고 있습니다.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">99</span>
+                    <span class="site-state-item-name">포스트</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">카테고리</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">태그</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9rbw=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HackerRank"><span class="nav-text">HackerRank</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Subdomain"><span class="nav-text">Subdomain</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Basic-Data-Types"><span class="nav-text">Basic Data Types</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem"><span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#개념-공부"><span class="nav-text">개념 공부</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lists"><span class="nav-text">Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tuples"><span class="nav-text">Tuples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List-Comprehensions"><span class="nav-text">List Comprehensions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Find-the-Runner-Up-Score"><span class="nav-text">Find the Runner-Up Score</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nested-Lists"><span class="nav-text">Nested Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Finding-the-percentage"><span class="nav-text">Finding the percentage</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+      <!-- Adsense Sidebar -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsense_side -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8226968057315512" data-ad-slot="2956452829" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <!-- Adsense Sidebar -->
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NUNU</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Mist</span> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/lazyload/lozad.min.js?v=1.10.0"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://taejin0527.github.io/[object Object]/Language-Python-20200122-PY-day4/";
+    this.page.identifier = "[object Object]/Language-Python-20200122-PY-day4/";
+    this.page.title = '(PYTHON) Day - 4 Basic Data Types';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aon-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":0,"vOffset":-50,"mobile":{"show":false,"scale":0.5,"motion":true}}});</script></body>
+</html>
