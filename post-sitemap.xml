@@ -264,7 +264,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200122-PY-day4/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200120-PY-day2/</loc>
         <lastmod>2021-05-27T14:22:03.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +272,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200120-PY-day2/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200122-PY-day4/</loc>
         <lastmod>2021-05-27T14:22:03.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -328,7 +328,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200313-PY-day22-2/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200313-PY-day22-1/</loc>
         <lastmod>2021-05-27T14:22:03.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -336,7 +336,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200313-PY-day22-1/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Language-Python-20200313-PY-day22-2/</loc>
         <lastmod>2021-05-27T14:22:03.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -520,14 +520,6 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190801-sw-6282/</loc>
-        <lastmod>2021-05-27T14:20:01.235Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190801-sw-6273/</loc>
         <lastmod>2021-05-27T14:20:01.235Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -536,7 +528,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190804-sw-6301/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190801-sw-6282/</loc>
         <lastmod>2021-05-27T14:20:01.235Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -545,6 +537,14 @@
 
     <url>
         <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190804-sw-6254/</loc>
+        <lastmod>2021-05-27T14:20:01.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190804-sw-6301/</loc>
         <lastmod>2021-05-27T14:20:01.235Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -608,7 +608,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190805-sw-6232/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190805-sw-6259/</loc>
         <lastmod>2021-05-27T14:20:01.234Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -616,7 +616,7 @@
     </url>
 
     <url>
-        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190805-sw-6259/</loc>
+        <loc>https://taejin0527.github.io/%5Bobject%20Object%5D/Algorithm-SWEA-20190805-sw-6232/</loc>
         <lastmod>2021-05-27T14:20:01.234Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
